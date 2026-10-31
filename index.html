@@ -387,6 +387,40 @@ main .wrap>*{min-width:0}
 .fund a{color:var(--teal);font-weight:700;font-size:15px;text-decoration:none}
 
 
+
+/* ---------- Signup form ---------- */
+.sform{display:grid;gap:14px;position:relative;max-width:820px}
+.sform[hidden],.s-done[hidden]{display:none}
+.s-main{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap}
+.s-email{flex:1 1 280px}
+.sform label:not(.s-ok):not(.s-check)>span,.s-area legend{display:block;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--navy-soft);margin:0 0 6px;font-family:var(--sans);font-weight:600}
+.sform input:not([type=checkbox]),.sform select,.sform textarea{width:100%;box-sizing:border-box;font:inherit;font-size:16px;color:#16202B;background:#fff;border:2px solid transparent;border-radius:12px;padding:12px 14px;outline:none}
+.sform textarea{resize:vertical}
+.sform input:focus,.sform select:focus,.sform textarea:focus{border-color:var(--gold)}
+.s-email input{font-size:17px;padding:14px 16px}
+.s-main .btn{background:#F2A65A;color:#12355B;border:0;cursor:pointer;padding:15px 26px;font-size:16px}
+.s-main .btn[disabled]{opacity:.6;cursor:wait}
+.s-ok,.s-check{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.5;color:#E3EBF4}
+.s-ok a{color:#F2A65A}
+.sform input[type=checkbox]{width:18px;height:18px;margin:2px 0 0;accent-color:#F2A65A;flex-shrink:0}
+.s-more{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px}
+.s-more summary{cursor:pointer;padding:14px 18px;font-weight:600;list-style:none}
+.s-more summary::-webkit-details-marker{display:none}
+.s-more summary::after{content:"+";float:right;font-size:20px;line-height:1;color:#F2A65A}
+.s-more[open] summary::after{content:"–"}
+.s-more summary small{font-weight:400;color:var(--navy-soft);margin-left:6px}
+.s-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;padding:4px 18px 18px}
+.s-wide{grid-column:1/-1}
+.s-area{border:0;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center}
+.s-area legend{width:100%}
+.s-area label{display:flex;gap:8px;align-items:center;font-size:15px;color:#E3EBF4}
+.s-msg{min-height:1.2em;font-size:15px;color:#FFD2A8;margin:0}
+.s-done{position:relative;background:rgba(255,255,255,.08);border:1px solid rgba(242,166,90,.5);border-radius:16px;padding:22px 24px;max-width:640px}
+.s-done h3{color:#fff;margin:0 0 6px}
+.s-done p{color:#E3EBF4}
+.s-alt a{color:var(--navy-soft)}
+@media (max-width:600px){.s-main .btn{width:100%}.s-grid{padding:4px 14px 16px}}
+
 /* ---------- Ideas gate ---------- */
 .idea .lock{display:inline-flex;align-items:center;gap:6px;margin:4px 0 0;font-size:13.5px;font-weight:600;color:var(--muted)}
 .idea .lock::before{content:"";width:12px;height:14px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 14'%3E%3Cpath d='M3 6V4a3 3 0 0 1 6 0v2h1a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 14'%3E%3Cpath d='M3 6V4a3 3 0 0 1 6 0v2h1a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z'/%3E%3C/svg%3E") center/contain no-repeat}
@@ -802,29 +836,44 @@ main .wrap>*{min-width:0}
   </div>
   <div class="ideas-gate">
     <div><h3>Želite cijelu razradu?</h3><p>U proširenom izdanju za svaku ideju dobivate prijavitelja i partnere, ciljane skupine, aktivnosti, okvirni proračun, pokazatelje i savjete za bodovanje. Šaljemo ga samo pretplatnicima, besplatno, 8. i 22. u mjesecu.</p></div>
-    <a class="btn" href="https://preview.mailerlite.io/forms/2755810/202853588407420251/share" target="_blank" rel="noopener">Prijavi se i primaj proširena izdanja →</a>
+    <a class="btn" href="#prijava">Prijavi se i primaj proširena izdanja →</a>
   </div>
 </section>
 
 <section class="signup" id="prijava">
   <svg class="env" viewBox="0 0 120 90" aria-hidden="true"><rect x="4" y="10" width="112" height="76" rx="8" fill="#fff"/><path d="M4 16l56 40 56-40" stroke="#12355B" stroke-width="5" fill="none"/></svg>
   <div class="head" style="margin:0"><span class="over">Besplatno</span><h2>Prijavite se</h2></div>
-  <p>Dobivat ćete oba newslettera, „Natječaji u fokusu“ i „Projektne ideje“, a možete se uključiti i u burzu partnera. Obavezna je samo e-adresa.</p>
-  <p class="callout"><strong>Želite ciljano dobivati informacije o mogućnostima financiranja?</strong> Ispunite sva polja. Prema mjestu, vrsti institucije i području interesa javljamo vam pozive koji su baš za vas.</p>
-  <div class="fields">
-    <div class="f req"><small>Obavezno</small>E-adresa</div>
-    <div class="f"><small>Neobavezno</small>Ime i prezime</div>
-    <div class="f"><small>Neobavezno</small>Institucija koju predstavljate</div>
-    <div class="f"><small>Neobavezno</small>Vrsta institucije</div>
-    <div class="f"><small>Neobavezno</small>Mjesto</div>
-    <div class="f"><small>Neobavezno</small>Županija</div>
-    <div class="f"><small>Neobavezno</small>Država</div>
-    <div class="f"><small>Neobavezno</small>Mobitel</div>
-    <div class="f"><small>Neobavezno</small>Područje interesa</div>
-    <div class="f"><small>Neobavezno</small>Suradnja – nudim ili tražim</div>
-    <div class="f"><small>Neobavezno</small>Objava u burzi partnera (DA/NE)</div>
+  <p>Dobivat ćete oba newslettera, „Natječaji u fokusu“ (1. i 15. u mjesecu) i prošireno izdanje „Projektnih ideja“ (8. i 22. u mjesecu). Odmah nakon prijave stiže vam i zadnje prošireno izdanje. Obavezna je samo e-adresa.</p>
+  <p class="callout"><strong>Želite ciljano dobivati informacije o mogućnostima financiranja?</strong> Otvorite dodatna polja u obrascu i ispunite ih. Prema mjestu, vrsti institucije i području interesa javljamo vam pozive koji su baš za vas.</p>
+  <form class="sform" id="sform" action="https://assets.mailerlite.com/jsonp/2755810/forms/202853588407420251/subscribe" method="post" novalidate>
+    <div class="s-main">
+      <label class="s-email"><span>E-adresa</span><input type="email" name="fields[email]" autocomplete="email" required placeholder="ime@ustanova.hr"></label>
+      <button class="btn" type="submit">Prijavi me →</button>
+    </div>
+    <label class="s-ok"><input type="checkbox" name="privola" required> <span>Pristajem na primanje newslettera i obradu podataka prema <a href="#privatnost">Pravilima privatnosti</a>.</span></label>
+    <details class="s-more">
+      <summary>Želite ciljane informacije? Dodajte podatke o sebi <small>neobavezno</small></summary>
+      <div class="s-grid">
+        <label><span>Ime i prezime</span><input name="fields[name]" autocomplete="name"></label>
+        <label><span>Institucija</span><input name="fields[company]" autocomplete="organization"></label>
+        <label><span>Vrsta institucije</span><select name="fields[vrsta_institucije]"><option value="">Odaberite</option><option>Osnovna škola</option><option>Srednja škola</option><option>Dječji vrtić</option><option>Visoko učilište</option><option>Sportski klub ili savez</option><option>Udruga</option><option>Jedinica lokalne ili regionalne samouprave</option><option>Javna ustanova</option><option>Tvrtka ili obrt</option><option>Organizacija Hrvata izvan RH</option><option>Drugo</option></select></label>
+        <label><span>Mjesto</span><input name="fields[city]" autocomplete="address-level2"></label>
+        <label><span>Županija</span><select name="fields[state]"><option value="">Odaberite</option><option>Bjelovarsko-bilogorska</option><option>Brodsko-posavska</option><option>Dubrovačko-neretvanska</option><option>Grad Zagreb</option><option>Istarska</option><option>Karlovačka</option><option>Koprivničko-križevačka</option><option>Krapinsko-zagorska</option><option>Ličko-senjska</option><option>Međimurska</option><option>Osječko-baranjska</option><option>Požeško-slavonska</option><option>Primorsko-goranska</option><option>Sisačko-moslavačka</option><option>Splitsko-dalmatinska</option><option>Šibensko-kninska</option><option>Varaždinska</option><option>Virovitičko-podravska</option><option>Vukovarsko-srijemska</option><option>Zadarska</option><option>Zagrebačka</option><option>Izvan Republike Hrvatske</option></select></label>
+        <label><span>Država</span><input name="fields[country]" autocomplete="country-name" placeholder="Hrvatska"></label>
+        <label><span>Mobitel</span><input type="tel" name="fields[phone]" autocomplete="tel"></label>
+        <fieldset class="s-area"><legend>Područje interesa</legend><label><input type="checkbox" value="Odgoj i obrazovanje"> Obrazovanje</label><label><input type="checkbox" value="Sport"> Sport</label><label><input type="checkbox" value="Hrvati izvan RH"> Hrvati izvan RH</label><input type="hidden" name="fields[podrucje_interesa]"></fieldset>
+        <label class="s-wide"><span>Suradnja – što nudite ili tražite</span><textarea name="fields[suradnja_nudim_ili_trazim]" rows="2" placeholder="npr. tražimo partnersku školu za Erasmus+ projekt"></textarea></label>
+        <label class="s-check s-wide"><input type="checkbox" id="s-burza"> <span>Objavite profil naše institucije u Burzi partnera (bez imena, e-adrese i mobitela)</span><input type="hidden" name="fields[objava_u_burzi_partnera]" value="NE"></label>
+      </div>
+    </details>
+    <input type="hidden" name="ml-submit" value="1"><input type="hidden" name="anticsrf" value="true">
+    <p class="s-msg" role="status" aria-live="polite"></p>
+  </form>
+  <div class="s-done" id="sdone" hidden>
+    <h3>Još samo jedan korak ✉️</h3>
+    <p>Poslali smo vam e-mail s poveznicom za potvrdu. Kliknite je i prijava je gotova. Ne vidite poruku? Provjerite mapu neželjene pošte ili „Promocije“.</p>
   </div>
-  <a class="btn" href="https://preview.mailerlite.io/forms/2755810/202853588407420251/share" target="_blank" rel="noopener" style="justify-self:start;position:relative">Otvori obrazac za prijavu →</a>
+  <p class="fine s-alt">Obrazac ne radi u vašem pregledniku? <a href="https://preview.mailerlite.io/forms/2755810/202853588407420251/share" target="_blank" rel="noopener">Prijavite se ovdje</a>.</p>
   <p class="fine">Prijavu potvrđujete klikom na poveznicu u e-mailu. Podatke koristimo samo za slanje newslettera i, uz vašu suglasnost, za burzu partnera. Odjaviti se možete u svakom izdanju, a brisanje podataka zatražite na rektor.co@gmail.com.</p>
 </section>
 
@@ -1036,6 +1085,23 @@ main .wrap>*{min-width:0}
     dlg.addEventListener('close',function(){if(/^#(impressum|privatnost|kolacici|uvjeti|pristupacnost)$/.test(location.hash))history.replaceState(null,'',location.pathname+location.search)})}
   function openLegal(){var h=location.hash.slice(1);if(h)showLegal(h)}
   window.addEventListener('hashchange',openLegal);openLegal();
+
+  (function(){var f=document.getElementById('sform');if(!f)return;var msg=f.querySelector('.s-msg'),btn=f.querySelector('button[type=submit]'),done=document.getElementById('sdone');
+    function fail(t){msg.textContent=t;btn.disabled=false;btn.textContent='Prijavi me →'}
+    f.addEventListener('submit',function(e){e.preventDefault();msg.textContent='';
+      var em=f.querySelector('input[type=email]');if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em.value.trim())){em.focus();return fail('Upišite ispravnu e-adresu.')}
+      if(!f.querySelector('[name=privola]').checked)return fail('Za prijavu označite pristanak na primanje newslettera.');
+      f.querySelector('[name="fields[podrucje_interesa]"]').value=[].map.call(f.querySelectorAll('.s-area input:checked'),function(x){return x.value}).join(', ');
+      f.querySelector('[name="fields[objava_u_burzi_partnera]"]').value=document.getElementById('s-burza').checked?'DA':'NE';
+      var fd=new URLSearchParams();[].forEach.call(f.elements,function(el){if(el.name&&el.name!=='privola'&&(el.value||el.name.indexOf('fields[')<0))fd.append(el.name,el.value.trim())});
+      btn.disabled=true;btn.textContent='Šaljem…';
+      function ok(){f.hidden=true;done.hidden=false;done.scrollIntoView({block:'center',behavior:'smooth'})}
+      fetch(f.action,{method:'POST',body:fd}).then(function(r){return r.json().catch(function(){return {success:r.ok}})}).then(function(j){
+        if(j&&j.success)ok();else{var er=j&&j.errors&&j.errors.fields;fail(er?'Provjerite podatke: '+Object.keys(er).join(', ')+'.':'Prijava nije uspjela. Pokušajte ponovno ili upotrijebite poveznicu ispod.')}
+      }).catch(function(){fetch(f.action,{method:'POST',mode:'no-cors',body:fd}).then(ok).catch(function(){fail('Prijava trenutačno nije moguća s ove stranice. Upotrijebite poveznicu ispod obrasca.')})});
+    });
+    var pl=f.querySelector('.s-ok a');pl&&pl.addEventListener('click',function(e){e.preventDefault();showLegal('privatnost')});
+  })();
   document.querySelectorAll('.flinks a, .legal-dlg a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href').slice(1);if(showLegal(id)){e.preventDefault();history.replaceState(null,'','#'+id)}else if(dlg&&dlg.open)closeLegal()})});
 
   // active nav
