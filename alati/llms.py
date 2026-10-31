@@ -12,6 +12,7 @@ for r in re.findall(r'<tr data[^>]*>(.*?)</tr>', t, re.S):
     a = re.search(r'href="([^"]+)"', td[1])
     rows.append(f"- **{txt(td[1])}** – rok: {txt(td[0])}; iznos: {txt(td[2])}; područje: {txt(td[3])}" + (f"; [službena stranica]({a.group(1)})" if a else ''))
 m = re.search(r'Stanje na dan ([^.<]*\.[^.<]*\.[^.<]*\.)', s); stanje = m.group(1) if m else ''
+faq = re.findall(r'<details[^>]*><summary>(.*?)</summary><p class="a">(.*?)</p></details>', s[s.index('id="pitanja"'):] if 'id="pitanja"' in s else '', re.S)
 arh = sorted(glob.glob('arhiva/*.html'), reverse=True)
 def ttl(f):
     m = re.search(r'<title>([^<]*)</title>', open(f, encoding='utf-8').read()); return m.group(1) if m else f
@@ -49,6 +50,9 @@ Podaci su informativni; mjerodavne su službene upute davatelja sredstava.
 
 {chr(10).join(f'- [{ttl(f)}](https://projektnaklinika.enter.fit/{f})' for f in arh) if arh else '- Još nema izdanja.'}
 
+## Česta pitanja
+
+{chr(10).join(f'### {txt(q)}{chr(10)}{chr(10)}{txt(a)}{chr(10)}' for q,a in faq)}
 ## Optional
 
 - [Sitemap](https://projektnaklinika.enter.fit/sitemap.xml)

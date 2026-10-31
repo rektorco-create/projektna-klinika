@@ -39,6 +39,56 @@ Podaci su informativni; mjerodavne su službene upute davatelja sredstava.
 
 - [Natječaji u fokusu – studeni 2026.](https://projektnaklinika.enter.fit/arhiva/2026-10-30-natjecaji-u-fokusu.html)
 
+## Česta pitanja
+
+### Što je Projektna klinika?
+
+Projektna klinika je besplatna stranica i newsletter o otvorenim natječajima i javnim pozivima za EU i nacionalna sredstva u tri područja: odgoj i obrazovanje, sport te projekti povezani s Hrvatima izvan RH. Uz pregled poziva nudi burzu projektnih partnera i podugovaratelja, bazu provjerenih konzultanata, Školu projekata i pomoć u pripremi i provedbi projekata. Pokreće je Rektor poslovna rješenja d.o.o. iz Splita.
+
+### Gdje se objavljuju natječaji za EU fondove u Hrvatskoj?
+
+Pozivi iz EU fondova objavljuju se na portalu eufondovi.gov.hr, pozivi Europskog socijalnog fonda plus na esf.hr, a pozivi Nacionalnog plana oporavka i otpornosti na fondovieu.gov.hr. Erasmus+ i Europske snage solidarnosti objavljuje Agencija za mobilnost i programe EU (ampeu.hr), a nacionalne natječaje ministarstva i Središnji državni ured za Hrvate izvan RH na svojim stranicama. Projektna klinika sve to prati i dvaput mjesečno objavljuje pregled otvorenih poziva s iznosima i rokovima.
+
+### Tko se može prijaviti na natječaje?
+
+Ovisi o pozivu. Najčešći prihvatljivi prijavitelji su škole, vrtići i druge javne ustanove, gradovi, općine i županije, udruge upisane u Registar udruga, sportski klubovi i savezi te zaklade. Neki pozivi su otvoreni i poduzetnicima ili organizacijama izvan Hrvatske. Točan popis uvijek je naveden u uputama za prijavitelje, u poglavlju o prihvatljivosti prijavitelja i partnera.
+
+### Kako se prijaviti na ESF+ natječaj?
+
+Najprije pažljivo pročitajte upute za prijavitelje i provjerite jesu li prijavitelj, partneri, aktivnosti i troškovi prihvatljivi. Zatim razradite projekt: problem i ciljanu skupinu, aktivnosti, pokazatelje, plan nabave i proračun. Prijava se za većinu poziva podnosi elektronički, putem sustava eFondovi, uz propisane obrasce i izjave. Prijavu pošaljite nekoliko dana prije roka, jer se dokumentacija naknadno ne može dopunjavati.
+
+### Što su upute za prijavitelje i zašto su važne?
+
+Upute za prijavitelje (UzP) glavni su dokument svakog poziva. Određuju tko se može prijaviti, koje su aktivnosti i troškovi prihvatljivi, najmanji i najveći iznos potpore, trajanje projekta, obvezne pokazatelje i kriterije bodovanja. Većina odbijenih prijava pada na formalnim uvjetima iz uputa, zato ih vrijedi pročitati cijele i prije pisanja projekta napraviti popis obveznih priloga.
+
+### Može li udruga ili sportski klub biti partner školi ili općini?
+
+Može, ako poziv dopušta partnerstvo i ako udruga ili klub ispunjava uvjete za partnere iz uputa za prijavitelje. Mnogi pozivi partnerstvo dodatno boduju, osobito kad partner donosi stručnost ili pristup ciljanoj skupini. Uloge i obveze partnera opisuju se u prijavi, a odnosi se uređuju izjavom ili sporazumom o partnerstvu. Partnera možete potražiti u Burzi partnera Projektne klinike.
+
+### Trebam li vlastito sufinanciranje?
+
+Ovisi o pozivu. Intenzitet potpore propisan je u uputama: kod mnogih ESF+ i nacionalnih poziva za javne ustanove i neprofitne organizacije potpora pokriva do 100 % prihvatljivih troškova, dok drugi traže vlastito sudjelovanje. Imajte na umu i da se dio troškova plaća unaprijed, a nadoknađuje nakon odobrenja zahtjeva za nadoknadom sredstava, pa je potrebno planirati likvidnost.
+
+### Koliko traje priprema prijave projekta?
+
+Za ozbiljniju prijavu realno je računati na četiri do osam tjedana: provjera prihvatljivosti, okupljanje partnera, razrada aktivnosti i proračuna, prikupljanje potvrda i izjava te pisanje i provjera prijave. Za manje nacionalne natječaje dovoljno je i kraće. Zato je korisno pratiti najave poziva unaprijed, što radimo u newsletteru „Natječaji u fokusu“.
+
+### Postoje li natječaji za projekte Hrvata izvan Republike Hrvatske?
+
+Postoje. Središnji državni ured za Hrvate izvan Republike Hrvatske redovito raspisuje natječaje za projekte hrvatske manjine, Hrvata u Bosni i Hercegovini i iseljeništva. Pojedina ministarstva imaju i programe za lokalne zajednice Hrvata u BiH, primjerice za gospodarski razvoj ili klimatske projekte. Aktualne pozive za to područje Projektna klinika označava crvenom bojom.
+
+### Što je stopa iskorištenosti sredstava?
+
+Stopa iskorištenosti pokazuje koliki je dio odobrenih sredstava na kraju projekta stvarno potrošen i priznat kao prihvatljiv trošak. Visoka stopa znači da je projekt dobro planiran i proveden. Zato u bazu konzultanata Projektne klinike primamo stručnjake čija je stopa iskorištenosti veća od 85 %.
+
+### Koliko košta pomoć Projektne klinike?
+
+Pregled poziva, newsletteri, Burza partnera i Škola projekata besplatni su. Za pomoć u provjeri prihvatljivosti, pripremi prijave ili provedbi projekta pošaljite upit kroz kontakt obrazac ili na rektor.co@gmail.com. Odgovaramo uz prijedlog suradnje prilagođen vašem projektu.
+
+### Kako primati obavijesti o novim natječajima?
+
+Prijavite se besplatno na newsletter Projektne klinike. „Natječaji u fokusu“ stiže 1. i 15. u mjesecu s pregledom otvorenih poziva i rokova, a „Projektne ideje“ 8. i 22. u mjesecu s tri razrađene projektne ideje za aktualne pozive, samo za pretplatnike.
+
 ## Optional
 
 - [Sitemap](https://projektnaklinika.enter.fit/sitemap.xml)
