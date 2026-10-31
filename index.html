@@ -387,10 +387,25 @@ main .wrap>*{min-width:0}
 .fund a{color:var(--teal);font-weight:700;font-size:15px;text-decoration:none}
 
 
+/* ---------- Ideas gate ---------- */
+.idea .lock{display:inline-flex;align-items:center;gap:6px;margin:4px 0 0;font-size:13.5px;font-weight:600;color:var(--muted)}
+.idea .lock::before{content:"";width:12px;height:14px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 14'%3E%3Cpath d='M3 6V4a3 3 0 0 1 6 0v2h1a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 14'%3E%3Cpath d='M3 6V4a3 3 0 0 1 6 0v2h1a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z'/%3E%3C/svg%3E") center/contain no-repeat}
+.ideas-gate{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 32px;padding:28px 30px;border-radius:22px;background:linear-gradient(120deg,var(--navy),#1d4a78);color:#fff}
+.ideas-gate h3{color:#fff;margin:0 0 6px;font-size:22px}
+.ideas-gate p{margin:0;color:#d7e2ee;max-width:60ch}
+.ideas-gate .btn{background:#F2A65A;color:#12355B;flex-shrink:0}
+@media (max-width:600px){.ideas-gate{padding:22px 20px}.ideas-gate .btn{width:100%;justify-content:center;text-align:center}}
+
 /* ---------- Legal ---------- */
-.legal{background:var(--surface);border-top:1px solid var(--line)}
-.legal .wrap{padding-block:56px 40px;display:grid;gap:12px}
-.legal-h{font-size:26px!important;margin:0 0 8px}
+.legal-dlg{border:0;padding:0;border-radius:22px;background:var(--surface);color:var(--ink);width:min(820px,calc(100vw - 32px));max-height:calc(100dvh - 48px);box-shadow:0 30px 80px rgba(10,30,55,.35)}
+.legal-dlg::backdrop{background:rgba(10,25,45,.55);backdrop-filter:blur(3px)}
+.lg-wrap{padding:24px 26px 28px;display:grid;gap:12px}
+.lg-top{display:flex;justify-content:space-between;align-items:center;gap:16px;position:sticky;top:-24px;background:var(--surface);padding-top:4px;z-index:1}
+.legal-h{font-size:26px!important;margin:0}
+.lg-close{border:0;background:var(--bg);color:var(--ink);width:40px;height:40px;border-radius:50%;font-size:24px;line-height:1;cursor:pointer}
+.lg-close:hover{background:var(--line)}
+.legal-dlg.one .lg-item:not([open]){display:none}
+@media (max-width:560px){.lg-wrap{padding:18px 16px 22px}.lg-item summary{padding:14px 16px}.lg-body{padding:0 16px 18px}}
 .lg-item{border-radius:16px;background:var(--bg)}
 .lg-item summary{list-style:none;cursor:pointer;padding:16px 22px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-weight:600}
 .lg-item summary::-webkit-details-marker{display:none}
@@ -776,14 +791,18 @@ main .wrap>*{min-width:0}
 </section>
 
 <section id="ideje">
-  <div class="head"><span class="over">Novo 8. i 22. u mjesecu</span><h2>Projektne ideje</h2><p class="sub">Izdanje od 30. 10. 2026. Svaka ideja razrađena je prema natječajnoj dokumentaciji: partneri, aktivnosti, proračun i savjeti za bodovanje.</p></div>
+  <div class="head"><span class="over">Novo 8. i 22. u mjesecu</span><h2>Projektne ideje</h2><p class="sub">Izdanje od 30. 10. 2026. Ovdje je kratka najava. Prošireno izdanje, razrađeno prema natječajnoj dokumentaciji, dobivaju samo pretplatnici newslettera.</p></div>
   <div class="ideas">
     <div class="idea lift"><svg class="band" viewBox="0 0 300 90" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="90" fill="var(--sky-teal)"/><circle cx="40" cy="70" r="40" fill="#0F6E74" opacity=".25"/><path d="M120 70l22-30 22 30z" fill="#0F6E74"/><path d="M150 70l26-40 26 40z" fill="#1C7A86"/><circle cx="240" cy="30" r="10" fill="#F2A65A" class="pulse"/><rect x="0" y="70" width="300" height="20" fill="#0F6E74" opacity=".3"/></svg>
-      <div class="t"><span class="kicker k-teal">Odgoj i obrazovanje · MDU</span><h3>Mali istraživači zavičaja</h3><p>Općina, škola i udruga nude besplatne zavičajne radionice, sportsku igraonicu, eko-vrt i praznične kampove za 120 djece. Rok 19. 11.</p><p class="amt">okvirno 59.920 €</p></div></div>
+      <div class="t"><span class="kicker k-teal">Odgoj i obrazovanje · MDU</span><h3>Mali istraživači zavičaja</h3><p>Zavičajne radionice i praznični kampovi za djecu u maloj općini. Rok 19. 11.</p><p class="lock">Puna razrada u newsletteru</p><p class="amt">okvirno 59.920 €</p></div></div>
     <div class="idea lift"><svg class="band" viewBox="0 0 300 90" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="90" fill="var(--sky-orange)"/><rect y="62" width="300" height="28" fill="#4E9A5A" opacity=".7"/><circle cx="150" cy="40" r="16" fill="#fff" stroke="#C55A1E" stroke-width="3" class="float"/><path d="M60 62v-24M240 62v-24" stroke="#C55A1E" stroke-width="4"/><circle cx="60" cy="32" r="6" fill="#C55A1E"/><circle cx="240" cy="32" r="6" fill="#C55A1E"/></svg>
-      <div class="t"><span class="kicker k-orange">Sport · ESF+</span><h3>Svi u igri</h3><p>Sportski klub sa školom i udrugom: prilagođeni treninzi i radionice zdravih navika za 60 djece u riziku. Prijave od 24. 11.</p><p class="amt">okvirno 119.000 €</p></div></div>
+      <div class="t"><span class="kicker k-orange">Sport · ESF+</span><h3>Svi u igri</h3><p>Sportski klub uključuje djecu u riziku od isključenosti. Prijave od 24. 11.</p><p class="lock">Puna razrada u newsletteru</p><p class="amt">okvirno 119.000 €</p></div></div>
     <div class="idea lift"><svg class="band" viewBox="0 0 300 90" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="90" fill="var(--sky-red)"/><path d="M90 74V44l40-22 40 22v30z" fill="#fff"/><path d="M84 46l46-28 46 28" stroke="#A3262A" stroke-width="5" fill="none"/><g fill="#12355B" opacity=".85"><rect x="100" y="24" width="20" height="10" transform="rotate(-30 110 29)"/><rect x="134" y="20" width="20" height="10" transform="rotate(30 144 25)"/></g><circle cx="230" cy="30" r="14" fill="#F2A65A" class="pulse"/><path d="M200 74c0-18 14-26 20-26s20 8 20 26" fill="#4E9A5A"/></svg>
-      <div class="t"><span class="kicker k-red">Hrvati izvan RH · MZOZT</span><h3>Zelena škola</h3><p>Općina u BiH i osnovna škola: izolacija, sunčana elektrana, dizalica topline i zeleno dvorište. Rok 30. 11.</p><p class="amt">okvirno 400.000 €, 90 % bespovratno</p></div></div>
+      <div class="t"><span class="kicker k-red">Hrvati izvan RH · MZOZT</span><h3>Zelena škola</h3><p>Energetska obnova osnovne škole u BiH. Rok 30. 11.</p><p class="lock">Puna razrada u newsletteru</p><p class="amt">okvirno 400.000 €, 90 % bespovratno</p></div></div>
+  </div>
+  <div class="ideas-gate">
+    <div><h3>Želite cijelu razradu?</h3><p>U proširenom izdanju za svaku ideju dobivate prijavitelja i partnere, ciljane skupine, aktivnosti, okvirni proračun, pokazatelje i savjete za bodovanje. Šaljemo ga samo pretplatnicima, besplatno, 8. i 22. u mjesecu.</p></div>
+    <a class="btn" href="https://preview.mailerlite.io/forms/2755810/202853588407420251/share" target="_blank" rel="noopener">Prijavi se i primaj proširena izdanja →</a>
   </div>
 </section>
 
@@ -813,7 +832,7 @@ main .wrap>*{min-width:0}
   <div class="head"><span class="over">Sva izdanja</span><h2>Arhiva</h2></div>
   <div style="display:grid;gap:12px">
     <details class="issue"><summary><span class="date">30. 10. 2026.</span><span class="ititle">Natječaji u fokusu<small>10 otvorenih poziva · prvi rok 7. 11.</small></span><span class="chev">›</span></summary><div class="body">Pozivi iz ovog izdanja nalaze se u tablici <a href="#pozivi">Otvoreni pozivi</a>.</div></details>
-    <details class="issue"><summary><span class="date">30. 10. 2026.</span><span class="ititle">Projektne ideje<small>3 razrađena koncepta</small></span><span class="chev">›</span></summary><div class="body">Mali istraživači zavičaja (MDU), Svi u igri (ESF+ sport) i Zelena škola (MZOZT, BiH). Sažetci su u odjeljku <a href="#ideje">Projektne ideje</a>.</div></details>
+    <details class="issue"><summary><span class="date">30. 10. 2026.</span><span class="ititle">Projektne ideje<small>3 razrađena koncepta</small></span><span class="chev">›</span></summary><div class="body">Mali istraživači zavičaja (MDU), Svi u igri (ESF+ sport) i Zelena škola (MZOZT, BiH). Kratke najave su u odjeljku <a href="#ideje">Projektne ideje</a>, a prošireno izdanje poslano je pretplatnicima.</div></details>
   </div>
 </section>
 
@@ -827,9 +846,9 @@ main .wrap>*{min-width:0}
 
 </div></main>
 
-<section class="legal" id="pravno" aria-label="Pravne informacije">
-<div class="wrap">
-<h2 class="legal-h">Pravne informacije</h2>
+<dialog class="legal-dlg" id="pravno" aria-labelledby="legal-h">
+<div class="lg-wrap">
+<div class="lg-top"><h2 class="legal-h" id="legal-h">Pravne informacije</h2><button type="button" class="lg-close" aria-label="Zatvori">×</button></div>
 
 <details class="lg-item" id="impressum"><summary><span>Impressum – podaci o pružatelju usluge</span><span class="chev">›</span></summary><div class="lg-body">
 <p><strong>Projektna klinika</strong> je informativna usluga tvrtke:</p>
@@ -903,7 +922,7 @@ main .wrap>*{min-width:0}
 <p>Stranicu nastojimo učiniti dostupnom svima: radi na mobitelima i računalima, podržava tamni način rada i smanjene animacije, a sve funkcije dostupne su i tipkovnicom. Ako naiđete na prepreku, javite nam se na rektor.co@gmail.com.</p>
 </div></details>
 </div>
-</section>
+</dialog>
 <footer><div class="wrap"><span style="display:inline-flex;align-items:center;gap:10px"><svg width="22" height="22" viewBox="0 0 104 104" aria-hidden="true"><rect x="38" y="4" width="28" height="36" rx="9" fill="#3FA9AE"/><rect x="64" y="38" width="36" height="28" rx="9" fill="#E07B3C"/><rect x="38" y="64" width="28" height="36" rx="9" fill="#D24B4F"/><rect x="4" y="38" width="36" height="28" rx="9" fill="#F2A65A"/><rect x="38" y="38" width="28" height="28" rx="4" fill="#FFFFFF"/></svg>Projektna klinika</span><span>Pokreće Rektor poslovna rješenja d.o.o. · Ivica Zelić</span><span>Projektna klinika ne zamjenjuje službene upute davatelja sredstava.</span><nav class="flinks" aria-label="Pravne informacije"><a href="#impressum">Impressum</a><a href="#privatnost">Pravila privatnosti</a><a href="#kolacici">Izjava o kolačićima</a><a href="#uvjeti">Uvjeti korištenja</a><a href="#pristupacnost">Pristupačnost</a><a href="#kontakt">Kontakt</a><span style="color:var(--navy-soft);font-size:14px;margin-left:auto">© 2026 REKTOR POSLOVNA RJEŠENJA d.o.o.</span></nav></div></footer>
 
 <script>
@@ -1006,9 +1025,18 @@ main .wrap>*{min-width:0}
   });
 
   // open legal sections from links
-  function openLegal(){var h=location.hash.slice(1),d=h&&document.getElementById(h);if(d&&d.tagName==='DETAILS'){d.open=true;d.scrollIntoView({block:'start'})}}
+  var dlg=document.getElementById('pravno');
+  function showLegal(id){var d=document.getElementById(id);if(!dlg||!d||d.tagName!=='DETAILS'||!dlg.contains(d))return false;
+    dlg.querySelectorAll('.lg-item').forEach(function(x){x.open=(x===d)});dlg.classList.add('one');
+    if(!dlg.open){dlg.showModal?dlg.showModal():dlg.setAttribute('open','')}dlg.scrollTop=0;return true}
+  function closeLegal(){if(dlg.close)dlg.close();else dlg.removeAttribute('open')}
+  if(dlg){dlg.querySelector('.lg-close').addEventListener('click',closeLegal);
+    dlg.addEventListener('click',function(e){if(e.target===dlg)closeLegal()});
+    dlg.querySelectorAll('.lg-item summary').forEach(function(sm){sm.addEventListener('click',function(){dlg.classList.remove('one')})});
+    dlg.addEventListener('close',function(){if(/^#(impressum|privatnost|kolacici|uvjeti|pristupacnost)$/.test(location.hash))history.replaceState(null,'',location.pathname+location.search)})}
+  function openLegal(){var h=location.hash.slice(1);if(h)showLegal(h)}
   window.addEventListener('hashchange',openLegal);openLegal();
-  document.querySelectorAll('.flinks a, .legal a').forEach(function(a){a.addEventListener('click',function(){var d=document.getElementById(a.getAttribute('href').slice(1));if(d&&d.tagName==='DETAILS')d.open=true})});
+  document.querySelectorAll('.flinks a, .legal-dlg a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href').slice(1);if(showLegal(id)){e.preventDefault();history.replaceState(null,'','#'+id)}else if(dlg&&dlg.open)closeLegal()})});
 
   // active nav
   var links=[].slice.call(document.querySelectorAll('nav.sec a'));
