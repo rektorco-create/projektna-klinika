@@ -26,7 +26,7 @@
   --teal:#0F6E74; --orange:#B4531A; --red:#A3262A; --gold:#F2A65A;
   --chip-teal:#E6F2F2; --chip-orange:#FBEEE5; --chip-red:#F6E9EA;
   --sky-teal:#D7ECEC; --sky-orange:#FBE3D3; --sky-red:#F3DADB;
-  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --serif:"Source Sans 3", "Segoe UI", Arial, sans-serif;
   --sans:"Source Sans 3", "Segoe UI", Arial, sans-serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
@@ -57,7 +57,7 @@ header.mast{background:radial-gradient(120% 140% at 85% 20%, #1C4A7A 0%, var(--n
 .brandrow svg{width:46px;height:46px;flex:none}
 .navmark{width:26px;height:26px;flex:none;align-self:center;margin-right:6px}
 h1{font-family:var(--serif);font-weight:400;font-size:clamp(42px,7vw,66px);line-height:1.02;margin:0;text-wrap:balance}
-h1 .acc{display:block;font-style:italic;color:var(--gold)}
+h1 .acc{display:block;font-style:normal;color:var(--gold)}
 .rotor{font-family:var(--serif);font-size:22px;margin:0;color:var(--navy-soft)}
 .rotor b{color:var(--navy-ink);font-weight:600;display:inline-block;min-width:9ch}
 .rotor b.swap{animation:swap .5s ease}
@@ -296,7 +296,7 @@ footer .wrap{padding-block:40px 48px}
 .hs-red{background:linear-gradient(110deg,rgba(163,38,42,.55) 0%,rgba(163,38,42,.12) 55%,transparent 80%)}
 .hs-gold{background:linear-gradient(110deg,rgba(242,166,90,.35) 0%,rgba(242,166,90,.08) 55%,transparent 80%)}
 .hh{font-family:var(--serif);font-weight:400;font-size:clamp(36px,5.6vw,60px);line-height:1.05;letter-spacing:-.02em;margin:0;color:var(--navy-ink);text-wrap:balance}
-.hh em{font-style:italic;color:var(--gold)}
+.hh em{font-style:normal;color:var(--gold)}
 .hs .over{background:rgba(255,255,255,.14);color:var(--navy-ink)}
 .hero-bar{position:absolute;left:0;right:0;bottom:0;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:0 30px;z-index:2}
 #sl-hero .hs .hero{padding-bottom:116px}
@@ -346,7 +346,7 @@ h3{font-family:var(--serif);font-weight:600;letter-spacing:-.005em}
 .q,.tipslide p{font-family:var(--serif)}
 .rotor{font-family:var(--serif);font-weight:400}
 .rotor b{font-weight:600}
-h1 .acc,.hh em{font-family:var(--serif);font-style:italic;font-weight:400}
+h1 .acc,.hh em{font-family:var(--sans);font-style:normal;font-weight:700}
 
 /* ---------- Sliders ---------- */
 .slider{position:relative;min-width:0;max-width:100%}
@@ -534,6 +534,14 @@ main .wrap>*{min-width:0}
   .sl-prog span.run{animation:prog var(--dur,6s) linear forwards!important}
   html{scroll-behavior:auto}
 }
+
+/* ---------- Jedno pismo za cijelu stranicu ---------- */
+body,body *{font-family:var(--sans)}
+h1{font-weight:700;letter-spacing:-.02em}
+h2{font-weight:700;letter-spacing:-.01em}
+h3{font-weight:700}
+.stat b,.hh{font-weight:700}
+.rotor,.q{font-weight:400}
 </style>
 
 <div class="rule"><span></span><span></span><span></span></div>
@@ -560,9 +568,9 @@ main .wrap>*{min-width:0}
       <g class="float d2"><rect x="50" y="154" width="210" height="48" rx="10" fill="#FBEEE5"/><circle cx="72" cy="178" r="10" fill="#C55A1E"/><rect x="92" y="168" width="104" height="8" rx="4" fill="#B4531A" opacity=".7"/><rect x="92" y="182" width="130" height="7" rx="3.5" fill="#B4531A" opacity=".35"/></g>
       <g class="float d3"><rect x="50" y="212" width="210" height="48" rx="10" fill="#F6E9EA"/><circle cx="72" cy="236" r="10" fill="#A3262A"/><rect x="92" y="226" width="90" height="8" rx="4" fill="#A3262A" opacity=".7"/><rect x="92" y="240" width="112" height="7" rx="3.5" fill="#A3262A" opacity=".35"/></g>
       <!-- calendar -->
-      <g transform="translate(238 8)" class="float d2"><rect width="96" height="92" rx="12" fill="#12355B" stroke="#AFC3DA" stroke-width="2"/><rect width="96" height="26" rx="12" fill="#A3262A"/><rect y="14" width="96" height="12" fill="#A3262A"/><text x="48" y="19" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="12" font-weight="700" fill="#fff">STUDENI</text><text x="48" y="72" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="38" fill="#fff">19</text><circle cx="80" cy="40" r="5" fill="#F2A65A" class="pulse"/></g>
+      <g transform="translate(238 8)" class="float d2"><rect width="96" height="92" rx="12" fill="#12355B" stroke="#AFC3DA" stroke-width="2"/><rect width="96" height="26" rx="12" fill="#A3262A"/><rect y="14" width="96" height="12" fill="#A3262A"/><text x="48" y="19" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="12" font-weight="700" fill="#fff">STUDENI</text><text x="48" y="72" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="38" fill="#fff">19</text><circle cx="80" cy="40" r="5" fill="#F2A65A" class="pulse"/></g>
       <!-- coins / budget -->
-      <g transform="translate(250 200)" class="float"><circle cx="40" cy="62" r="34" fill="#F2A65A"/><circle cx="40" cy="62" r="25" fill="none" stroke="#12355B" stroke-width="3"/><text x="40" y="72" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="600" fill="#12355B">€</text></g>
+      <g transform="translate(250 200)" class="float"><circle cx="40" cy="62" r="34" fill="#F2A65A"/><circle cx="40" cy="62" r="25" fill="none" stroke="#12355B" stroke-width="3"/><text x="40" y="72" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" font-weight="600" fill="#12355B">€</text></g>
       <!-- partner nodes -->
       <g transform="translate(0 250)"><circle cx="22" cy="40" r="14" fill="#0F6E74" stroke="#fff" stroke-width="3"/><circle cx="56" cy="52" r="12" fill="#C55A1E" stroke="#fff" stroke-width="3"/><path d="M34 44l12 5" stroke="#fff" stroke-width="3"/></g>
     </svg>
@@ -590,7 +598,7 @@ main .wrap>*{min-width:0}
       <p class="hh">Pišete i provodite projekte s <em>85 %+</em> iskorištenosti?</p>
       <p class="lede">Prijavite se u bazu konzultanata. Općinama, školama, klubovima i udrugama preporučujemo provjerene stručnjake prema programu, području i regiji.</p>
       <div class="cta"><a class="btn" href="#konzultanti">Baza konzultanata</a></div></div>
-    <svg class="big-scene" viewBox="0 0 320 280" aria-hidden="true"><circle cx="160" cy="150" r="112" fill="#fff" opacity=".1"/><path d="M60 190 A100 100 0 0 1 260 190" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="22" stroke-linecap="round"/><path class="gauge" d="M60 190 A100 100 0 0 1 260 190" fill="none" stroke="#F2A65A" stroke-width="22" stroke-linecap="round" pathLength="100" stroke-dasharray="85 100"/><text x="160" y="176" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="52" fill="#fff">85 %</text><text x="160" y="214" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="15" font-weight="700" fill="#F3DADB" letter-spacing="2">ISKORIŠTENOST</text></svg>
+    <svg class="big-scene" viewBox="0 0 320 280" aria-hidden="true"><circle cx="160" cy="150" r="112" fill="#fff" opacity=".1"/><path d="M60 190 A100 100 0 0 1 260 190" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="22" stroke-linecap="round"/><path class="gauge" d="M60 190 A100 100 0 0 1 260 190" fill="none" stroke="#F2A65A" stroke-width="22" stroke-linecap="round" pathLength="100" stroke-dasharray="85 100"/><text x="160" y="176" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="52" fill="#fff">85 %</text><text x="160" y="214" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="15" font-weight="700" fill="#F3DADB" letter-spacing="2">ISKORIŠTENOST</text></svg>
   </div></div>
 
   <div class="sl-slide hs hs-gold"><div class="wrap hero">
@@ -598,7 +606,7 @@ main .wrap>*{min-width:0}
       <p class="hh">Od ideje do završnog izvješća u <em>šest koraka</em></p>
       <p class="lede">Problem i ciljevi, partnerstvo, proračun, prijava, provedba i održivost. Kratko, praktično i s najdešćim zamkama iz prakse.</p>
       <div class="cta"><a class="btn" href="#edukacija">Uči s nama</a><a class="btn ghost" href="#ideje">Projektne ideje</a></div></div>
-    <svg class="big-scene" viewBox="0 0 320 280" aria-hidden="true"><path class="draw" d="M40 220 C90 220,80 160,130 160 S170 100,210 100 S250 50,290 50" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 10"/><g font-family="'Source Serif 4', Georgia, serif" font-size="20" text-anchor="middle" fill="#fff"><circle cx="40" cy="220" r="20" fill="#0F6E74"/><text x="40" y="227">1</text><circle cx="90" cy="200" r="20" fill="#1C7A86"/><text x="90" y="207">2</text><circle cx="140" cy="158" r="20" fill="#C55A1E"/><text x="140" y="165">3</text><circle cx="190" cy="118" r="20" fill="#B4531A"/><text x="190" y="125">4</text><circle cx="240" cy="80" r="20" fill="#A3262A"/><text x="240" y="87">5</text></g><g class="float"><circle cx="290" cy="46" r="26" fill="#F2A65A"/><path d="M278 46l9 9 16-16" stroke="#12355B" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
+    <svg class="big-scene" viewBox="0 0 320 280" aria-hidden="true"><path class="draw" d="M40 220 C90 220,80 160,130 160 S170 100,210 100 S250 50,290 50" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 10"/><g font-family="'Source Sans 3', Arial, sans-serif" font-size="20" text-anchor="middle" fill="#fff"><circle cx="40" cy="220" r="20" fill="#0F6E74"/><text x="40" y="227">1</text><circle cx="90" cy="200" r="20" fill="#1C7A86"/><text x="90" y="207">2</text><circle cx="140" cy="158" r="20" fill="#C55A1E"/><text x="140" y="165">3</text><circle cx="190" cy="118" r="20" fill="#B4531A"/><text x="190" y="125">4</text><circle cx="240" cy="80" r="20" fill="#A3262A"/><text x="240" y="87">5</text></g><g class="float"><circle cx="290" cy="46" r="26" fill="#F2A65A"/><path d="M278 46l9 9 16-16" stroke="#12355B" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
   </div></div>
 
   </div></div>
@@ -744,7 +752,7 @@ main .wrap>*{min-width:0}
         <path d="M20 110 A80 80 0 0 1 180 110" fill="none" stroke="var(--line)" stroke-width="16" stroke-linecap="round"/>
         <path class="gauge" d="M20 110 A80 80 0 0 1 180 110" fill="none" stroke="url(#gg)" stroke-width="16" stroke-linecap="round" pathLength="100" stroke-dasharray="85 100"/>
         <defs><linearGradient id="gg" x1="0" x2="1"><stop offset="0" stop-color="#0F6E74"/><stop offset=".6" stop-color="#F2A65A"/><stop offset="1" stop-color="#C55A1E"/></linearGradient></defs>
-        <text x="100" y="98" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="34" font-weight="600" fill="var(--ink)">85 %+</text>
+        <text x="100" y="98" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="34" font-weight="600" fill="var(--ink)">85 %+</text>
       </svg>
       <span>iskorištenih ugovorenih sredstava</span>
     </div>
@@ -768,7 +776,7 @@ main .wrap>*{min-width:0}
   <div class="head"><span class="over">Edukacija</span><h2>Škola projekata</h2><p class="sub">Šest koraka od ideje do završnog izvješća. Kratko i praktično, s najčešćim zamkama iz prakse.</p></div>
   <svg class="path" viewBox="0 0 900 90" aria-hidden="true">
     <path class="draw" d="M40 60 C140 10, 200 10, 190 45 S300 80, 340 45 S470 10, 490 45 S620 80, 640 45 S770 10, 860 50" fill="none" stroke="var(--line)" stroke-width="4" stroke-linecap="round"/>
-    <g font-family="'Source Serif 4', Georgia, serif" font-size="18" text-anchor="middle" fill="#fff">
+    <g font-family="'Source Sans 3', Arial, sans-serif" font-size="18" text-anchor="middle" fill="#fff">
       <circle cx="40" cy="60" r="18" fill="#0F6E74"/><text x="40" y="66">1</text>
       <circle cx="190" cy="45" r="18" fill="#1C7A86"/><text x="190" y="51">2</text>
       <circle cx="340" cy="45" r="18" fill="#C55A1E"/><text x="340" y="51">3</text>
