@@ -224,6 +224,8 @@ details[open] > summary .chev{transform:rotate(90deg)}
 .ititle{font-family:var(--serif);font-size:19px;font-weight:600;min-width:0}
 .ititle small{display:block;font-family:var(--sans);font-size:14px;font-weight:400;color:var(--muted)}
 .issue .body{padding:0 20px 18px;color:var(--muted);font-size:15px}
+.issue .body .read{display:inline-block;margin-top:8px;font-weight:700;color:var(--teal);text-decoration:none}
+.issue .body .read:hover{text-decoration:underline}
 .contactcard{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}
 @media (max-width:560px){.contactcard{grid-template-columns:1fr}}
 .contactcard svg{width:96px;height:96px}
@@ -900,10 +902,10 @@ h3{font-weight:700}
 </section>
 
 <section id="arhiva">
-  <div class="head"><span class="over">Sva izdanja</span><h2>Arhiva</h2></div>
+  <div class="head"><span class="over">Sva izdanja</span><h2>Arhiva</h2><p class="sub">Sva izdanja „Natječaja u fokusu“ možete pročitati u cijelosti. „Projektne ideje“ ovdje su u kratkom obliku, a prošireno izdanje šaljemo pretplatnicima.</p></div>
   <div style="display:grid;gap:12px">
-    <details class="issue"><summary><span class="date">30. 10. 2026.</span><span class="ititle">Natječaji u fokusu<small>10 otvorenih poziva · prvi rok 7. 11.</small></span><span class="chev">›</span></summary><div class="body">Pozivi iz ovog izdanja nalaze se u tablici <a href="#pozivi">Otvoreni pozivi</a>.</div></details>
-    <details class="issue"><summary><span class="date">30. 10. 2026.</span><span class="ititle">Projektne ideje<small>3 razrađena koncepta</small></span><span class="chev">›</span></summary><div class="body">Mali istraživači zavičaja (MDU), Svi u igri (ESF+ sport) i Zelena škola (MZOZT, BiH). Kratke najave su u odjeljku <a href="#ideje">Projektne ideje</a>, a prošireno izdanje poslano je pretplatnicima.</div></details>
+    <details class="issue"><summary><span class="date">30. 10. 2026.</span><span class="ititle">Natječaji u fokusu<small>10 otvorenih poziva · prvi rok 7. 11.</small></span><span class="chev">›</span></summary><div class="body">Deset otvorenih poziva za obrazovanje, sport i Hrvate izvan RH, s iznosima i rokovima. <a class="read" href="https://projektnaklinika.enter.fit/arhiva/2026-10-30-natjecaji-u-fokusu.html" target="_blank" rel="noopener">Pročitaj cijelo izdanje →</a></div></details>
+    <details class="issue"><summary><span class="date">30. 10. 2026.</span><span class="ititle">Projektne ideje<small>3 razrađena koncepta</small></span><span class="chev">›</span></summary><div class="body">Mali istraživači zavičaja (MDU), Svi u igri (ESF+ sport) i Zelena škola (MZOZT, BiH). Kratke najave su u odjeljku <a href="#ideje">Projektne ideje</a>, a prošireno izdanje poslano je pretplatnicima. <a class="read" href="#prijava">Prijavi se i primaj proširena izdanja →</a></div></details>
   </div>
 </section>
 
