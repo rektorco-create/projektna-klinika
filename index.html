@@ -7,6 +7,7 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/fonts/fonts.css">
 <meta name="theme-color" content="#12355B">
 <meta property="og:title" content="Projektna klinika">
 <meta property="og:description" content="Otvoreni pozivi, burza partnera, baza konzultanata i škola projekata – za obrazovanje, sport i Hrvate izvan RH.">
@@ -17,7 +18,6 @@
 <body>
 <title>Projektna klinika</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20120%20120%22%3E%3Crect%20width%3D%22120%22%20height%3D%22120%22%20rx%3D%2228%22%20fill%3D%22%2312355B%22/%3E%3Cg%20transform%3D%22translate%2812%2012%29%20scale%280.923%29%22%3E%3Crect%20x%3D%2238%22%20y%3D%224%22%20width%3D%2228%22%20height%3D%2236%22%20rx%3D%229%22%20fill%3D%22%233FA9AE%22/%3E%3Crect%20x%3D%2264%22%20y%3D%2238%22%20width%3D%2236%22%20height%3D%2228%22%20rx%3D%229%22%20fill%3D%22%23E07B3C%22/%3E%3Crect%20x%3D%2238%22%20y%3D%2264%22%20width%3D%2228%22%20height%3D%2236%22%20rx%3D%229%22%20fill%3D%22%23D24B4F%22/%3E%3Crect%20x%3D%224%22%20y%3D%2238%22%20width%3D%2236%22%20height%3D%2228%22%20rx%3D%229%22%20fill%3D%22%23F2A65A%22/%3E%3Crect%20x%3D%2238%22%20y%3D%2238%22%20width%3D%2228%22%20height%3D%2228%22%20rx%3D%224%22%20fill%3D%22%23FFFFFF%22/%3E%3C/g%3E%3C/svg%3E">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@400;600;700&display=swap">
 <style>
 /* Layout: navy masthead with live partner-network canvas + illustrated hero scene; stats band; funder ticker; deadline timeline; sections in an 960px column */
 :root{
@@ -334,6 +334,20 @@ main,header.mast{overflow-x:clip}
 .tllist li{background:color-mix(in srgb,var(--c) 7%,transparent);border-radius:0 12px 12px 0;margin-bottom:6px}
 @media (max-width:600px){#calls tbody tr{padding:14px 12px;border-radius:14px;margin-bottom:8px;border-bottom:0}#calls tbody td:first-child{box-shadow:none;padding-left:0}#calls tbody tr{box-shadow:inset 4px 0 0 var(--ac)}}
 
+/* ---------- Typography harmonisation ---------- */
+html{font-optical-sizing:auto;text-rendering:optimizeLegibility}
+button,input,select,textarea{font-family:inherit}
+h1,h2,.hh,.q,.tipslide p,.stat b,.dl .big,.num,.ititle{font-family:var(--serif);font-weight:400;font-kerning:normal}
+h3{font-family:var(--serif);font-weight:600;letter-spacing:-.005em}
+.over,.kicker,.eyebrow,.tag,.n,.date,.fine,.note,nav.sec a,.btn,.chip,.sl-btn,.f small,th,.left{font-family:var(--sans)}
+.over,.kicker,.eyebrow{font-weight:700}
+.btn,.chip,nav.sec a{font-weight:600}
+.lede,.sub,p,li,dd,td{font-family:var(--sans)}
+.q,.tipslide p{font-family:var(--serif)}
+.rotor{font-family:var(--serif);font-weight:400}
+.rotor b{font-weight:600}
+h1 .acc,.hh em{font-family:var(--serif);font-style:italic;font-weight:400}
+
 /* ---------- Sliders ---------- */
 .slider{position:relative;min-width:0;max-width:100%}
 main .wrap>*{min-width:0}
@@ -371,6 +385,27 @@ main .wrap>*{min-width:0}
 .fund h3{font-size:20px}
 .fund p{margin:0;color:var(--muted);font-size:15.5px}
 .fund a{color:var(--teal);font-weight:700;font-size:15px;text-decoration:none}
+
+
+/* ---------- Legal ---------- */
+.legal{background:var(--surface);border-top:1px solid var(--line)}
+.legal .wrap{padding-block:56px 40px;display:grid;gap:12px}
+.legal-h{font-size:26px!important;margin:0 0 8px}
+.lg-item{border-radius:16px;background:var(--bg)}
+.lg-item summary{list-style:none;cursor:pointer;padding:16px 22px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-weight:600}
+.lg-item summary::-webkit-details-marker{display:none}
+.lg-body{padding:0 22px 22px;font-size:16px;line-height:1.7;max-width:78ch}
+.lg-body h3{font-size:18px;margin:18px 0 6px}
+.lg-body p,.lg-body ul{margin:0 0 10px}
+.lg-body ul{padding-left:20px}
+.lg-body .upd{color:var(--muted);font-size:14px}
+.kv{display:grid;grid-template-columns:max-content 1fr;gap:6px 24px;margin:8px 0 0}
+.kv dt{color:var(--muted)}
+.kv dd{margin:0;font-weight:600}
+@media (max-width:560px){.kv{grid-template-columns:1fr}.kv dd{margin-bottom:8px}}
+.flinks{display:flex;flex-wrap:wrap;gap:6px 18px;width:100%;padding-top:14px;border-top:1px solid rgba(255,255,255,.12)}
+.flinks a{color:var(--navy-soft);text-decoration:none;font-size:14px}
+.flinks a:hover{color:#fff;text-decoration:underline}
 
 /* ---------- Responsive: large / tablet / phone / small phone ---------- */
 .tllist{display:none;list-style:none;margin:0;padding:0;gap:0}
@@ -476,9 +511,9 @@ main .wrap>*{min-width:0}
       <g class="float d2"><rect x="50" y="154" width="210" height="48" rx="10" fill="#FBEEE5"/><circle cx="72" cy="178" r="10" fill="#C55A1E"/><rect x="92" y="168" width="104" height="8" rx="4" fill="#B4531A" opacity=".7"/><rect x="92" y="182" width="130" height="7" rx="3.5" fill="#B4531A" opacity=".35"/></g>
       <g class="float d3"><rect x="50" y="212" width="210" height="48" rx="10" fill="#F6E9EA"/><circle cx="72" cy="236" r="10" fill="#A3262A"/><rect x="92" y="226" width="90" height="8" rx="4" fill="#A3262A" opacity=".7"/><rect x="92" y="240" width="112" height="7" rx="3.5" fill="#A3262A" opacity=".35"/></g>
       <!-- calendar -->
-      <g transform="translate(238 8)" class="float d2"><rect width="96" height="92" rx="12" fill="#12355B" stroke="#AFC3DA" stroke-width="2"/><rect width="96" height="26" rx="12" fill="#A3262A"/><rect y="14" width="96" height="12" fill="#A3262A"/><text x="48" y="19" text-anchor="middle" font-family="Source Sans 3, Arial" font-size="12" font-weight="700" fill="#fff">STUDENI</text><text x="48" y="72" text-anchor="middle" font-family="Source Serif 4, Georgia" font-size="38" fill="#fff">19</text><circle cx="80" cy="40" r="5" fill="#F2A65A" class="pulse"/></g>
+      <g transform="translate(238 8)" class="float d2"><rect width="96" height="92" rx="12" fill="#12355B" stroke="#AFC3DA" stroke-width="2"/><rect width="96" height="26" rx="12" fill="#A3262A"/><rect y="14" width="96" height="12" fill="#A3262A"/><text x="48" y="19" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="12" font-weight="700" fill="#fff">STUDENI</text><text x="48" y="72" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="38" fill="#fff">19</text><circle cx="80" cy="40" r="5" fill="#F2A65A" class="pulse"/></g>
       <!-- coins / budget -->
-      <g transform="translate(250 200)" class="float"><circle cx="40" cy="62" r="34" fill="#F2A65A"/><circle cx="40" cy="62" r="25" fill="none" stroke="#12355B" stroke-width="3"/><text x="40" y="72" text-anchor="middle" font-family="Source Serif 4, Georgia" font-size="28" font-weight="600" fill="#12355B">€</text></g>
+      <g transform="translate(250 200)" class="float"><circle cx="40" cy="62" r="34" fill="#F2A65A"/><circle cx="40" cy="62" r="25" fill="none" stroke="#12355B" stroke-width="3"/><text x="40" y="72" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="600" fill="#12355B">€</text></g>
       <!-- partner nodes -->
       <g transform="translate(0 250)"><circle cx="22" cy="40" r="14" fill="#0F6E74" stroke="#fff" stroke-width="3"/><circle cx="56" cy="52" r="12" fill="#C55A1E" stroke="#fff" stroke-width="3"/><path d="M34 44l12 5" stroke="#fff" stroke-width="3"/></g>
     </svg>
@@ -506,7 +541,7 @@ main .wrap>*{min-width:0}
       <p class="hh">Pišete i provodite projekte s <em>85 %+</em> iskorištenosti?</p>
       <p class="lede">Prijavite se u bazu konzultanata. Općinama, školama, klubovima i udrugama preporučujemo provjerene stručnjake prema programu, području i regiji.</p>
       <div class="cta"><a class="btn" href="#konzultanti">Baza konzultanata</a></div></div>
-    <svg class="big-scene" viewBox="0 0 320 280" aria-hidden="true"><circle cx="160" cy="150" r="112" fill="#fff" opacity=".1"/><path d="M60 190 A100 100 0 0 1 260 190" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="22" stroke-linecap="round"/><path class="gauge" d="M60 190 A100 100 0 0 1 260 190" fill="none" stroke="#F2A65A" stroke-width="22" stroke-linecap="round" pathLength="100" stroke-dasharray="85 100"/><text x="160" y="176" text-anchor="middle" font-family="Source Serif 4, Georgia, serif" font-size="52" fill="#fff">85 %</text><text x="160" y="214" text-anchor="middle" font-family="Source Sans 3, Arial" font-size="15" font-weight="700" fill="#F3DADB" letter-spacing="2">ISKORIŠTENOST</text></svg>
+    <svg class="big-scene" viewBox="0 0 320 280" aria-hidden="true"><circle cx="160" cy="150" r="112" fill="#fff" opacity=".1"/><path d="M60 190 A100 100 0 0 1 260 190" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="22" stroke-linecap="round"/><path class="gauge" d="M60 190 A100 100 0 0 1 260 190" fill="none" stroke="#F2A65A" stroke-width="22" stroke-linecap="round" pathLength="100" stroke-dasharray="85 100"/><text x="160" y="176" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="52" fill="#fff">85 %</text><text x="160" y="214" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="15" font-weight="700" fill="#F3DADB" letter-spacing="2">ISKORIŠTENOST</text></svg>
   </div></div>
 
   <div class="sl-slide hs hs-gold"><div class="wrap hero">
@@ -514,7 +549,7 @@ main .wrap>*{min-width:0}
       <p class="hh">Od ideje do završnog izvješća u <em>šest koraka</em></p>
       <p class="lede">Problem i ciljevi, partnerstvo, proračun, prijava, provedba i održivost. Kratko, praktično i s najdešćim zamkama iz prakse.</p>
       <div class="cta"><a class="btn" href="#edukacija">Uči s nama</a><a class="btn ghost" href="#ideje">Projektne ideje</a></div></div>
-    <svg class="big-scene" viewBox="0 0 320 280" aria-hidden="true"><path class="draw" d="M40 220 C90 220,80 160,130 160 S170 100,210 100 S250 50,290 50" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 10"/><g font-family="Source Serif 4, Georgia, serif" font-size="20" text-anchor="middle" fill="#fff"><circle cx="40" cy="220" r="20" fill="#0F6E74"/><text x="40" y="227">1</text><circle cx="90" cy="200" r="20" fill="#1C7A86"/><text x="90" y="207">2</text><circle cx="140" cy="158" r="20" fill="#C55A1E"/><text x="140" y="165">3</text><circle cx="190" cy="118" r="20" fill="#B4531A"/><text x="190" y="125">4</text><circle cx="240" cy="80" r="20" fill="#A3262A"/><text x="240" y="87">5</text></g><g class="float"><circle cx="290" cy="46" r="26" fill="#F2A65A"/><path d="M278 46l9 9 16-16" stroke="#12355B" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
+    <svg class="big-scene" viewBox="0 0 320 280" aria-hidden="true"><path class="draw" d="M40 220 C90 220,80 160,130 160 S170 100,210 100 S250 50,290 50" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 10"/><g font-family="'Source Serif 4', Georgia, serif" font-size="20" text-anchor="middle" fill="#fff"><circle cx="40" cy="220" r="20" fill="#0F6E74"/><text x="40" y="227">1</text><circle cx="90" cy="200" r="20" fill="#1C7A86"/><text x="90" y="207">2</text><circle cx="140" cy="158" r="20" fill="#C55A1E"/><text x="140" y="165">3</text><circle cx="190" cy="118" r="20" fill="#B4531A"/><text x="190" y="125">4</text><circle cx="240" cy="80" r="20" fill="#A3262A"/><text x="240" y="87">5</text></g><g class="float"><circle cx="290" cy="46" r="26" fill="#F2A65A"/><path d="M278 46l9 9 16-16" stroke="#12355B" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
   </div></div>
 
   </div></div>
@@ -625,8 +660,8 @@ main .wrap>*{min-width:0}
       <g class="float d2"><circle cx="350" cy="110" r="38" fill="#C55A1E"/><circle cx="350" cy="100" r="9" fill="#fff"/><path d="M332 128c2-12 10-16 18-16s16 4 18 16z" fill="#fff"/></g>
       <g class="float d3"><circle cx="210" cy="110" r="30" fill="#12355B"/><path d="M196 112l8 8 18-18" stroke="#F2A65A" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
       <circle cx="210" cy="44" r="14" fill="#A3262A" class="pulse"/><circle cx="210" cy="176" r="14" fill="#F2A65A" class="pulse"/>
-      <text x="70" y="172" text-anchor="middle" font-family="Source Sans 3, Arial" font-size="13" font-weight="700" fill="var(--muted)">PARTNER</text>
-      <text x="350" y="172" text-anchor="middle" font-family="Source Sans 3, Arial" font-size="13" font-weight="700" fill="var(--muted)">PODUGOVARATELJ</text>
+      <text x="70" y="172" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="13" font-weight="700" fill="var(--muted)">PARTNER</text>
+      <text x="350" y="172" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="13" font-weight="700" fill="var(--muted)">PODUGOVARATELJ</text>
     </svg>
   </div>
   <div class="split" style="margin-top:18px">
@@ -660,7 +695,7 @@ main .wrap>*{min-width:0}
         <path d="M20 110 A80 80 0 0 1 180 110" fill="none" stroke="var(--line)" stroke-width="16" stroke-linecap="round"/>
         <path class="gauge" d="M20 110 A80 80 0 0 1 180 110" fill="none" stroke="url(#gg)" stroke-width="16" stroke-linecap="round" pathLength="100" stroke-dasharray="85 100"/>
         <defs><linearGradient id="gg" x1="0" x2="1"><stop offset="0" stop-color="#0F6E74"/><stop offset=".6" stop-color="#F2A65A"/><stop offset="1" stop-color="#C55A1E"/></linearGradient></defs>
-        <text x="100" y="98" text-anchor="middle" font-family="Source Serif 4, Georgia" font-size="34" font-weight="600" fill="var(--ink)">85 %+</text>
+        <text x="100" y="98" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="34" font-weight="600" fill="var(--ink)">85 %+</text>
       </svg>
       <span>iskorištenih ugovorenih sredstava</span>
     </div>
@@ -684,7 +719,7 @@ main .wrap>*{min-width:0}
   <div class="head"><span class="over">Edukacija</span><h2>Škola projekata</h2><p class="sub">Šest koraka od ideje do završnog izvješća. Kratko i praktično, s najčešćim zamkama iz prakse.</p></div>
   <svg class="path" viewBox="0 0 900 90" aria-hidden="true">
     <path class="draw" d="M40 60 C140 10, 200 10, 190 45 S300 80, 340 45 S470 10, 490 45 S620 80, 640 45 S770 10, 860 50" fill="none" stroke="var(--line)" stroke-width="4" stroke-linecap="round"/>
-    <g font-family="Source Serif 4, Georgia" font-size="18" text-anchor="middle" fill="#fff">
+    <g font-family="'Source Serif 4', Georgia, serif" font-size="18" text-anchor="middle" fill="#fff">
       <circle cx="40" cy="60" r="18" fill="#0F6E74"/><text x="40" y="66">1</text>
       <circle cx="190" cy="45" r="18" fill="#1C7A86"/><text x="190" y="51">2</text>
       <circle cx="340" cy="45" r="18" fill="#C55A1E"/><text x="340" y="51">3</text>
@@ -791,7 +826,85 @@ main .wrap>*{min-width:0}
 </section>
 
 </div></main>
-<footer><div class="wrap"><span style="display:inline-flex;align-items:center;gap:10px"><svg width="22" height="22" viewBox="0 0 104 104" aria-hidden="true"><rect x="38" y="4" width="28" height="36" rx="9" fill="#3FA9AE"/><rect x="64" y="38" width="36" height="28" rx="9" fill="#E07B3C"/><rect x="38" y="64" width="28" height="36" rx="9" fill="#D24B4F"/><rect x="4" y="38" width="36" height="28" rx="9" fill="#F2A65A"/><rect x="38" y="38" width="28" height="28" rx="4" fill="#FFFFFF"/></svg>Projektna klinika</span><span>Pokreće Rektor poslovna rješenja d.o.o. · Ivica Zelić</span><span>Projektna klinika ne zamjenjuje službene upute davatelja sredstava.</span></div></footer>
+
+<section class="legal" id="pravno" aria-label="Pravne informacije">
+<div class="wrap">
+<h2 class="legal-h">Pravne informacije</h2>
+
+<details class="lg-item" id="impressum"><summary><span>Impressum – podaci o pružatelju usluge</span><span class="chev">›</span></summary><div class="lg-body">
+<p><strong>Projektna klinika</strong> je informativna usluga tvrtke:</p>
+<dl class="kv">
+<dt>Tvrtka</dt><dd>REKTOR POSLOVNA RJEŠENJA d.o.o. za usluge</dd>
+<dt>Sjedište</dt><dd>R. Boškovića 20, 21000 Split, Hrvatska</dd>
+<dt>Registarski sud</dt><dd>Trgovački sud u Splitu</dd>
+<dt>MBS</dt><dd>060481925</dd>
+<dt>OIB</dt><dd>68499407249</dd>
+<dt>Direktor</dt><dd>Ivica Zelić</dd>
+<dt>Temeljni kapital</dt><dd>[IZNOS] EUR, uplaćen u cijelosti</dd>
+<dt>Banka i IBAN</dt><dd>[NAZIV BANKE], [IBAN]</dd>
+<dt>Kontakt</dt><dd>rektor.co@gmail.com</dd>
+</dl>
+</div></details>
+
+<details class="lg-item" id="privatnost"><summary><span>Pravila privatnosti</span><span class="chev">›</span></summary><div class="lg-body">
+<p class="upd">Vrijedi od 1. studenoga 2026.</p>
+<h3>1. Voditelj obrade</h3>
+<p>Voditelj obrade osobnih podataka je REKTOR POSLOVNA RJEŠENJA d.o.o., R. Boškovića 20, 21000 Split, OIB 68499407249. Za sva pitanja o osobnim podacima pišite na rektor.co@gmail.com.</p>
+<h3>2. Koje podatke prikupljamo</h3>
+<ul>
+<li><strong>Prijava na newsletter:</strong> e-adresa (obavezno) te, ako ih sami upišete, ime i prezime, institucija i njezina vrsta, mjesto, županija, država, broj mobitela, područje interesa i opis suradnje koju nudite ili tražite.</li>
+<li><strong>Burza partnera:</strong> podaci o instituciji i opis suradnje, samo ako u polje „Objava u burzi partnera“ upišete DA.</li>
+<li><strong>Baza konzultanata:</strong> uz kontakt podatke i broj napisanih i provedenih projekata, stopa iskorištenosti sredstava, programi i reference.</li>
+<li><strong>Podaci o korištenju e-pošte:</strong> otvaranje newslettera i klikovi na poveznice, koje bilježi sustav za slanje.</li>
+<li><strong>Tehnički podaci:</strong> pri posjetu stranici pružatelj hostinga može zabilježiti IP adresu i podatke o pregledniku radi sigurnosti i rada stranice.</li>
+</ul>
+<h3>3. Svrha i pravna osnova</h3>
+<ul>
+<li>Slanje newslettera „Natječaji u fokusu“ i „Projektne ideje“ te ciljanih informacija o mogućnostima financiranja – na temelju vaše privole (čl. 6. st. 1. t. a) Opće uredbe o zaštiti podataka).</li>
+<li>Objava profila u burzi partnera i preporuka konzultanata – na temelju vaše izričite privole, koju u svakom trenutku možete povući.</li>
+<li>Odgovaranje na vaše upite – na temelju vašeg zahtjeva (čl. 6. st. 1. t. b).</li>
+<li>Sigurnost i ispravan rad stranice – na temelju legitimnog interesa (čl. 6. st. 1. t. f).</li>
+</ul>
+<h3>4. Tko još obrađuje podatke</h3>
+<ul>
+<li><strong>MailerLite</strong> (UAB MailerLite, Litva, EU) – prijave, pohrana pretplatnika i slanje newslettera.</li>
+<li><strong>GitHub</strong> (GitHub Inc., SAD) – hosting stranice. Prijenos u SAD temelji se na Okviru za privatnost podataka EU–SAD i standardnim ugovornim klauzulama.</li>
+<li><strong>Anthropic</strong> (Anthropic PBC, SAD) – alat umjetne inteligencije kojim pripremamo sadržaj newslettera, tjedne izvještaje i pregled prijava za burzu partnera i bazu konzultanata. Prijenos se temelji na standardnim ugovornim klauzulama.</li>
+</ul>
+<p>Podatke ne prodajemo i ne ustupamo trećim stranama u marketinške svrhe. Ne donosimo automatizirane odluke koje bi imale pravne učinke na vas.</p>
+<h3>5. Koliko dugo čuvamo podatke</h3>
+<p>Podatke za newsletter čuvamo dok se ne odjavite. Profil u burzi partnera uklanjamo najkasnije u roku od sedam dana od povlačenja privole. Prijave konzultanata čuvamo dok traje suradnja, a najdulje dvije godine od zadnjeg kontakta.</p>
+<h3>6. Vaša prava</h3>
+<p>Imate pravo na pristup svojim podacima, ispravak, brisanje, ograničenje obrade, prenosivost podataka i prigovor na obradu te pravo u svakom trenutku povući privolu, bez utjecaja na zakonitost obrade prije povlačenja. Od newslettera se odjavljujete poveznicom na dnu svakog e-maila. Zahtjeve šaljite na rektor.co@gmail.com i odgovorit ćemo u roku od 30 dana.</p>
+<p>Ako smatrate da su vaša prava povrijeđena, možete podnijeti prigovor Agenciji za zaštitu osobnih podataka (AZOP), Selska cesta 136, 10000 Zagreb, azop.hr.</p>
+</div></details>
+
+<details class="lg-item" id="kolacici"><summary><span>Izjava o kolačićima</span><span class="chev">›</span></summary><div class="lg-body">
+<p><strong>Ova stranica ne koristi kolačiće</strong> za praćenje, analitiku ni oglašavanje i ne postavlja nikakve kolačiće na vaš uređaj. Zato vas ne tražimo privolu putem skočnog prozora.</p>
+<ul>
+<li><strong>Fontovi</strong> su smješteni na istom poslužitelju kao stranica, pa se pri učitavanju ne šalju podaci vanjskim servisima poput Google Fontsa.</li>
+<li><strong>Obrasci za prijavu</strong> otvaraju se na stranicama sustava MailerLite, koji može koristiti vlastite nužne kolačiće za rad obrasca i zaštitu od zlouporabe. Za njih vrijede pravila privatnosti MailerLitea.</li>
+<li><strong>Poveznice na službene stranice</strong> ministarstava i fondova vode na stranice koje imaju vlastita pravila o kolačićima.</li>
+</ul>
+<p>Ako u budućnosti uvedemo analitiku ili druge kolačiće koji nisu nužni, prije toga ćemo zatražiti vašu privolu i ažurirati ovu izjavu.</p>
+</div></details>
+
+<details class="lg-item" id="uvjeti"><summary><span>Uvjeti korištenja i odricanje od odgovornosti</span><span class="chev">›</span></summary><div class="lg-body">
+<ul>
+<li>Sadržaj Projektne klinike je informativan. Podatke o pozivima provjeravamo na službenim stranicama davatelja na dan objave, ali mjerodavni su isključivo službeni tekstovi poziva, upute za prijavitelje i njihove izmjene.</li>
+<li>Projektne ideje i okvirni proračuni su primjeri. Ne predstavljaju jamstvo prihvatljivosti ni odobrenja financiranja.</li>
+<li>Profili u burzi partnera i preporuke konzultanata temelje se na podacima koje su dostavili sami sudionici. Ne odgovaramo za njihovu točnost ni za odnose koji iz kontakta nastanu.</li>
+<li>Ne odgovaramo za sadržaj vanjskih stranica na koje vode poveznice.</li>
+<li>Tekstovi, ilustracije i logo Projektne klinike vlasništvo su tvrtke REKTOR POSLOVNA RJEŠENJA d.o.o. Dijeljenje uz navođenje izvora je dopušteno, a komercijalna uporaba samo uz pisano dopuštenje.</li>
+</ul>
+</div></details>
+
+<details class="lg-item" id="pristupacnost"><summary><span>Pristupačnost</span><span class="chev">›</span></summary><div class="lg-body">
+<p>Stranicu nastojimo učiniti dostupnom svima: radi na mobitelima i računalima, podržava tamni način rada i smanjene animacije, a sve funkcije dostupne su i tipkovnicom. Ako naiđete na prepreku, javite nam se na rektor.co@gmail.com.</p>
+</div></details>
+</div>
+</section>
+<footer><div class="wrap"><span style="display:inline-flex;align-items:center;gap:10px"><svg width="22" height="22" viewBox="0 0 104 104" aria-hidden="true"><rect x="38" y="4" width="28" height="36" rx="9" fill="#3FA9AE"/><rect x="64" y="38" width="36" height="28" rx="9" fill="#E07B3C"/><rect x="38" y="64" width="28" height="36" rx="9" fill="#D24B4F"/><rect x="4" y="38" width="36" height="28" rx="9" fill="#F2A65A"/><rect x="38" y="38" width="28" height="28" rx="4" fill="#FFFFFF"/></svg>Projektna klinika</span><span>Pokreće Rektor poslovna rješenja d.o.o. · Ivica Zelić</span><span>Projektna klinika ne zamjenjuje službene upute davatelja sredstava.</span><nav class="flinks" aria-label="Pravne informacije"><a href="#impressum">Impressum</a><a href="#privatnost">Pravila privatnosti</a><a href="#kolacici">Izjava o kolačićima</a><a href="#uvjeti">Uvjeti korištenja</a><a href="#pristupacnost">Pristupačnost</a><a href="#kontakt">Kontakt</a><span style="color:var(--navy-soft);font-size:14px;margin-left:auto">© 2026 REKTOR POSLOVNA RJEŠENJA d.o.o.</span></nav></div></footer>
 
 <script>
 (function(){
@@ -891,6 +1004,11 @@ main .wrap>*{min-width:0}
     calcPv();drawDots();render();restart();
     window.addEventListener('resize',function(){var o=pv;calcPv();if(o!==pv){i=0;drawDots()}render()});
   });
+
+  // open legal sections from links
+  function openLegal(){var h=location.hash.slice(1),d=h&&document.getElementById(h);if(d&&d.tagName==='DETAILS'){d.open=true;d.scrollIntoView({block:'start'})}}
+  window.addEventListener('hashchange',openLegal);openLegal();
+  document.querySelectorAll('.flinks a, .legal a').forEach(function(a){a.addEventListener('click',function(){var d=document.getElementById(a.getAttribute('href').slice(1));if(d&&d.tagName==='DETAILS')d.open=true})});
 
   // active nav
   var links=[].slice.call(document.querySelectorAll('nav.sec a'));
