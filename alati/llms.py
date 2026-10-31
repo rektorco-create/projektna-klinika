@@ -29,6 +29,7 @@ out = f"""# Projektna klinika
 - Pomoć u provjeri prihvatljivosti, okupljanju partnera, izradi proračuna, pripremi prijave i provedbi projekta.
 
 Kontakt: rektor.co@gmail.com · obrazac na https://projektnaklinika.enter.fit/#kontakt
+Društvene mreže: https://www.facebook.com/projektnaklinika · https://www.instagram.com/projektnaklinika
 
 ## Otvoreni pozivi (stanje na dan {stanje})
 
