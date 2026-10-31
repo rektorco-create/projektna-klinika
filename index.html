@@ -234,6 +234,28 @@ details[open] > summary .chev{transform:rotate(90deg)}
 .issue .body{padding:0 20px 18px;color:var(--muted);font-size:15px}
 .issue .body .read{display:inline-block;margin-top:8px;font-weight:700;color:var(--teal);text-decoration:none}
 .issue .body .read:hover{text-decoration:underline}
+.cwrap{display:grid;grid-template-columns:1fr 1.3fr;gap:22px;align-items:start}
+@media (max-width:860px){.cwrap{grid-template-columns:1fr}}
+.cform{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;display:grid;gap:14px}
+.cform h3{margin:0;font-size:22px;color:var(--ink)}
+.cform .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:560px){.cform .row2{grid-template-columns:1fr}}
+.cform label>span{display:block;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 6px;font-weight:600}
+.cform input:not([type=checkbox]),.cform select,.cform textarea{width:100%;box-sizing:border-box;font:inherit;font-size:16px;color:var(--ink);background:var(--soft);border:2px solid var(--line);border-radius:10px;padding:11px 13px}
+.cform textarea{resize:vertical;min-height:130px}
+.cform input:focus,.cform select:focus,.cform textarea:focus{outline:none;border-color:var(--gold)}
+.cform label.c-check>span{display:inline;text-transform:none;letter-spacing:0;font-size:14.5px;font-weight:400;margin:0;color:var(--muted)}
+.cform .c-check a{color:var(--teal)}
+.cform .c-check{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--muted);line-height:1.45}
+.cform .c-check input{width:18px;height:18px;margin:2px 0 0;accent-color:#F2A65A;flex-shrink:0}
+.cform .c-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.cform button{justify-self:start;border:0;cursor:pointer;font:inherit;font-weight:700;font-size:16px}
+.cform button:disabled{opacity:.6;cursor:default}
+.c-msg{min-height:1.2em;margin:0;color:var(--red);font-weight:600}
+.c-done{background:var(--chip-teal);border:1px solid var(--line);border-radius:20px;padding:26px}
+.c-done[hidden],.cform[hidden]{display:none}
+.c-done h3{margin:0 0 6px;color:var(--teal);font-size:22px}
+.c-done p{margin:0;color:var(--ink)}
 .contactcard{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}
 @media (max-width:560px){.contactcard{grid-template-columns:1fr}}
 .contactcard svg{width:96px;height:96px}
@@ -921,10 +943,31 @@ h3{font-weight:700}
 </section>
 
 <section id="kontakt">
-  <div class="contactcard">
+  <div class="cwrap">
+  <div class="contactcard" style="grid-template-columns:1fr">
     <svg viewBox="0 0 96 96" aria-hidden="true"><circle cx="48" cy="48" r="46" fill="var(--chip-teal)"/><rect x="26" y="20" width="44" height="58" rx="6" fill="#fff" stroke="#0F6E74" stroke-width="3"/><rect x="36" y="14" width="24" height="12" rx="4" fill="#0F6E74"/><path d="M36 42h24M36 52h24M36 62h14" stroke="#0F6E74" stroke-width="3" stroke-linecap="round"/><circle cx="68" cy="68" r="14" fill="#F2A65A" class="pulse"/><path d="M62 68l4 4 8-8" stroke="#12355B" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
     <div><h2 style="font-size:28px">Trebate pomoć s projektom?</h2><p class="sub">Provjeravamo prihvatljivost, okupljamo partnere, slažemo proračun, pripremamo prijavu i pratimo provedbu.</p>
     <div class="contact"><span class="mail" id="mail">rektor.co@gmail.com</span><button class="copy" id="copy" type="button">Kopiraj adresu</button></div></div>
+  </div>
+
+  <form class="cform" id="cform" novalidate>
+    <h3>Pošaljite upit</h3>
+    <div class="row2">
+      <label><span>Ime i prezime *</span><input name="ime" autocomplete="name" required maxlength="120"></label>
+      <label><span>E-adresa *</span><input name="email" type="email" autocomplete="email" required maxlength="160"></label>
+    </div>
+    <div class="row2">
+      <label><span>Institucija</span><input name="institucija" autocomplete="organization" maxlength="160" placeholder="škola, općina, klub, udruga…"></label>
+      <label><span>Telefon</span><input name="telefon" type="tel" autocomplete="tel" maxlength="40"></label>
+    </div>
+    <label><span>Tema</span><select name="tema"><option>Pomoć s prijavom projekta</option><option>Provjera prihvatljivosti</option><option>Provedba i izvještavanje</option><option>Burza partnera</option><option>Baza konzultanata</option><option>Newsletter</option><option>Ostalo</option></select></label>
+    <label><span>Poruka *</span><textarea name="poruka" required maxlength="4000" placeholder="Ukratko opišite projektnu ideju ili pitanje: područje, natječaj ako ga znate, rok."></textarea></label>
+    <label class="c-hp" aria-hidden="true"><span>Ne ispunjavati</span><input name="_honey" tabindex="-1" autocomplete="off"></label>
+    <label class="c-check"><input type="checkbox" name="privola_kontakt"><span>Pristajem da se moji podaci koriste za odgovor na ovaj upit, u skladu s <a href="#privatnost">pravilima privatnosti</a>. Upit ne znači prijavu na newsletter.</span></label>
+    <p class="c-msg" role="alert"></p>
+    <button class="btn" type="submit">Pošalji upit →</button>
+  </form>
+  <div class="c-done" id="cdone" hidden><h3>Hvala, upit je poslan.</h3><p>Odgovaramo u pravilu u roku od dva radna dana na e-adresu koju ste upisali.</p></div>
   </div>
 </section>
 
@@ -960,6 +1003,7 @@ h3{font-weight:700}
 <li><strong>Baza konzultanata:</strong> uz kontakt podatke i broj napisanih i provedenih projekata, stopa iskorištenosti sredstava, programi i reference.</li>
 <li><strong>Podaci o korištenju e-pošte:</strong> otvaranje newslettera i klikovi na poveznice, koje bilježi sustav za slanje.</li>
 <li><strong>Tehnički podaci:</strong> pri posjetu stranici pružatelj hostinga može zabilježiti IP adresu i podatke o pregledniku radi sigurnosti i rada stranice.</li>
+<li><strong>Kontakt obrazac:</strong> ime i prezime, e-adresa i poruka te, ako ih upišete, institucija i telefon. Koristimo ih samo za odgovor na vaš upit i ne upisujemo vas na newsletter. Poruka se dostavlja e-poštom putem usluge FormSubmit (formsubmit.co).</li>
 <li><strong>Statistika posjeta:</strong> za brojanje posjeta koristimo GoatCounter, alat bez kolačića koji ne prikuplja osobne podatke i ne prati vas između stranica. Bilježi se samo zbirna statistika: koje su stranice posjećene, s koje stranice ste došli, vrsta uređaja i preglednika te država. IP adresa se ne pohranjuje.</li>
 </ul>
 <h3>3. Svrha i pravna osnova</h3>
@@ -1177,6 +1221,27 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   if(p)try{goatcounter.count({path:p,title:t,event:true})}catch(_){}
 },true);
 </script>
+<script>
+(function(){var f=document.getElementById('cform');if(!f)return;var msg=f.querySelector('.c-msg'),btn=f.querySelector('button[type=submit]'),done=document.getElementById('cdone');
+  function fail(t){msg.textContent=t;btn.disabled=false;btn.textContent='Pošalji upit →'}
+  f.addEventListener('submit',function(e){e.preventDefault();msg.textContent='';
+    var v=function(n){var x=f.querySelector('[name="'+n+'"]');return x?x.value.trim():''};
+    if(!v('ime')){f.ime.focus();return fail('Upišite ime i prezime.')}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v('email'))){f.email.focus();return fail('Upišite ispravnu e-adresu.')}
+    if(v('poruka').length<10){f.poruka.focus();return fail('Napišite poruku (barem nekoliko riječi).')}
+    if(!f.privola_kontakt.checked)return fail('Za slanje označite pristanak na obradu podataka.');
+    if(v('_honey'))return;
+    btn.disabled=true;btn.textContent='Šaljem…';
+    var data={name:v('ime'),email:v('email'),institucija:v('institucija'),telefon:v('telefon'),tema:v('tema'),poruka:v('poruka'),
+      _subject:'Upit s Projektne klinike: '+v('tema')+' – '+v('ime'),_replyto:v('email'),_template:'table',_captcha:'false',_honey:''};
+    fetch('https://formsubmit.co/ajax/rektor.co@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){return r.json().catch(function(){return {}}).then(function(j){if(!r.ok||String(j.success)==='false')throw new Error(j.message||'greška');})})
+      .then(function(){f.hidden=true;done.hidden=false;try{window.goatcounter&&goatcounter.count({path:'kontakt-poslan',title:'Poslan kontakt upit',event:true})}catch(_){}})
+      .catch(function(){fail('Slanje nije uspjelo. Pokušajte ponovno ili pišite izravno na rektor.co@gmail.com.')});
+  });
+})();
+</script>
+
 
 </body>
 </html>
