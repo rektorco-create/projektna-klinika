@@ -285,6 +285,30 @@ th{padding:16px 14px 12px 0}
 footer .wrap{padding-block:40px 48px}
 .signup .over{background:rgba(242,166,90,.18);color:#F2A65A}
 
+/* ---------- Area-tinted surfaces ---------- */
+.a1{--ac:var(--teal)}.a2{--ac:var(--orange)}.a3{--ac:var(--red)}
+.area{background:color-mix(in srgb,var(--ac) 9%,var(--surface));box-shadow:var(--shadow),inset 0 5px 0 var(--ac)}
+.area .t{background:transparent}
+.area h3{color:color-mix(in srgb,var(--ac) 70%,var(--ink))}
+.area .n{display:inline-block;justify-self:start;background:color-mix(in srgb,var(--ac) 16%,transparent);padding:3px 10px;border-radius:999px}
+#calls tbody tr[data-a="teal"]{--ac:var(--teal)}#calls tbody tr[data-a="orange"]{--ac:var(--orange)}#calls tbody tr[data-a="red"]{--ac:var(--red)}
+#calls tbody tr{background:color-mix(in srgb,var(--ac) 6%,transparent)}
+#calls tbody tr:hover{background:color-mix(in srgb,var(--ac) 13%,transparent)}
+#calls tbody td:first-child{box-shadow:inset 4px 0 0 var(--ac);padding-left:16px}
+#calls tbody tr td{border-bottom-color:var(--surface);border-bottom-width:3px}
+.chip[data-f="teal"]{--ac:var(--teal)}.chip[data-f="orange"]{--ac:var(--orange)}.chip[data-f="red"]{--ac:var(--red)}
+.chip[data-f]:not([data-f="all"]){background:color-mix(in srgb,var(--ac) 12%,var(--surface));color:color-mix(in srgb,var(--ac) 75%,var(--ink))}
+.chip[data-f]:not([data-f="all"])[aria-pressed="true"]{background:var(--ac);color:#fff}
+.dl{background:linear-gradient(160deg,color-mix(in srgb,var(--c) 14%,var(--surface)) 0%,var(--surface) 70%)}
+.idea:nth-child(1){--ac:var(--teal)}.idea:nth-child(2){--ac:var(--orange)}.idea:nth-child(3){--ac:var(--red)}
+.idea{background:color-mix(in srgb,var(--ac) 8%,var(--surface))}
+.idea .t{border-top:4px solid var(--ac)}
+.crit .box:nth-child(1){--ac:var(--teal)}.crit .box:nth-child(2){--ac:var(--orange)}.crit .box:nth-child(3){--ac:var(--red)}
+.crit .box,#partneri .split .box:nth-child(1){background:color-mix(in srgb,var(--ac,var(--teal)) 8%,var(--surface))}
+#partneri .split .box:nth-child(2){background:color-mix(in srgb,var(--orange) 8%,var(--surface))}
+.tllist li{background:color-mix(in srgb,var(--c) 7%,transparent);border-radius:0 12px 12px 0;margin-bottom:6px}
+@media (max-width:600px){#calls tbody tr{padding:14px 12px;border-radius:14px;margin-bottom:8px;border-bottom:0}#calls tbody td:first-child{box-shadow:none;padding-left:0}#calls tbody tr{box-shadow:inset 4px 0 0 var(--ac)}}
+
 /* ---------- Sliders ---------- */
 .slider{position:relative;min-width:0;max-width:100%}
 main .wrap>*{min-width:0}
