@@ -14,6 +14,7 @@
 <meta property="og:image" content="https://projektnaklinika.enter.fit/logo/logo-ikona-512.png">
 <meta property="og:url" content="https://projektnaklinika.enter.fit/">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<script data-goatcounter="https://projektnaklinika.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 <title>Projektna klinika</title>
@@ -959,6 +960,7 @@ h3{font-weight:700}
 <li><strong>Baza konzultanata:</strong> uz kontakt podatke i broj napisanih i provedenih projekata, stopa iskorištenosti sredstava, programi i reference.</li>
 <li><strong>Podaci o korištenju e-pošte:</strong> otvaranje newslettera i klikovi na poveznice, koje bilježi sustav za slanje.</li>
 <li><strong>Tehnički podaci:</strong> pri posjetu stranici pružatelj hostinga može zabilježiti IP adresu i podatke o pregledniku radi sigurnosti i rada stranice.</li>
+<li><strong>Statistika posjeta:</strong> za brojanje posjeta koristimo GoatCounter, alat bez kolačića koji ne prikuplja osobne podatke i ne prati vas između stranica. Bilježi se samo zbirna statistika: koje su stranice posjećene, s koje stranice ste došli, vrsta uređaja i preglednika te država. IP adresa se ne pohranjuje.</li>
 </ul>
 <h3>3. Svrha i pravna osnova</h3>
 <ul>
@@ -988,7 +990,8 @@ h3{font-weight:700}
 <li><strong>Obrasci za prijavu</strong> otvaraju se na stranicama sustava MailerLite, koji može koristiti vlastite nužne kolačiće za rad obrasca i zaštitu od zlouporabe. Za njih vrijede pravila privatnosti MailerLitea.</li>
 <li><strong>Poveznice na službene stranice</strong> ministarstava i fondova vode na stranice koje imaju vlastita pravila o kolačićima.</li>
 </ul>
-<p>Ako u budućnosti uvedemo analitiku ili druge kolačiće koji nisu nužni, prije toga ćemo zatražiti vašu privolu i ažurirati ovu izjavu.</p>
+<p><strong>Statistika posjeta:</strong> za zbirnu statistiku posjeta koristimo GoatCounter, koji ne postavlja kolačiće i ne prikuplja osobne podatke, pa za njega nije potrebna privola.</p>
+<p>Ako u budućnosti uvedemo kolačiće koji nisu nužni, prije toga ćemo zatražiti vašu privolu i ažurirati ovu izjavu.</p>
 </div></details>
 
 <details class="lg-item" id="uvjeti"><summary><span>Uvjeti korištenja i odricanje od odgovornosti</span><span class="chev">›</span></summary><div class="lg-body">
@@ -1129,7 +1132,7 @@ h3{font-weight:700}
       f.querySelector('[name="fields[objava_u_burzi_partnera]"]').value=document.getElementById('s-burza').checked?'DA':'NE';
       var fd=new URLSearchParams();[].forEach.call(f.elements,function(el){if(el.name&&el.name!=='privola'&&(el.value||el.name.indexOf('fields[')<0))fd.append(el.name,el.value.trim())});
       btn.disabled=true;btn.textContent='Šaljem…';
-      function ok(){f.hidden=true;done.hidden=false;done.scrollIntoView({block:'center',behavior:'smooth'})}
+      function ok(){f.hidden=true;done.hidden=false;try{window.goatcounter&&goatcounter.count({path:"prijava-uspjesna",title:"Uspješna prijava na newsletter",event:true})}catch(_){}done.scrollIntoView({block:'center',behavior:'smooth'})}
       fetch(f.action,{method:'POST',body:fd}).then(function(r){return r.json().catch(function(){return {success:r.ok}})}).then(function(j){
         if(j&&j.success)ok();else{var er=j&&j.errors&&j.errors.fields;fail(er?'Provjerite podatke: '+Object.keys(er).join(', ')+'.':'Prijava nije uspjela. Pokušajte ponovno ili upotrijebite poveznicu ispod.')}
       }).catch(function(){fetch(f.action,{method:'POST',mode:'no-cors',body:fd}).then(ok).catch(function(){fail('Prijava trenutačno nije moguća s ove stranice. Upotrijebite poveznicu ispod obrasca.')})});
@@ -1165,5 +1168,15 @@ h3{font-weight:700}
   if(!reduce)requestAnimationFrame(step);
 })();
 </script>
+<script>
+/* Analitika (GoatCounter, bez kolačića): klikovi na prijavu, arhivu i vanjske poveznice */
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a||!window.goatcounter)return;
+  var h=a.getAttribute('href')||'',p=null,t=a.textContent.trim().slice(0,60);
+  if(h==='#prijava')p='klik-prijava';else if(h.indexOf('/arhiva/')>-1)p='arhiva-izdanje';
+  else if(/^https?:/.test(h)&&h.indexOf('projektnaklinika.enter.fit')<0){try{p='van-'+new URL(h).hostname.replace(/^www\./,'')}catch(_){}}
+  if(p)try{goatcounter.count({path:p,title:t,event:true})}catch(_){}
+},true);
+</script>
+
 </body>
 </html>
