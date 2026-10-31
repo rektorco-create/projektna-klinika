@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Projektna klinika: otvoreni pozivi za EU i nacionalna sredstva, burza projektnih partnera i podugovaratelja, baza konzultanata i škola projekata.">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>Projektna klinika</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+/* Layout: navy masthead with live partner-network canvas + illustrated hero scene; stats band; funder ticker; deadline timeline; sections in an 960px column */
+:root{
+  --bg:#F3F5F8; --surface:#FFFFFF; --ink:#16202B; --muted:#56616E; --line:#DCE2EA; --soft:#EEF2F6;
+  --navy:#12355B; --navy-2:#0D2846; --navy-ink:#FFFFFF; --navy-soft:#AFC3DA;
+  --teal:#0F6E74; --orange:#B4531A; --red:#A3262A; --gold:#F2A65A;
+  --chip-teal:#E6F2F2; --chip-orange:#FBEEE5; --chip-red:#F6E9EA;
+  --sky-teal:#D7ECEC; --sky-orange:#FBE3D3; --sky-red:#F3DADB;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Source Sans 3", "Segoe UI", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E141B; --surface:#16202B; --ink:#E8EDF3; --muted:#9AA7B5; --line:#2A3846; --soft:#1B2734;
+  --navy:#0B2440; --navy-2:#081B31; --navy-ink:#F2F6FA; --navy-soft:#8FA9C6;
+  --teal:#4FB3B8; --orange:#E8935F; --red:#E07A7D; --gold:#F2A65A;
+  --chip-teal:#163238; --chip-orange:#3A2619; --chip-red:#3A1E21;
+  --sky-teal:#163238; --sky-orange:#35241A; --sky-red:#341C1F; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E141B; --surface:#16202B; --ink:#E8EDF3; --muted:#9AA7B5; --line:#2A3846; --soft:#1B2734;
+  --navy:#0B2440; --navy-2:#081B31; --navy-ink:#F2F6FA; --navy-soft:#8FA9C6;
+  --teal:#4FB3B8; --orange:#E8935F; --red:#E07A7D; --gold:#F2A65A;
+  --chip-teal:#163238; --chip-orange:#3A2619; --chip-red:#3A1E21;
+  --sky-teal:#163238; --sky-orange:#35241A; --sky-red:#341C1F; color-scheme:dark}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6}
+.wrap{max-width:960px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.rule{display:flex;height:6px}.rule span{flex:1}.rule span:nth-child(1){background:#0F6E74}.rule span:nth-child(2){background:#C55A1E}.rule span:nth-child(3){background:#A3262A}
+
+/* hero */
+header.mast{background:radial-gradient(120% 140% at 85% 20%, #1C4A7A 0%, var(--navy) 45%, var(--navy-2) 100%);color:var(--navy-ink);position:relative;overflow:hidden}
+#net{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero{position:relative;padding-block:52px 44px;display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center}
+@media (max-width:760px){.hero{grid-template-columns:1fr}.scene{max-width:380px}}
+.hero-text{display:grid;gap:16px;min-width:0}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--navy-soft);margin:0}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(42px,7vw,66px);line-height:1.02;margin:0;text-wrap:balance}
+h1 .acc{display:block;font-style:italic;color:var(--gold)}
+.rotor{font-family:var(--serif);font-size:22px;margin:0;color:var(--navy-soft)}
+.rotor b{color:var(--navy-ink);font-weight:600;display:inline-block;min-width:9ch}
+.rotor b.swap{animation:swap .5s ease}
+@keyframes swap{from{transform:translateY(8px);opacity:.2}to{transform:none;opacity:1}}
+.lede{margin:0;max-width:56ch;font-size:18px;color:var(--navy-ink)}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#12355B;font-weight:700;text-decoration:none;padding:12px 20px;border-radius:8px;transition:transform .15s, box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.btn.ghost{background:transparent;color:var(--navy-ink);box-shadow:inset 0 0 0 1.5px var(--navy-soft)}
+.scene{width:100%;height:auto;display:block;filter:drop-shadow(0 18px 30px rgba(0,0,0,.25))}
+.float{animation:float 6s ease-in-out infinite}
+.float.d2{animation-delay:-2s}.float.d3{animation-delay:-4s}
+@keyframes float{50%{transform:translateY(-6px)}}
+.pulse{animation:pulse 2.4s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+@keyframes pulse{50%{transform:scale(1.25);opacity:.6}}
+
+/* stats + ticker */
+.stats{background:var(--surface);border-bottom:1px solid var(--line)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding-block:18px}
+@media (max-width:560px){.stats .wrap{grid-template-columns:repeat(2,1fr)}}
+.stat{display:grid;gap:0}
+.stat b{font-family:var(--serif);font-size:34px;font-weight:600;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat:nth-child(1) b{color:var(--teal)}.stat:nth-child(2) b{color:var(--orange)}.stat:nth-child(3) b{color:var(--red)}.stat:nth-child(4) b{color:var(--muted)}
+.stat span{font-size:14px;color:var(--muted)}
+.ticker{background:var(--soft);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap}
+.track{display:inline-flex;gap:40px;padding-block:10px;animation:tick 40s linear infinite;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.track span::before{content:"●";color:var(--gold);margin-right:12px;font-size:10px;vertical-align:2px}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* nav */
+nav.sec{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+nav.sec .wrap{display:flex;gap:4px;overflow-x:auto;padding-block:6px;scrollbar-width:none}
+nav.sec a{white-space:nowrap;text-decoration:none;color:var(--muted);font-weight:600;font-size:15px;padding:8px 12px;border-radius:6px;transition:background .15s,color .15s}
+nav.sec a:hover,nav.sec a.on{background:var(--soft);color:var(--ink)}
+nav.sec a.on{box-shadow:inset 0 -2px 0 var(--gold)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+main .wrap{padding-block:44px 64px;display:grid;gap:72px}
+section{scroll-margin-top:64px}
+.head{display:grid;gap:6px;margin-bottom:18px}
+.over{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(28px,4vw,36px);line-height:1.15;margin:0;text-wrap:balance}
+h3{font-family:var(--serif);font-weight:600;font-size:21px;margin:0;line-height:1.3}
+.sub{color:var(--muted);margin:0;max-width:65ch}
+.lift{transition:transform .2s, box-shadow .2s, border-color .2s}
+.lift:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(18,53,91,.12)}
+
+/* areas */
+.areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.area{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;text-decoration:none;color:var(--ink);display:grid}
+.area svg{display:block;width:100%;height:auto}
+.area .t{padding:16px 18px 18px;display:grid;gap:4px}
+.area p{margin:0;color:var(--muted);font-size:15px}
+.area .n{font-size:13px;font-weight:700}
+.a1 .n{color:var(--teal)}.a2 .n{color:var(--orange)}.a3 .n{color:var(--red)}
+
+/* timeline */
+.tl{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 20px 14px;margin-bottom:16px;overflow-x:auto}
+.tl svg{display:block;min-width:640px;width:100%;height:auto}
+.tl text{font-family:var(--sans)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.chip{font:inherit;font-size:14px;font-weight:600;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer;transition:background .15s}
+.chip[aria-pressed="true"]{background:var(--navy);color:var(--navy-ink);border-color:var(--navy)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:6px 20px 14px}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:15px;font-variant-numeric:tabular-nums}
+th{text-align:left;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:12px 10px 8px 0;border-bottom:1px solid var(--line)}
+td{padding:11px 10px 11px 0;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+tbody tr{transition:background .15s}
+tbody tr:hover{background:var(--soft)}
+td a{color:var(--ink);text-decoration-color:var(--line);text-underline-offset:3px}
+td.d{white-space:nowrap;font-weight:700}
+.left{display:block;font-size:12px;font-weight:700;margin-top:2px}
+.left.hot{color:var(--red)}.left.warm{color:var(--orange)}.left.ok{color:var(--teal)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:6px;white-space:nowrap}
+.t-teal{background:var(--chip-teal);color:var(--teal)}.t-orange{background:var(--chip-orange);color:var(--orange)}.t-red{background:var(--chip-red);color:var(--red)}
+.note{font-size:14px;color:var(--muted);margin:10px 0 0}
+.note a{color:var(--muted)}
+
+/* partners */
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center}
+@media (max-width:760px){.pgrid{grid-template-columns:1fr}}
+.pgrid svg{width:100%;height:auto;display:block}
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:grid;gap:8px;align-content:start}
+.box p,.box ul{margin:0;color:var(--muted);font-size:15.5px}
+.box ul{padding-left:18px}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.k-teal{color:var(--teal)}.k-orange{color:var(--orange)}.k-red{color:var(--red)}
+.empty{border:1.5px dashed var(--line);border-radius:14px;padding:22px;display:grid;gap:12px;background:var(--soft);margin-top:16px}
+.empty p{margin:0;color:var(--muted)}
+.tmpl{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px 16px;font-size:14px}
+.tmpl span{color:var(--muted)}
+.tmpl b{display:block;color:var(--ink);font-weight:600}
+.steps{display:grid;gap:10px;counter-reset:s;margin:0;padding:0;list-style:none}
+.steps li{counter-increment:s;display:grid;grid-template-columns:32px 1fr;gap:12px;align-items:start}
+.steps li::before{content:counter(s);width:28px;height:28px;border-radius:50%;background:var(--navy);color:var(--navy-ink);display:grid;place-items:center;font-weight:700;font-size:14px}
+
+/* consultants */
+.consult{display:grid;grid-template-columns:1fr 240px;gap:28px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px}
+.consult-main{display:grid;gap:12px;min-width:0}
+.consult .btn{justify-self:start}
+.q{font-family:var(--serif);font-size:21px;line-height:1.45;margin:0;max-width:52ch}
+.meter{display:grid;justify-items:center;gap:4px;text-align:center;color:var(--muted);font-size:14px}
+.meter svg{width:100%;max-width:220px;height:auto}
+.gauge{animation:gauge 1.6s cubic-bezier(.2,.8,.2,1) both}
+@keyframes gauge{from{stroke-dasharray:0 100}to{stroke-dasharray:85 100}}
+.crit{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
+@media (max-width:760px){.consult{grid-template-columns:1fr;padding:22px}.meter{order:-1}.crit{grid-template-columns:1fr}}
+
+/* school */
+.path{display:block;width:100%;height:auto;margin-bottom:8px}
+.draw{stroke-dasharray:1200;stroke-dashoffset:0;animation:draw 2.2s ease-out both}
+@keyframes draw{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}
+.mods{display:grid;gap:10px}
+.mod{background:var(--surface);border:1px solid var(--line);border-radius:14px;transition:border-color .2s}
+.mod[open]{border-color:var(--teal)}
+.mod summary{list-style:none;cursor:pointer;padding:16px 20px;display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center}
+.mod summary::-webkit-details-marker{display:none}
+.num{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:20px;color:#fff;background:var(--teal)}
+.mod:nth-child(2) .num{background:#1C7A86}.mod:nth-child(3) .num{background:#C55A1E}.mod:nth-child(4) .num{background:#B4531A}.mod:nth-child(5) .num{background:#A3262A}.mod:nth-child(6) .num{background:#12355B}
+.mod summary small{display:block;color:var(--muted);font-size:14px;font-weight:400;font-family:var(--sans)}
+.chev{color:var(--muted);transition:transform .2s}
+details[open] > summary .chev{transform:rotate(90deg)}
+.mod .in{padding:0 20px 18px 72px;display:grid;gap:10px;min-width:0;animation:open .3s ease}
+@keyframes open{from{transform:translateY(-4px)}to{transform:none}}
+.mod .in p,.mod .in ul{margin:0;font-size:16px}
+.mod .in ul{padding-left:18px;display:grid;gap:4px}
+.tip{background:var(--soft);border-radius:8px;padding:10px 14px;font-size:15px}
+.tip::before{content:"Savjet: ";font-weight:700;color:var(--orange)}
+@media (max-width:560px){.mod .in{padding-left:20px}}
+.gloss{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:16px}
+.gloss div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.gloss dt{font-weight:700}
+.gloss dd{margin:2px 0 0;color:var(--muted);font-size:15px}
+
+/* ideas */
+.ideas{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.idea{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid;align-content:start}
+.idea .band{height:90px;display:block;width:100%}
+.idea .t{padding:16px 18px 18px;display:grid;gap:6px}
+.idea p{margin:0;color:var(--muted);font-size:15px}
+.idea .amt{font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
+
+/* signup */
+.signup{background:radial-gradient(120% 140% at 0% 0%, #1C4A7A 0%, var(--navy) 50%, var(--navy-2) 100%);color:var(--navy-ink);border-radius:20px;padding:30px 26px;display:grid;gap:18px;position:relative;overflow:hidden}
+.signup .env{position:absolute;right:-20px;top:-10px;width:220px;opacity:.18;pointer-events:none}
+.signup h2{color:var(--navy-ink)}
+.signup p{margin:0;max-width:62ch;position:relative}
+.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;position:relative}
+.f{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:8px 12px;font-size:15px}
+.f small{display:block;color:var(--navy-soft);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.f.req{border-color:var(--gold)}
+.callout{border-left:4px solid var(--gold);padding:4px 0 4px 14px}
+.fine{font-size:13px;color:var(--navy-soft)}
+
+/* archive + contact */
+.issue{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.issue summary{list-style:none;cursor:pointer;padding:16px 20px;display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center}
+.issue summary::-webkit-details-marker{display:none}
+.date{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--muted);white-space:nowrap}
+.ititle{font-family:var(--serif);font-size:19px;font-weight:600;min-width:0}
+.ititle small{display:block;font-family:var(--sans);font-size:14px;font-weight:400;color:var(--muted)}
+.issue .body{padding:0 20px 18px;color:var(--muted);font-size:15px}
+.contactcard{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}
+@media (max-width:560px){.contactcard{grid-template-columns:1fr}}
+.contactcard svg{width:96px;height:96px}
+.contact{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+.mail{font-weight:700;user-select:all}
+.copy{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:6px;padding:6px 10px;cursor:pointer}
+footer{background:var(--navy-2);color:var(--navy-soft)}
+footer .wrap{padding-block:26px 34px;font-size:14px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+
+/* ---------- Responsive: large / tablet / phone / small phone ---------- */
+.tllist{display:none;list-style:none;margin:0;padding:0;gap:0}
+.tllist li{display:grid;grid-template-columns:16px 1fr auto;gap:12px;align-items:start;padding:10px 0;border-left:2px solid var(--line);margin-left:7px;padding-left:14px;position:relative}
+.tllist li::before{content:"";position:absolute;left:-8px;top:14px;width:14px;height:14px;border-radius:50%;background:var(--c);border:3px solid var(--surface)}
+.tllist li span:first-child{display:none}
+.tllist b{display:block;font-size:15px}
+.tllist small{color:var(--muted);font-size:13px}
+.tllist .left{margin:0;white-space:nowrap}
+
+@media (min-width:1200px){
+  .wrap{max-width:1140px}
+  .hero{grid-template-columns:1.1fr .9fr;padding-block:72px 64px}
+  h1{font-size:76px}
+  .lede{font-size:19px}
+  .areas{grid-template-columns:repeat(3,1fr)}
+  .ideas{grid-template-columns:repeat(3,1fr)}
+  #edukacija .eduwrap{display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:start}
+  #edukacija .gloss-side{position:sticky;top:72px}
+  #edukacija .gloss{grid-template-columns:1fr;margin-top:12px}
+  .fields{grid-template-columns:repeat(4,1fr)}
+}
+@media (min-width:761px) and (max-width:1199px){
+  .areas{grid-template-columns:repeat(3,1fr)}
+  .area .t p{font-size:14px}
+  .ideas{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:760px){
+  .hero{padding-block:36px 28px;gap:20px}
+  .scene{max-width:320px;justify-self:center}
+  .rotor{font-size:19px}
+  main .wrap{gap:56px;padding-block:32px 48px}
+  .stats .wrap{grid-template-columns:repeat(2,1fr);row-gap:14px}
+  .pgrid svg{max-width:420px;justify-self:center}
+}
+@media (max-width:600px){
+  .tl{padding:16px 16px 6px}
+  .tl svg{display:none}
+  .tllist{display:grid}
+  /* table becomes cards */
+  #calls thead{display:none}
+  #calls, #calls tbody{display:block}
+  #calls tr{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;padding:12px 0;border-bottom:1px solid var(--line)}
+  #calls tr:last-child{border-bottom:0}
+  #calls td{border:0;padding:0}
+  #calls td.d{grid-row:span 3;min-width:74px}
+  #calls td:nth-child(3){font-size:14px;color:var(--muted)}
+  .panel{padding:4px 16px}
+  .ticker .track{animation-duration:28s}
+  .mod summary{padding:14px 16px;gap:12px}
+  .num{width:32px;height:32px;font-size:17px}
+  .signup{padding:24px 18px}
+  .contactcard{padding:20px;text-align:left}
+  footer .wrap{flex-direction:column}
+}
+@media (max-width:420px){
+  h1{font-size:40px}
+  .cta .btn{flex:1 1 100%;justify-content:center}
+  .scene{max-width:260px}
+  .stat b{font-size:28px}
+  .chips{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}
+  .chip{flex:0 0 auto}
+  .fields{grid-template-columns:1fr 1fr}
+  .f{font-size:14px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+
+<div class="rule"><span></span><span></span><span></span></div>
+<header class="mast">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="wrap hero">
+    <div class="hero-text">
+      <p class="eyebrow">Rektor poslovna rješenja d.o.o.</p>
+      <h1>Projektna<span class="acc">klinika</span></h1>
+      <p class="rotor" aria-live="off">Mjesto za <b id="rot">partnere</b></p>
+      <p class="lede">Ovdje se susreću projektni partneri i podugovaratelji. Pratite otvorene pozive i učite kako projekt napisati, prijaviti i provesti. Za škole, vrtiće, općine, sportske klubove, udruge i hrvatske zajednice izvan RH.</p>
+      <div class="cta"><a class="btn" href="#prijava">Prijavite se besplatno</a><a class="btn ghost" href="#pozivi">Otvoreni pozivi</a></div>
+    </div>
+    <!-- Hero scene: clinic-style project board -->
+    <svg class="scene" viewBox="0 0 360 320" role="img" aria-label="Ilustracija: projektna ploča s rokovima, partnerima i proračunom">
+      <rect x="30" y="34" width="250" height="250" rx="18" fill="#FFFFFF"/>
+      <rect x="30" y="34" width="250" height="44" rx="18" fill="#F2A65A"/><rect x="30" y="60" width="250" height="18" fill="#F2A65A"/>
+      <circle cx="58" cy="56" r="8" fill="#12355B"/><rect x="74" y="50" width="110" height="12" rx="6" fill="#12355B" opacity=".85"/>
+      <g class="float"><rect x="50" y="96" width="210" height="48" rx="10" fill="#E6F2F2"/><circle cx="72" cy="120" r="10" fill="#0F6E74"/><path d="M67 120l4 4 7-8" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="92" y="110" width="120" height="8" rx="4" fill="#0F6E74" opacity=".7"/><rect x="92" y="124" width="80" height="7" rx="3.5" fill="#0F6E74" opacity=".35"/></g>
+      <g class="float d2"><rect x="50" y="154" width="210" height="48" rx="10" fill="#FBEEE5"/><circle cx="72" cy="178" r="10" fill="#C55A1E"/><rect x="92" y="168" width="104" height="8" rx="4" fill="#B4531A" opacity=".7"/><rect x="92" y="182" width="130" height="7" rx="3.5" fill="#B4531A" opacity=".35"/></g>
+      <g class="float d3"><rect x="50" y="212" width="210" height="48" rx="10" fill="#F6E9EA"/><circle cx="72" cy="236" r="10" fill="#A3262A"/><rect x="92" y="226" width="90" height="8" rx="4" fill="#A3262A" opacity=".7"/><rect x="92" y="240" width="112" height="7" rx="3.5" fill="#A3262A" opacity=".35"/></g>
+      <!-- calendar -->
+      <g transform="translate(238 8)" class="float d2"><rect width="96" height="92" rx="12" fill="#12355B" stroke="#AFC3DA" stroke-width="2"/><rect width="96" height="26" rx="12" fill="#A3262A"/><rect y="14" width="96" height="12" fill="#A3262A"/><text x="48" y="19" text-anchor="middle" font-family="Source Sans 3, Arial" font-size="12" font-weight="700" fill="#fff">STUDENI</text><text x="48" y="72" text-anchor="middle" font-family="Source Serif 4, Georgia" font-size="38" fill="#fff">19</text><circle cx="80" cy="40" r="5" fill="#F2A65A" class="pulse"/></g>
+      <!-- coins / budget -->
+      <g transform="translate(250 200)" class="float"><circle cx="40" cy="62" r="34" fill="#F2A65A"/><circle cx="40" cy="62" r="25" fill="none" stroke="#12355B" stroke-width="3"/><text x="40" y="72" text-anchor="middle" font-family="Source Serif 4, Georgia" font-size="28" font-weight="600" fill="#12355B">€</text></g>
+      <!-- partner nodes -->
+      <g transform="translate(0 250)"><circle cx="22" cy="40" r="14" fill="#0F6E74" stroke="#fff" stroke-width="3"/><circle cx="56" cy="52" r="12" fill="#C55A1E" stroke="#fff" stroke-width="3"/><path d="M34 44l12 5" stroke="#fff" stroke-width="3"/></g>
+    </svg>
+  </div>
+</header>
+
+<div class="stats"><div class="wrap">
+  <div class="stat"><b data-count="8">8</b><span>otvorenih poziva</span></div>
+  <div class="stat"><b data-count="3">3</b><span>projektne ideje</span></div>
+  <div class="stat"><b data-count="6">6</b><span>lekcija Škole projekata</span></div>
+  <div class="stat"><b data-count="4">4</b><span>izdanja mjesečno</span></div>
+</div></div>
+<div class="ticker" aria-hidden="true"><div class="track">
+  <span>ESF+</span><span>NPOO</span><span>Erasmus+</span><span>Ministarstvo znanosti, obrazovanja i mladih</span><span>Ministarstvo turizma i sporta</span><span>Ministarstvo demografije i useljeništva</span><span>Središnji državni ured za Hrvate izvan RH</span><span>MVEP</span><span>MINGO</span><span>MZOZT</span>
+  <span>ESF+</span><span>NPOO</span><span>Erasmus+</span><span>Ministarstvo znanosti, obrazovanja i mladih</span><span>Ministarstvo turizma i sporta</span><span>Ministarstvo demografije i useljeništva</span><span>Središnji državni ured za Hrvate izvan RH</span><span>MVEP</span><span>MINGO</span><span>MZOZT</span>
+</div></div>
+
+<nav class="sec" aria-label="Odjeljci"><div class="wrap">
+  <a href="#podrucja">Područja</a><a href="#pozivi">Otvoreni pozivi</a><a href="#partneri">Burza partnera</a><a href="#konzultanti">Konzultanti</a><a href="#edukacija">Škola projekata</a><a href="#ideje">Projektne ideje</a><a href="#prijava">Prijava</a><a href="#arhiva">Arhiva</a><a href="#kontakt">Kontakt</a>
+</div></nav>
+
+<main><div class="wrap">
+
+<section id="podrucja">
+  <div class="head"><span class="over">Tri područja</span><h2>Za koga radimo</h2><p class="sub">Pratimo pozive i razrađujemo projekte u tri područja u kojima se najčešće traže partneri i znanje.</p></div>
+  <div class="areas">
+    <a class="area a1 lift" href="#pozivi" data-go="teal">
+      <svg viewBox="0 0 300 150" aria-hidden="true"><rect width="300" height="150" fill="var(--sky-teal)"/><circle cx="250" cy="34" r="16" fill="#F2A65A" class="pulse"/><rect y="122" width="300" height="28" fill="#0F6E74" opacity=".25"/>
+        <path d="M70 70l60-34 60 34z" fill="#A3262A"/><rect x="80" y="70" width="100" height="56" fill="#FFFFFF"/><rect x="118" y="92" width="24" height="34" fill="#12355B"/><rect x="90" y="80" width="18" height="16" fill="#0F6E74" opacity=".6"/><rect x="152" y="80" width="18" height="16" fill="#0F6E74" opacity=".6"/><rect x="128" y="22" width="2" height="18" fill="#12355B"/><path d="M130 22h16l-4 5 4 5h-16z" fill="#C55A1E" class="float"/>
+        <g class="float d2"><rect x="206" y="88" width="34" height="40" rx="3" fill="#0F6E74"/><rect x="212" y="94" width="22" height="3" fill="#fff"/><rect x="212" y="101" width="16" height="3" fill="#fff"/></g><circle cx="40" cy="112" r="12" fill="#C55A1E"/><rect x="34" y="122" width="12" height="18" rx="4" fill="#C55A1E"/><circle cx="262" cy="114" r="10" fill="#12355B"/><rect x="257" y="122" width="10" height="16" rx="4" fill="#12355B"/></svg>
+      <div class="t"><span class="n">Odgoj i obrazovanje</span><h3>Škole, vrtići, ustanove</h3><p>ESF+, NPOO, Erasmus+, MZOM i MDU: izvannastavne aktivnosti, infrastruktura, stipendije.</p></div></a>
+    <a class="area a2 lift" href="#pozivi" data-go="orange">
+      <svg viewBox="0 0 300 150" aria-hidden="true"><rect width="300" height="150" fill="var(--sky-orange)"/><rect y="88" width="300" height="62" fill="#4E9A5A"/><path d="M0 88h300" stroke="#fff" stroke-width="2"/><circle cx="150" cy="118" r="18" fill="none" stroke="#fff" stroke-width="2"/><path d="M150 88v62" stroke="#fff" stroke-width="2"/><rect x="0" y="104" width="22" height="30" fill="none" stroke="#fff" stroke-width="2"/><rect x="278" y="104" width="22" height="30" fill="none" stroke="#fff" stroke-width="2"/>
+        <g class="float"><circle cx="196" cy="70" r="12" fill="#fff" stroke="#12355B" stroke-width="2"/><path d="M190 64l6 3 6-3M196 67v8" stroke="#12355B" stroke-width="2" fill="none"/></g>
+        <circle cx="100" cy="60" r="10" fill="#C55A1E"/><path d="M100 70v26M100 78l-14 8M100 78l14-6M100 96l-10 16M100 96l12 14" stroke="#C55A1E" stroke-width="6" stroke-linecap="round" fill="none"/>
+        <circle cx="240" cy="66" r="9" fill="#12355B"/><path d="M240 75v22M240 82l-12 6M240 82l12 6M240 97l-8 14M240 97l9 14" stroke="#12355B" stroke-width="5" stroke-linecap="round" fill="none"/><circle cx="40" cy="30" r="14" fill="#F2A65A" class="pulse"/></svg>
+      <div class="t"><span class="n">Sport</span><h3>Klubovi, savezi, ŠSD</h3><p>ESF+ za uključivanje djece u sport, MINTS programi, Erasmus+ Sport, sportska infrastruktura.</p></div></a>
+    <a class="area a3 lift" href="#pozivi" data-go="red">
+      <svg viewBox="0 0 300 150" aria-hidden="true"><rect width="300" height="150" fill="var(--sky-red)"/><circle cx="60" cy="36" r="16" fill="#F2A65A" class="pulse"/><path d="M0 96 L40 70 L70 86 L0 130z" fill="#8C9AA8" opacity=".6"/><path d="M300 92 L262 66 L228 84 L300 130z" fill="#8C9AA8" opacity=".6"/>
+        <rect y="118" width="300" height="32" fill="#2E8FA0" opacity=".55"/><path d="M0 128q20-6 40 0t40 0 40 0 40 0 40 0 40 0 40 0 40 0" stroke="#fff" stroke-width="2" fill="none" opacity=".7" class="float"/>
+        <path d="M70 118 Q150 30 230 118" fill="none" stroke="#E3D5C0" stroke-width="16"/><path d="M70 118 Q150 30 230 118" fill="none" stroke="#C8B79C" stroke-width="2"/><rect x="50" y="96" width="30" height="34" fill="#E3D5C0"/><rect x="220" y="96" width="30" height="34" fill="#E3D5C0"/><rect x="40" y="70" width="22" height="60" fill="#D8C8AE"/><rect x="40" y="64" width="22" height="8" fill="#A3262A"/>
+        <circle cx="150" cy="66" r="4" fill="#A3262A"/></svg>
+      <div class="t"><span class="n">Hrvati izvan RH</span><h3>Zajednice, općine, udruge</h3><p>Središnji državni ured, MVEP, MINGO, MZOZT i MDU: kultura, gospodarstvo, klimatski projekti u BiH.</p></div></a>
+  </div>
+</section>
+
+<section id="pozivi">
+  <div class="head"><span class="over">Ažurirano 1. i 15. u mjesecu</span><h2>Otvoreni pozivi</h2><p class="sub">Stanje na dan 30. 10. 2026. Broj dana do roka računa se automatski.</p></div>
+  <div class="tl" aria-label="Vremenska crta rokova">
+    <svg id="tlsvg" viewBox="0 0 900 150" role="img" aria-label="Rokovi u studenom i prosincu 2026."></svg>
+    <ol class="tllist" id="tllist" aria-label="Rokovi"></ol>
+  </div>
+  <div class="chips" role="group" aria-label="Filtriraj po području">
+    <button class="chip" type="button" data-f="all" aria-pressed="true">Sve</button>
+    <button class="chip" type="button" data-f="teal" aria-pressed="false">Odgoj i obrazovanje</button>
+    <button class="chip" type="button" data-f="orange" aria-pressed="false">Sport</button>
+    <button class="chip" type="button" data-f="red" aria-pressed="false">Hrvati izvan RH</button>
+  </div>
+  <div class="panel"><div class="tbl"><table id="calls">
+    <thead><tr><th>Rok</th><th>Poziv</th><th>Iznos</th><th>Područje</th></tr></thead>
+    <tbody>
+    <tr data-a="red" data-due="2026-11-07"><td class="d">7. 11.</td><td><a href="https://mingo.gov.hr/javni-pozivi-i-natjecaji-7371/javni-pozivi-i-natjecaji-ministarstva/otvoreni-javni-pozivi-i-natjecaji/7390" target="_blank" rel="noopener">MINGO – gospodarski razvoj lokalnih zajednica Hrvata u BiH</a></td><td>50–290 tis. €</td><td><span class="tag t-red">Hrvati izvan RH</span></td></tr>
+    <tr data-a="red" data-due="2026-11-09"><td class="d">9. 11.</td><td><a href="https://rrvz.hr/javni-poziv-za-predlaganje-projekata-kulturne-promidzbe-javne-diplomacije-i-medunarodne-prepoznatljivosti-republike-hrvatske-2/" target="_blank" rel="noopener">MVEP – kulturna promidžba i javna diplomacija u inozemstvu</a></td><td>1–20 tis. €</td><td><span class="tag t-red">Hrvati izvan RH</span></td></tr>
+    <tr data-a="teal" data-due="2026-11-19"><td class="d">19. 11.</td><td><a href="https://mdu.gov.hr/javni-pozivi/program-provedbe-edukativnih-kulturnih-i-sportskih-aktivnosti-za-predskolsku-djecu-te-djecu-od-1-do-4-razreda-osnovne-skole-u-lokalnim-zajednicama/7674" target="_blank" rel="noopener">MDU – edukativne, kulturne i sportske aktivnosti za djecu</a></td><td>10–70 tis. €</td><td><span class="tag t-teal">Obrazovanje</span></td></tr>
+    <tr data-a="teal" data-due="2026-11-23"><td class="d">23. 11.</td><td><a href="https://esf.hr/esfplus/natjecaji/obrazovanje/podrska-osnovnim-skolama-za-provedbu-izvannastavnih-aktivnosti-kao-pripreme-za-program-cjelodnevne-skole-ii/" target="_blank" rel="noopener">ESF+ – izvannastavne aktivnosti, cjelodnevna škola II</a></td><td>20 mil. € ukupno</td><td><span class="tag t-teal">Obrazovanje</span></td></tr>
+    <tr data-a="orange" data-open="2026-11-24"><td class="d">od 24. 11.</td><td><a href="https://mints.gov.hr/javni-pozivi-i-natjecaji-11414/s-p-o-r-t/22182" target="_blank" rel="noopener">ESF+ – djeca i mladi u riziku od socijalne isključenosti u sportu</a></td><td>50–150 tis. €</td><td><span class="tag t-orange">Sport</span></td></tr>
+    <tr data-a="red" data-due="2026-11-30"><td class="d">30. 11.</td><td><a href="https://mzozt.gov.hr/javni-pozivi-i-natjecaji-7371/javni-pozivi-i-natjecaji-ministarstva/otvoreni-javni-pozivi-i-natjecaji/7390" target="_blank" rel="noopener">MZOZT – klimatski projekti lokalnih zajednica u BiH</a></td><td>75 tis. – 1 mil. €</td><td><span class="tag t-red">Hrvati izvan RH</span></td></tr>
+    <tr data-a="teal" data-due="2026-12-30"><td class="d">30. 12.</td><td><a href="https://mzom.gov.hr/natjecaji-196/objavljen-poziv-potporna-infrastruktura-za-operaciju-jacanje-kompetencija-studenata-i-mladih-istrazivaca-za-pametnu-specijalizaciju-i-industrijsku-tranziciju-kod-poziva-pk-1-1-20/8080" target="_blank" rel="noopener">MZOM PK.1.1.20 – potporna infrastruktura za studente i mlade istraživače</a></td><td>–</td><td><span class="tag t-teal">Obrazovanje</span></td></tr>
+    <tr data-a="teal" data-due="2028-06-30"><td class="d">30. 6. 2028.</td><td><a href="https://mingo.gov.hr/javni-pozivi-i-natjecaji-7371/javni-pozivi-i-natjecaji-ministarstva/otvoreni-javni-pozivi-i-natjecaji/7390" target="_blank" rel="noopener">MINGO – kompetencije nastavnika i mentora u strukovnim školama</a></td><td>1–20 tis. €</td><td><span class="tag t-teal">Obrazovanje</span></td></tr>
+    </tbody></table></div></div>
+  <p class="note">Izvori: službene stranice davatelja, <a href="https://eufondovi.gov.hr/poziv/" target="_blank" rel="noopener">eufondovi.gov.hr</a> i <a href="https://efondovi.mrrfeu.hr/MISCMS" target="_blank" rel="noopener">eFondovi</a>. Prije prijave uvijek provjerite izvorni tekst poziva.</p>
+</section>
+
+<section id="partneri">
+  <div class="pgrid">
+    <div class="head" style="margin:0"><span class="over">Povezivanje</span><h2>Burza partnera</h2><p class="sub">Mnogi pozivi traže ili boduju partnerstvo, a provedba projekta gotovo uvijek treba vanjske izvođače. Ovdje se povezuju oni koji traže i oni koji nude.</p></div>
+    <svg viewBox="0 0 420 220" aria-hidden="true">
+      <defs><linearGradient id="lk" x1="0" x2="1"><stop offset="0" stop-color="#0F6E74"/><stop offset="1" stop-color="#C55A1E"/></linearGradient></defs>
+      <path class="draw" d="M70 110 C140 30, 280 30, 350 110 M70 110 C140 190, 280 190, 350 110 M70 110 L210 110 L350 110" fill="none" stroke="url(#lk)" stroke-width="2.5" stroke-dasharray="6 6" opacity=".7"/>
+      <g class="float"><circle cx="70" cy="110" r="38" fill="#0F6E74"/><path d="M52 124v-20l18-12 18 12v20z" fill="#fff"/><rect x="64" y="112" width="12" height="12" fill="#0F6E74"/></g>
+      <g class="float d2"><circle cx="350" cy="110" r="38" fill="#C55A1E"/><circle cx="350" cy="100" r="9" fill="#fff"/><path d="M332 128c2-12 10-16 18-16s16 4 18 16z" fill="#fff"/></g>
+      <g class="float d3"><circle cx="210" cy="110" r="30" fill="#12355B"/><path d="M196 112l8 8 18-18" stroke="#F2A65A" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+      <circle cx="210" cy="44" r="14" fill="#A3262A" class="pulse"/><circle cx="210" cy="176" r="14" fill="#F2A65A" class="pulse"/>
+      <text x="70" y="172" text-anchor="middle" font-family="Source Sans 3, Arial" font-size="13" font-weight="700" fill="var(--muted)">PARTNER</text>
+      <text x="350" y="172" text-anchor="middle" font-family="Source Sans 3, Arial" font-size="13" font-weight="700" fill="var(--muted)">PODUGOVARATELJ</text>
+    </svg>
+  </div>
+  <div class="split" style="margin-top:18px">
+    <div class="box lift"><span class="kicker k-teal">Projektni partneri</span><h3>Tražite ili nudite partnerstvo</h3><ul><li>općine i gradovi koji trebaju udrugu ili ustanovu kao partnera</li><li>škole, vrtići i sportski klubovi koji žele ući u projekt</li><li>zajednice Hrvata izvan RH koje traže partnere u Hrvatskoj</li></ul></div>
+    <div class="box lift"><span class="kicker k-orange">Podugovaratelji</span><h3>Nudite usluge za provedbu</h3><ul><li>treneri, edukatori, voditelji radionica, stručnjaci</li><li>izrada dokumentacije, energetski certifikati, nadzor</li><li>vidljivost, oprema, prijevoz, organizacija događanja</li></ul></div>
+  </div>
+  <div class="empty">
+    <h3>Prvi profili stižu uskoro</h3>
+    <p>Profil objavljujemo samo uz vašu izričitu suglasnost, nakon provjere. Svaki profil prikazuje:</p>
+    <div class="tmpl">
+      <span><b>Institucija</b>naziv i vrsta</span><span><b>Mjesto</b>županija i država</span><span><b>Područje</b>obrazovanje, sport, Hrvati izvan RH</span><span><b>Nudim / tražim</b>kratki opis suradnje</span>
+    </div>
+    <ol class="steps">
+      <li><span>U <a href="#prijava">prijavi</a> ispunite polje <strong>„Suradnja – nudim ili tražim“</strong> i u polje <strong>„Objava u burzi partnera“</strong> upišite <strong>DA</strong>.</span></li>
+      <li><span>Provjerimo podatke i jednom tjedno objavimo nove profile na ovoj stranici.</span></li>
+      <li><span>Zainteresirani vam se javljaju preko nas, a vaš kontakt ne objavljujemo bez dopuštenja.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="konzultanti">
+  <div class="consult">
+    <div class="consult-main">
+      <div class="head" style="margin:0"><span class="over">Za stručnjake</span><h2>Baza konzultanata</h2></div>
+      <p class="q">Imate iskustva u izradi projektnih prijedloga? Napisali ste ih, proveli i izvijestili, a vaša je stopa iskorištenosti dostupnih projektnih sredstava preko 85 %?</p>
+      <p class="sub">Prijavite se u bazu konzultanata. Općinama, školama, klubovima i udrugama koje trebaju pomoć preporučujemo provjerene stručnjake prema programu, području i regiji.</p>
+      <a class="btn" href="https://preview.mailerlite.io/forms/2755810/202853268004537862/share" target="_blank" rel="noopener">Prijavi se u bazu konzultanata →</a>
+    </div>
+    <div class="meter" aria-label="Uvjet: stopa iskorištenosti iznad 85 posto">
+      <svg viewBox="0 0 200 120" aria-hidden="true">
+        <path d="M20 110 A80 80 0 0 1 180 110" fill="none" stroke="var(--line)" stroke-width="16" stroke-linecap="round"/>
+        <path class="gauge" d="M20 110 A80 80 0 0 1 180 110" fill="none" stroke="url(#gg)" stroke-width="16" stroke-linecap="round" pathLength="100" stroke-dasharray="85 100"/>
+        <defs><linearGradient id="gg" x1="0" x2="1"><stop offset="0" stop-color="#0F6E74"/><stop offset=".6" stop-color="#F2A65A"/><stop offset="1" stop-color="#C55A1E"/></linearGradient></defs>
+        <text x="100" y="98" text-anchor="middle" font-family="Source Serif 4, Georgia" font-size="34" font-weight="600" fill="var(--ink)">85 %+</text>
+      </svg>
+      <span>iskorištenih ugovorenih sredstava</span>
+    </div>
+  </div>
+  <div class="crit">
+    <div class="box lift"><span class="kicker k-teal">1 · Pisanje</span><h3>Odobreni prijedlozi</h3><p>Barem jedan projektni prijedlog koji ste napisali i koji je dobio financiranje.</p></div>
+    <div class="box lift"><span class="kicker k-orange">2 · Provedba</span><h3>Provedeni i izviješteni</h3><p>Iskustvo u provedbi: nabava, zahtjevi za nadoknadom sredstava i završno izvješće.</p></div>
+    <div class="box lift"><span class="kicker k-red">3 · Rezultat</span><h3>Stopa iskorištenosti &gt; 85 %</h3><p>Isplaćena sredstva u odnosu na ugovorena, na projektima koje ste vodili ili savjetovali.</p></div>
+  </div>
+  <div class="empty">
+    <h3>Kako funkcionira</h3>
+    <ol class="steps">
+      <li><span>U obrascu navedite broj napisanih i provedenih projekata, stopu iskorištenosti, programe (ESF+, NPOO, Erasmus+, ministarstva…) i reference koje se mogu provjeriti.</span></li>
+      <li><span>Prijavu pregledavamo i po potrebi tražimo dokaze, npr. odluke o financiranju ili potvrde korisnika.</span></li>
+      <li><span>Odobrene konzultante preporučujemo korisnicima Projektne klinike prema području i regiji. Vaš kontakt dijelimo tek uz vaše dopuštenje.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="edukacija">
+  <div class="head"><span class="over">Edukacija</span><h2>Škola projekata</h2><p class="sub">Šest koraka od ideje do završnog izvješća. Kratko i praktično, s najčešćim zamkama iz prakse.</p></div>
+  <svg class="path" viewBox="0 0 900 90" aria-hidden="true">
+    <path class="draw" d="M40 60 C140 10, 200 10, 190 45 S300 80, 340 45 S470 10, 490 45 S620 80, 640 45 S770 10, 860 50" fill="none" stroke="var(--line)" stroke-width="4" stroke-linecap="round"/>
+    <g font-family="Source Serif 4, Georgia" font-size="18" text-anchor="middle" fill="#fff">
+      <circle cx="40" cy="60" r="18" fill="#0F6E74"/><text x="40" y="66">1</text>
+      <circle cx="190" cy="45" r="18" fill="#1C7A86"/><text x="190" y="51">2</text>
+      <circle cx="340" cy="45" r="18" fill="#C55A1E"/><text x="340" y="51">3</text>
+      <circle cx="490" cy="45" r="18" fill="#B4531A"/><text x="490" y="51">4</text>
+      <circle cx="640" cy="45" r="18" fill="#A3262A"/><text x="640" y="51">5</text>
+      <circle cx="860" cy="50" r="22" fill="#12355B"/><text x="860" y="56">6</text>
+    </g>
+    <path d="M851 50l6 6 12-12" stroke="#F2A65A" stroke-width="0" fill="none"/>
+  </svg>
+  <div class="eduwrap"><div class="mods">
+    <details class="mod" open><summary><span class="num">1</span><span><h3>Od ideje do projekta</h3><small>problem, cilj, ciljane skupine, rezultati</small></span><span class="chev">›</span></summary>
+      <div class="in"><p>Dobar projekt počinje problemom, a ne pozivom. Opišite što konkretno ne valja, koga to pogađa i kako ćete znati da ste uspjeli.</p>
+      <ul><li><strong>Problem</strong> potkrijepite podacima: broj djece, udaljenost do najbližeg programa, potrošnja energije.</li><li><strong>Opći cilj</strong> je promjena kojoj pridonosite, a <strong>specifični cilj</strong> ono što projekt sam postiže.</li><li><strong>Aktivnosti</strong> vode do <strong>rezultata</strong>, a rezultate mjere <strong>pokazatelji</strong> s početnom i ciljanom vrijednošću.</li></ul>
+      <p class="tip">Prije pisanja pročitajte upute za prijavitelje i kriterije bodovanja. Svaki kriterij treba imati jasan odgovor u prijavi.</p></div></details>
+    <details class="mod"><summary><span class="num">2</span><span><h3>Partnerstvo</h3><small>tko, zašto i s kojom ulogom</small></span><span class="chev">›</span></summary>
+      <div class="in"><ul><li>Svaki partner mora imati stvarnu, opisanu i mjerljivu ulogu. Partner „za bodove“ ocjenjivači brzo prepoznaju.</li><li>Provjerite ograničenja poziva: broj partnera, vrstu pravne osobe i smije li partner biti u više prijava.</li><li>Neki pozivi traže transparentan odabir partnera. Sačuvajte javni poziv, zapisnik i odluku.</li><li>Sporazum o partnerstvu potpišite prije prijave: uloge, troškovi, odgovornosti i rješavanje sporova.</li></ul>
+      <p class="tip">Partner nije podugovaratelj. Partner sudjeluje u projektu i troškovima, a podugovaratelj isporučuje uslugu ili robu po ugovoru, uz poštivanje pravila nabave.</p></div></details>
+    <details class="mod"><summary><span class="num">3</span><span><h3>Proračun</h3><small>izravni i neizravni troškovi, paušali, PDV</small></span><span class="chev">›</span></summary>
+      <div class="in"><ul><li><strong>Izravni troškovi</strong> vežu se uz aktivnosti: osoblje, vanjske usluge, oprema, putovanja, vidljivost.</li><li><strong>Neizravni troškovi</strong> (režije, računovodstvo) često se računaju kao postotak izravnih, npr. 7 % ili 15 %, bez dokazivanja računima.</li><li><strong>Pojednostavljene troškovne opcije</strong>: u ESF+ pozivima česti su paušali, npr. 40 % na troškove osoblja za sve ostale troškove.</li><li><strong>Intenzitet potpore</strong> govori koliki dio troškova pokriva davatelj, a ostatak je vlastito učešće.</li><li>PDV je prihvatljiv samo ako ga ne možete povratiti.</li></ul>
+      <p class="tip">Svaku stavku potkrijepite ponudom ili istraživanjem tržišta i provjerite sva ograničenja u postocima. Prekoračenje jedne granice može srušiti cijeli proračun.</p></div></details>
+    <details class="mod"><summary><span class="num">4</span><span><h3>Prijava i ocjenjivanje</h3><small>sustavi, dokumentacija, bodovanje</small></span><span class="chev">›</span></summary>
+      <div class="in"><ul><li>Prijave se predaju elektronički: eKohezija za ESF+ i EFRR, eFondovi za NPOO, ili sustav ministarstva.</li><li>Ocjenjivanje obično ide u dva koraka: <strong>administrativna provjera i prihvatljivost</strong> (nedostaje li dokument, prijava ispada), zatim <strong>kvaliteta</strong> prema bodovnoj tablici.</li><li>Potvrde (npr. o nepostojanju duga) često ne smiju biti starije od 30 dana.</li><li>Kod poziva po redoslijedu zaprimanja brzina je presudna, a pozivi se znaju obustaviti čim se popune.</li></ul>
+      <p class="tip">Ne predajte zadnji dan. Sustavi se pod opterećenjem usporavaju, a tehnički problem na vašoj strani ne produljuje rok.</p></div></details>
+    <details class="mod"><summary><span class="num">5</span><span><h3>Provedba</h3><small>nabava, zahtjevi za nadoknadom, vidljivost</small></span><span class="chev">›</span></summary>
+      <div class="in"><ul><li><strong>Nabava:</strong> javni naručitelji primjenjuju Zakon o javnoj nabavi, a ostali korisnici pravila za neobveznike (NOJN) iz ugovora.</li><li><strong>Zahtjev za nadoknadom sredstava (ZNS)</strong> šalje se redovito, s računima, dokazima o plaćanju i izvješćem o napretku.</li><li><strong>Vidljivost:</strong> logotipi i propisane izjave na svim materijalima, pločama i objavama.</li><li>Vodite evidencije: liste prisutnosti, fotografije, potpisane izjave sudionika.</li></ul>
+      <p class="tip">Najčešći razlog financijskih korekcija je nabava. Prije svake narudžbe provjerite pravila iz ugovora.</p></div></details>
+    <details class="mod"><summary><span class="num">6</span><span><h3>Završetak i održivost</h3><small>završno izvješće, pokazatelji, razdoblje nakon projekta</small></span><span class="chev">›</span></summary>
+      <div class="in"><ul><li>Završni ZNS i izvješće imaju rokove. Kašnjenje može značiti gubitak sredstava.</li><li>Neostvareni pokazatelji mogu donijeti financijske korekcije, pa ciljeve postavljajte realno.</li><li>Obveza održivosti često traje godinu do pet godina: oprema mora ostati u namjeni, a aktivnosti se nastavljaju.</li><li>Dokumentaciju čuvajte koliko ugovor propisuje, često i deset godina.</li></ul></div></details>
+  </div>
+  <aside class="gloss-side"><h3 style="margin-top:28px">Mali rječnik</h3>
+  <dl class="gloss">
+    <div><dt>PDP</dt><dd>Poziv na dostavu projektnih prijedloga.</dd></div>
+    <div><dt>ESF+</dt><dd>Europski socijalni fond plus: zapošljavanje, obrazovanje, socijalno uključivanje.</dd></div>
+    <div><dt>NPOO</dt><dd>Nacionalni plan oporavka i otpornosti.</dd></div>
+    <div><dt>ZNS</dt><dd>Zahtjev za nadoknadom sredstava, kojim se traži isplata za nastale troškove.</dd></div>
+    <div><dt>NOJN</dt><dd>Neobveznici javne nabave i pravila nabave koja za njih vrijede u projektu.</dd></div>
+    <div><dt>Intenzitet potpore</dt><dd>Postotak prihvatljivih troškova koji financira davatelj.</dd></div>
+    <div><dt>Paušal</dt><dd>Trošak izračunat kao postotak druge kategorije, bez računa.</dd></div>
+    <div><dt>SECAP</dt><dd>Akcijski plan energetski održivog razvitka i prilagodbe klimatskim promjenama.</dd></div>
+  </dl></aside></div>
+</section>
+
+<section id="ideje">
+  <div class="head"><span class="over">Novo 8. i 22. u mjesecu</span><h2>Projektne ideje</h2><p class="sub">Izdanje od 30. 10. 2026. Svaka ideja razrađena je prema natječajnoj dokumentaciji: partneri, aktivnosti, proračun i savjeti za bodovanje.</p></div>
+  <div class="ideas">
+    <div class="idea lift"><svg class="band" viewBox="0 0 300 90" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="90" fill="var(--sky-teal)"/><circle cx="40" cy="70" r="40" fill="#0F6E74" opacity=".25"/><path d="M120 70l22-30 22 30z" fill="#0F6E74"/><path d="M150 70l26-40 26 40z" fill="#1C7A86"/><circle cx="240" cy="30" r="10" fill="#F2A65A" class="pulse"/><rect x="0" y="70" width="300" height="20" fill="#0F6E74" opacity=".3"/></svg>
+      <div class="t"><span class="kicker k-teal">Odgoj i obrazovanje · MDU</span><h3>Mali istraživači zavičaja</h3><p>Općina, škola i udruga nude besplatne zavičajne radionice, sportsku igraonicu, eko-vrt i praznične kampove za 120 djece. Rok 19. 11.</p><p class="amt">okvirno 59.920 €</p></div></div>
+    <div class="idea lift"><svg class="band" viewBox="0 0 300 90" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="90" fill="var(--sky-orange)"/><rect y="62" width="300" height="28" fill="#4E9A5A" opacity=".7"/><circle cx="150" cy="40" r="16" fill="#fff" stroke="#C55A1E" stroke-width="3" class="float"/><path d="M60 62v-24M240 62v-24" stroke="#C55A1E" stroke-width="4"/><circle cx="60" cy="32" r="6" fill="#C55A1E"/><circle cx="240" cy="32" r="6" fill="#C55A1E"/></svg>
+      <div class="t"><span class="kicker k-orange">Sport · ESF+</span><h3>Svi u igri</h3><p>Sportski klub sa školom i udrugom: prilagođeni treninzi i radionice zdravih navika za 60 djece u riziku. Prijave od 24. 11.</p><p class="amt">okvirno 119.000 €</p></div></div>
+    <div class="idea lift"><svg class="band" viewBox="0 0 300 90" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="90" fill="var(--sky-red)"/><path d="M90 74V44l40-22 40 22v30z" fill="#fff"/><path d="M84 46l46-28 46 28" stroke="#A3262A" stroke-width="5" fill="none"/><g fill="#12355B" opacity=".85"><rect x="100" y="24" width="20" height="10" transform="rotate(-30 110 29)"/><rect x="134" y="20" width="20" height="10" transform="rotate(30 144 25)"/></g><circle cx="230" cy="30" r="14" fill="#F2A65A" class="pulse"/><path d="M200 74c0-18 14-26 20-26s20 8 20 26" fill="#4E9A5A"/></svg>
+      <div class="t"><span class="kicker k-red">Hrvati izvan RH · MZOZT</span><h3>Zelena škola</h3><p>Općina u BiH i osnovna škola: izolacija, sunčana elektrana, dizalica topline i zeleno dvorište. Rok 30. 11.</p><p class="amt">okvirno 400.000 €, 90 % bespovratno</p></div></div>
+  </div>
+</section>
+
+<section class="signup" id="prijava">
+  <svg class="env" viewBox="0 0 120 90" aria-hidden="true"><rect x="4" y="10" width="112" height="76" rx="8" fill="#fff"/><path d="M4 16l56 40 56-40" stroke="#12355B" stroke-width="5" fill="none"/></svg>
+  <div class="head" style="margin:0"><span class="over">Besplatno</span><h2>Prijavite se</h2></div>
+  <p>Dobivat ćete oba newslettera, „Natječaji u fokusu“ i „Projektne ideje“, a možete se uključiti i u burzu partnera. Obavezna je samo e-adresa.</p>
+  <p class="callout"><strong>Želite ciljano dobivati informacije o mogućnostima financiranja?</strong> Ispunite sva polja. Prema mjestu, vrsti institucije i području interesa javljamo vam pozive koji su baš za vas.</p>
+  <div class="fields">
+    <div class="f req"><small>Obavezno</small>E-adresa</div>
+    <div class="f"><small>Neobavezno</small>Ime i prezime</div>
+    <div class="f"><small>Neobavezno</small>Institucija koju predstavljate</div>
+    <div class="f"><small>Neobavezno</small>Vrsta institucije</div>
+    <div class="f"><small>Neobavezno</small>Mjesto</div>
+    <div class="f"><small>Neobavezno</small>Županija</div>
+    <div class="f"><small>Neobavezno</small>Država</div>
+    <div class="f"><small>Neobavezno</small>Mobitel</div>
+    <div class="f"><small>Neobavezno</small>Područje interesa</div>
+    <div class="f"><small>Neobavezno</small>Suradnja – nudim ili tražim</div>
+    <div class="f"><small>Neobavezno</small>Objava u burzi partnera (DA/NE)</div>
+  </div>
+  <a class="btn" href="https://preview.mailerlite.io/forms/2755810/202853588407420251/share" target="_blank" rel="noopener" style="justify-self:start;position:relative">Otvori obrazac za prijavu →</a>
+  <p class="fine">Prijavu potvrđujete klikom na poveznicu u e-mailu. Podatke koristimo samo za slanje newslettera i, uz vašu suglasnost, za burzu partnera. Odjaviti se možete u svakom izdanju, a brisanje podataka zatražite na rektor.co@gmail.com.</p>
+</section>
+
+<section id="arhiva">
+  <div class="head"><span class="over">Sva izdanja</span><h2>Arhiva</h2></div>
+  <div style="display:grid;gap:12px">
+    <details class="issue"><summary><span class="date">30. 10. 2026.</span><span class="ititle">Natječaji u fokusu<small>10 otvorenih poziva · prvi rok 7. 11.</small></span><span class="chev">›</span></summary><div class="body">Pozivi iz ovog izdanja nalaze se u tablici <a href="#pozivi">Otvoreni pozivi</a>.</div></details>
+    <details class="issue"><summary><span class="date">30. 10. 2026.</span><span class="ititle">Projektne ideje<small>3 razrađena koncepta</small></span><span class="chev">›</span></summary><div class="body">Mali istraživači zavičaja (MDU), Svi u igri (ESF+ sport) i Zelena škola (MZOZT, BiH). Sažetci su u odjeljku <a href="#ideje">Projektne ideje</a>.</div></details>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="contactcard">
+    <svg viewBox="0 0 96 96" aria-hidden="true"><circle cx="48" cy="48" r="46" fill="var(--chip-teal)"/><rect x="26" y="20" width="44" height="58" rx="6" fill="#fff" stroke="#0F6E74" stroke-width="3"/><rect x="36" y="14" width="24" height="12" rx="4" fill="#0F6E74"/><path d="M36 42h24M36 52h24M36 62h14" stroke="#0F6E74" stroke-width="3" stroke-linecap="round"/><circle cx="68" cy="68" r="14" fill="#F2A65A" class="pulse"/><path d="M62 68l4 4 8-8" stroke="#12355B" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+    <div><h2 style="font-size:28px">Trebate pomoć s projektom?</h2><p class="sub">Provjeravamo prihvatljivost, okupljamo partnere, slažemo proračun, pripremamo prijavu i pratimo provedbu.</p>
+    <div class="contact"><span class="mail" id="mail">rektor.co@gmail.com</span><button class="copy" id="copy" type="button">Kopiraj adresu</button></div></div>
+  </div>
+</section>
+
+</div></main>
+<footer><div class="wrap"><span>Ivica Zelić · Rektor poslovna rješenja d.o.o.</span><span>Projektna klinika ne zamjenjuje službene upute davatelja sredstava.</span></div></footer>
+
+<script>
+(function(){
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var DAY=864e5, today=new Date(); today.setHours(0,0,0,0);
+  function parse(s){var p=s.split('-');return new Date(+p[0],p[1]-1,+p[2])}
+
+  // rotating word
+  var words=['partnere','podugovaratelje','konzultante','otvorene pozive','projektne ideje','edukaciju'],wi=0,rot=document.getElementById('rot');
+  if(!reduce)setInterval(function(){wi=(wi+1)%words.length;rot.textContent=words[wi];rot.classList.remove('swap');void rot.offsetWidth;rot.classList.add('swap')},2600);
+
+  // days left in table + stats count
+  var rows=[].slice.call(document.querySelectorAll('#calls tbody tr')),open=0;
+  rows.forEach(function(r){
+    var td=r.querySelector('td.d'),s=document.createElement('span');s.className='left';
+    if(r.dataset.due){var n=Math.round((parse(r.dataset.due)-today)/DAY);
+      if(n<0){r.hidden=true;r.dataset.past='1';return}
+      open++;s.textContent=n===0?'danas':('još '+n+(n%10===1&&n%100!==11?' dan':' dana'));s.classList.add(n<=7?'hot':n<=21?'warm':'ok');}
+    else if(r.dataset.open){var m=Math.round((parse(r.dataset.open)-today)/DAY);open++;s.textContent=m>0?('otvara se za '+m+(m%10===1&&m%100!==11?' dan':' dana')):'otvoren';s.classList.add('ok');}
+    td.appendChild(s);
+  });
+  var first=document.querySelector('.stat b');if(open)first.dataset.count=open;
+  document.querySelectorAll('.stat b').forEach(function(b){
+    var t=+b.dataset.count;b.textContent=t;if(reduce)return;var st=null;
+    function f(ts){if(!st)st=ts;var k=Math.min(1,(ts-st)/900);b.textContent=Math.round(t*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)}
+    b.textContent='0';requestAnimationFrame(f);
+  });
+
+  // filter chips
+  var chips=document.querySelectorAll('.chip');
+  function setF(f){chips.forEach(function(x){x.setAttribute('aria-pressed',x.dataset.f===f?'true':'false')});
+    rows.forEach(function(r){if(r.dataset.past)return;r.hidden=!(f==='all'||r.dataset.a===f)})}
+  chips.forEach(function(c){c.addEventListener('click',function(){setF(c.dataset.f)})});
+  document.querySelectorAll('.area').forEach(function(a){a.addEventListener('click',function(){setF(a.dataset.go)})});
+
+  // deadline timeline (Nov–Dec of current window)
+  var svg=document.getElementById('tlsvg'),NS='http://www.w3.org/2000/svg';
+  function el(n,a,t){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(t!=null)e.textContent=t;svg.appendChild(e);return e}
+  var start=new Date(today.getFullYear(),today.getMonth(),1), end=new Date(start.getFullYear(),start.getMonth()+3,0);
+  if(today.getDate()>20){start=new Date(today.getFullYear(),today.getMonth()+1,1);start.setDate(start.getDate()-7);end=new Date(start.getFullYear(),start.getMonth()+2,0)}
+  var x0=40,x1=860,span=end-start; function X(d){return x0+(d-start)/span*(x1-x0)}
+  var col={teal:'#0F6E74',orange:'#C55A1E',red:'#A3262A'};
+  el('line',{x1:x0,y1:80,x2:x1,y2:80,stroke:'var(--line)','stroke-width':4,'stroke-linecap':'round'});
+  var mn=['sij','velj','ožu','tra','svi','lip','srp','kol','ruj','lis','stu','pro'];
+  for(var d=new Date(start);d<=end;d.setDate(d.getDate()+1)){ if(d.getDate()===1||+d===+start){el('line',{x1:X(d),y1:72,x2:X(d),y2:88,stroke:'var(--muted)','stroke-width':1.5});el('text',{x:X(d)+4,y:106,'font-size':13,fill:'var(--muted)','font-weight':700},mn[d.getMonth()].toUpperCase())} }
+  if(today>=start&&today<=end){var tx=X(today);el('line',{x1:tx,y1:30,x2:tx,y2:96,stroke:'var(--gold)','stroke-width':2,'stroke-dasharray':'4 4'});el('text',{x:tx,y:24,'text-anchor':'middle','font-size':12,'font-weight':700,fill:'var(--gold)'},'DANAS')}
+  var placed=[];
+  rows.forEach(function(r){var ds=r.dataset.due||r.dataset.open;if(!ds||r.dataset.past)return;var d=parse(ds);if(d<start||d>end)return;
+    var x=X(d),lvl=0;while(placed.some(function(p){return p.l===lvl&&Math.abs(p.x-x)<120}))lvl++;placed.push({x:x,l:lvl});
+    var y=lvl%2?122:58, ly=lvl%2?142:46;
+    var c=el('circle',{cx:x,cy:80,r:9,fill:col[r.dataset.a],stroke:'var(--surface)','stroke-width':3});
+    if(!reduce){c.style.transformOrigin=x+'px 80px';c.animate([{transform:'scale(0)'},{transform:'scale(1)'}],{duration:500,delay:200+placed.length*120,fill:'backwards',easing:'cubic-bezier(.3,1.6,.5,1)'})}
+    el('line',{x1:x,y1:lvl%2?89:71,x2:x,y2:y,stroke:col[r.dataset.a],'stroke-width':1.5,opacity:.6});
+    var name=r.querySelector('td:nth-child(2) a').textContent.split('–')[0].trim();
+    el('text',{x:x,y:lvl%2?y+16:y-4,'text-anchor':'middle','font-size':13,'font-weight':700,fill:'var(--ink)'},name+' · '+r.querySelector('td.d').firstChild.textContent);
+  });
+
+  // vertical deadline list for phones
+  var tll=document.getElementById('tllist');
+  rows.forEach(function(r){if(r.dataset.past)return;var li=document.createElement('li');li.style.setProperty('--c',col[r.dataset.a]);
+    var a=r.querySelector('td:nth-child(2) a').textContent,parts=a.split('–'),left=r.querySelector('.left');
+    li.innerHTML='<span></span><span><b></b><small></small></span>';
+    li.querySelector('b').textContent=r.querySelector('td.d').firstChild.textContent+' · '+parts[0].trim();
+    li.querySelector('small').textContent=(parts[1]||'').trim();
+    if(left){var c=left.cloneNode(true);li.appendChild(c)}
+    tll.appendChild(li)});
+
+  // active nav
+  var links=[].slice.call(document.querySelectorAll('nav.sec a'));
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-40% 0px -55% 0px'});
+    document.querySelectorAll('main section[id]').forEach(function(s){io.observe(s)})}
+
+  // copy
+  document.getElementById('copy').addEventListener('click',function(){
+    var b=this,m=document.getElementById('mail');
+    function sel(){var r=document.createRange();r.selectNodeContents(m);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Označeno – kopirajte'}
+    try{navigator.clipboard.writeText(m.textContent).then(function(){b.textContent='Kopirano'},sel)}catch(e){sel()}
+  });
+
+  // partner-network canvas
+  var cv=document.getElementById('net'),ctx=cv.getContext('2d');
+  var cols=['#3FA9AE','#E07B3C','#D24B4F','#F2A65A'],N=44,pts=[],W,H;
+  var seed=7;function rnd(){seed=(seed*16807)%2147483647;return seed/2147483647}
+  for(var i=0;i<N;i++)pts.push({x:rnd(),y:rnd(),vx:(rnd()-.5)*.0003,vy:(rnd()-.5)*.0003,c:cols[i%4],r:1.5+rnd()*3});
+  function size(){var dpr=window.devicePixelRatio||1;W=cv.clientWidth;H=cv.clientHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0)}
+  function draw(){ctx.clearRect(0,0,W,H);var xs=pts.map(function(p){return [p.x*W,p.y*H]});
+    for(var i=0;i<N;i++)for(var j=i+1;j<N;j++){var dx=xs[i][0]-xs[j][0],dy=xs[i][1]-xs[j][1],d=Math.sqrt(dx*dx+dy*dy);
+      if(d<140){ctx.strokeStyle='rgba(175,195,218,'+(0.22*(1-d/140))+')';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(xs[i][0],xs[i][1]);ctx.lineTo(xs[j][0],xs[j][1]);ctx.stroke()}}
+    for(var k=0;k<N;k++){ctx.fillStyle=pts[k].c;ctx.globalAlpha=.7;ctx.beginPath();ctx.arc(xs[k][0],xs[k][1],pts[k].r,0,6.283);ctx.fill()}ctx.globalAlpha=1}
+  function step(){pts.forEach(function(p){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>1)p.vx*=-1;if(p.y<0||p.y>1)p.vy*=-1});draw();requestAnimationFrame(step)}
+  size();draw();window.addEventListener('resize',function(){size();draw()});
+  if(!reduce)requestAnimationFrame(step);
+})();
+</script>
+
+</body>
+</html>
