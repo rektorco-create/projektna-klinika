@@ -285,6 +285,44 @@ th{padding:16px 14px 12px 0}
 footer .wrap{padding-block:40px 48px}
 .signup .over{background:rgba(242,166,90,.18);color:#F2A65A}
 
+/* ---------- Sliders ---------- */
+.slider{position:relative;min-width:0;max-width:100%}
+main .wrap>*{min-width:0}
+.sl-view{overflow:hidden;border-radius:22px;padding:6px 6px 14px;margin:-6px -6px -14px}
+.sl-track{display:flex;transition:transform .7s cubic-bezier(.22,.8,.24,1);will-change:transform}
+.sl-slide{flex:0 0 calc(100% / var(--pv,1));box-sizing:border-box;padding:0 24px 0 0}
+.sl-view{margin-right:-24px}
+.sl-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:22px}
+.sl-dots{display:flex;gap:8px;flex-wrap:wrap}
+.sl-dot{width:9px;height:9px;border-radius:999px;border:0;padding:0;background:var(--line);cursor:pointer;transition:width .3s,background .3s}
+.sl-dot[aria-current="true"]{width:28px;background:var(--gold)}
+.sl-nav{display:flex;gap:8px}
+.sl-btn{width:44px;height:44px;border-radius:999px;border:0;background:var(--surface);color:var(--ink);box-shadow:var(--shadow);cursor:pointer;font-size:18px;display:grid;place-items:center;transition:transform .15s}
+.sl-btn:hover{transform:scale(1.06)}
+.sl-prog{height:3px;background:var(--line);border-radius:3px;overflow:hidden;margin-top:14px}
+.sl-prog span{display:block;height:100%;width:0;background:var(--gold)}
+.sl-prog span.run{animation:prog var(--dur,6s) linear forwards}
+@keyframes prog{to{width:100%}}
+.slider:hover .sl-prog span.run,.slider:focus-within .sl-prog span.run{animation-play-state:paused}
+/* deadline cards */
+.dl{background:var(--surface);border-radius:22px;box-shadow:var(--shadow);padding:26px;display:grid;gap:10px;height:100%;box-sizing:border-box;text-decoration:none;color:var(--ink);border-top:5px solid var(--c)}
+.dl .big{font-family:var(--serif);font-size:46px;line-height:1;color:var(--c);font-variant-numeric:tabular-nums}
+.dl .big small{font-family:var(--sans);font-size:15px;color:var(--muted);margin-left:6px}
+.dl b{font-size:17px;line-height:1.35}
+.dl span{color:var(--muted);font-size:15px}
+/* tips */
+.tipslide{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:var(--navy-ink);border-radius:26px;padding:44px 48px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;min-height:200px;box-sizing:border-box}
+.tipslide .ic{width:72px;height:72px;border-radius:20px;background:rgba(242,166,90,.16);display:grid;place-items:center;font-family:var(--serif);font-size:34px;color:var(--gold)}
+.tipslide h3{color:var(--gold);font-size:14px;font-family:var(--sans);letter-spacing:.14em;text-transform:uppercase;margin:0 0 8px}
+.tipslide p{margin:0;font-family:var(--serif);font-size:24px;line-height:1.45}
+@media (max-width:600px){.tipslide{grid-template-columns:1fr;padding:30px 26px}.tipslide p{font-size:20px}}
+/* funders */
+.fund{background:var(--surface);border-radius:22px;box-shadow:var(--shadow);padding:28px;display:grid;gap:10px;height:100%;box-sizing:border-box}
+.fund .lg{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-weight:700;font-size:14px;color:#fff;letter-spacing:.02em}
+.fund h3{font-size:20px}
+.fund p{margin:0;color:var(--muted);font-size:15.5px}
+.fund a{color:var(--teal);font-weight:700;font-size:15px;text-decoration:none}
+
 /* ---------- Responsive: large / tablet / phone / small phone ---------- */
 .tllist{display:none;list-style:none;margin:0;padding:0;gap:0}
 .tllist li{display:grid;grid-template-columns:16px 1fr auto;gap:12px;align-items:start;padding:10px 0;border-left:2px solid var(--line);margin-left:7px;padding-left:14px;position:relative}
@@ -368,11 +406,12 @@ footer .wrap{padding-block:40px 48px}
   <canvas id="net" aria-hidden="true"></canvas>
   <div class="wrap hero">
     <div class="hero-text">
-      <div class="brandrow"><svg viewBox="0 0 104 104" role="img" aria-label="Znak Projektne klinike"><rect x="38" y="4" width="28" height="36" rx="9" fill="#3FA9AE"/><rect x="64" y="38" width="36" height="28" rx="9" fill="#E07B3C"/><rect x="38" y="64" width="28" height="36" rx="9" fill="#D24B4F"/><rect x="4" y="38" width="36" height="28" rx="9" fill="#F2A65A"/><rect x="38" y="38" width="28" height="28" rx="4" fill="#FFFFFF"/></svg><p class="eyebrow">Rektor poslovna rješenja d.o.o.</p></div>
+      <div class="brandrow"><svg viewBox="0 0 104 104" role="img" aria-label="Znak Projektne klinike"><rect x="38" y="4" width="28" height="36" rx="9" fill="#3FA9AE"/><rect x="64" y="38" width="36" height="28" rx="9" fill="#E07B3C"/><rect x="38" y="64" width="28" height="36" rx="9" fill="#D24B4F"/><rect x="4" y="38" width="36" height="28" rx="9" fill="#F2A65A"/><rect x="38" y="38" width="28" height="28" rx="4" fill="#FFFFFF"/></svg><p class="eyebrow">Projektna klinika</p></div>
       <h1>Projektna<span class="acc">klinika</span></h1>
       <p class="rotor" aria-live="off">Mjesto za <b id="rot">partnere</b></p>
       <p class="lede">Ovdje se susreću projektni partneri i podugovaratelji. Pratite otvorene pozive i učite kako projekt napisati, prijaviti i provesti. Za škole, vrtiće, općine, sportske klubove, udruge i hrvatske zajednice izvan RH.</p>
       <div class="cta"><a class="btn" href="#prijava">Prijavite se besplatno</a><a class="btn ghost" href="#pozivi">Otvoreni pozivi</a></div>
+      <p class="eyebrow" style="opacity:.8">Pokreće Rektor poslovna rješenja d.o.o.</p>
     </div>
     <!-- Hero scene: clinic-style project board -->
     <svg class="scene" viewBox="0 0 360 320" role="img" aria-label="Ilustracija: projektna ploča s rokovima, partnerima i proračunom">
@@ -410,6 +449,15 @@ footer .wrap{padding-block:40px 48px}
 
 <main><div class="wrap">
 
+<section id="rokovi" aria-label="Rokovi koji se bliže">
+  <div class="head"><span class="over">Odbrojavanje</span><h2>Rokovi koji se bliže</h2></div>
+  <div class="slider" data-pv="3" data-auto="5000" id="sl-rokovi">
+    <div class="sl-view"><div class="sl-track" id="dl-track"></div></div>
+    <div class="sl-bar"><div class="sl-dots"></div><div class="sl-nav"><button class="sl-btn" type="button" data-dir="-1" aria-label="Prethodni">‹</button><button class="sl-btn" type="button" data-dir="1" aria-label="Sljedeći">›</button></div></div>
+    <div class="sl-prog"><span></span></div>
+  </div>
+</section>
+
 <section id="podrucja">
   <div class="head"><span class="over">Tri područja</span><h2>Za koga radimo</h2><p class="sub">Pratimo pozive i razrađujemo projekte u tri područja u kojima se najčešće traže partneri i znanje.</p></div>
   <div class="areas">
@@ -430,6 +478,21 @@ footer .wrap{padding-block:40px 48px}
         <path d="M70 118 Q150 30 230 118" fill="none" stroke="#E3D5C0" stroke-width="16"/><path d="M70 118 Q150 30 230 118" fill="none" stroke="#C8B79C" stroke-width="2"/><rect x="50" y="96" width="30" height="34" fill="#E3D5C0"/><rect x="220" y="96" width="30" height="34" fill="#E3D5C0"/><rect x="40" y="70" width="22" height="60" fill="#D8C8AE"/><rect x="40" y="64" width="22" height="8" fill="#A3262A"/>
         <circle cx="150" cy="66" r="4" fill="#A3262A"/></svg>
       <div class="t"><span class="n">Hrvati izvan RH</span><h3>Zajednice, općine, udruge</h3><p>Središnji državni ured, MVEP, MINGO, MZOZT i MDU: kultura, gospodarstvo, klimatski projekti u BiH.</p></div></a>
+  </div>
+  <div class="head" style="margin-top:72px"><span class="over">Tko financira</span><h2>Davatelji sredstava</h2></div>
+  <div class="slider" data-pv="3" data-auto="4500" id="sl-fund">
+    <div class="sl-view"><div class="sl-track">
+      <div class="sl-slide"><div class="fund"><span class="lg" style="background:#0F6E74">ESF+</span><h3>Europski socijalni fond plus</h3><p>Obrazovanje, zapošljavanje i socijalno uključivanje, uključujući sport za djecu u riziku.</p><a href="https://esf.hr/esfplus/natjecaji/" target="_blank" rel="noopener">Pozivi →</a></div></div>
+      <div class="sl-slide"><div class="fund"><span class="lg" style="background:#12355B">NPOO</span><h3>Nacionalni plan oporavka</h3><p>Infrastruktura, zelena i digitalna tranzicija, školske dvorane i cjelodnevna škola.</p><a href="https://fondovieu.gov.hr/pozivi" target="_blank" rel="noopener">Pozivi →</a></div></div>
+      <div class="sl-slide"><div class="fund"><span class="lg" style="background:#1C7A86">E+</span><h3>Erasmus+</h3><p>Mobilnost i suradnja u obrazovanju, mladima i sportu, preko AMPEU i EACEA.</p><a href="https://www.ampeu.hr/erasmus" target="_blank" rel="noopener">Pozivi →</a></div></div>
+      <div class="sl-slide"><div class="fund"><span class="lg" style="background:#0F6E74">MZOM</span><h3>Ministarstvo znanosti, obrazovanja i mladih</h3><p>Programi za škole, studente, mlade i istraživače te stipendije.</p><a href="https://mzom.gov.hr/natjecaji-196/196" target="_blank" rel="noopener">Natječaji →</a></div></div>
+      <div class="sl-slide"><div class="fund"><span class="lg" style="background:#C55A1E">MINTS</span><h3>Ministarstvo turizma i sporta</h3><p>Lokalni sport, sportska infrastruktura i ESF+ sportski programi.</p><a href="https://mints.gov.hr/javni-pozivi-i-natjecaji-11414/s-p-o-r-t/22182" target="_blank" rel="noopener">Natječaji →</a></div></div>
+      <div class="sl-slide"><div class="fund"><span class="lg" style="background:#B4531A">MDU</span><h3>Ministarstvo demografije i useljeništva</h3><p>Aktivnosti za djecu i obitelji te programi za Hrvate izvan RH.</p><a href="https://mdu.gov.hr/javni-pozivi" target="_blank" rel="noopener">Pozivi →</a></div></div>
+      <div class="sl-slide"><div class="fund"><span class="lg" style="background:#A3262A">SDUH</span><h3>Središnji državni ured za Hrvate izvan RH</h3><p>Projekti hrvatske manjine, Hrvata u BiH i iseljeništva te stipendije.</p><a href="https://hrvatiizvanrh.gov.hr/natjecaji-574/574" target="_blank" rel="noopener">Natječaji →</a></div></div>
+      <div class="sl-slide"><div class="fund"><span class="lg" style="background:#7E1E22">MVEP</span><h3>Ministarstvo vanjskih i europskih poslova</h3><p>Kulturna promidžba, javna diplomacija i projekti u inozemstvu.</p><a href="https://mvep.gov.hr/ministarstvo/natjecaji/9625" target="_blank" rel="noopener">Natječaji →</a></div></div>
+      <div class="sl-slide"><div class="fund"><span class="lg" style="background:#4E9A5A">MZOZT</span><h3>Ministarstvo zelene tranzicije</h3><p>Klimatski projekti, uključjući lokalne zajednice u Bosni i Hercegovini.</p><a href="https://mzozt.gov.hr/javni-pozivi-i-natjecaji-7371/javni-pozivi-i-natjecaji-ministarstva/otvoreni-javni-pozivi-i-natjecaji/7390" target="_blank" rel="noopener">Pozivi →</a></div></div>
+    </div></div>
+    <div class="sl-bar"><div class="sl-dots"></div><div class="sl-nav"><button class="sl-btn" type="button" data-dir="-1" aria-label="Prethodni">‹</button><button class="sl-btn" type="button" data-dir="1" aria-label="Sljedeći">›</button></div></div>
   </div>
 </section>
 
@@ -570,6 +633,19 @@ footer .wrap{padding-block:40px 48px}
     <div><dt>Paušal</dt><dd>Trošak izračunat kao postotak druge kategorije, bez računa.</dd></div>
     <div><dt>SECAP</dt><dd>Akcijski plan energetski održivog razvitka i prilagodbe klimatskim promjenama.</dd></div>
   </dl></aside></div>
+  <div class="slider" data-pv="1" data-auto="7000" id="sl-tips" style="margin-top:56px" aria-label="Savjeti iz prakse">
+    <div class="sl-view"><div class="sl-track">
+      <div class="sl-slide"><div class="tipslide"><span class="ic">1</span><div><h3>Savjet iz prakse</h3><p>Prije prvog retka prijave pročitajte kriterije bodovanja. Svaki kriterij treba imati jasan i lako uočljiv odgovor.</p></div></div></div>
+      <div class="sl-slide"><div class="tipslide"><span class="ic">2</span><div><h3>Savjet iz prakse</h3><p>Potvrde o nepostojanju duga često ne smiju biti starije od 30 dana. Zatražite ih u zadnjem tjednu pripreme.</p></div></div></div>
+      <div class="sl-slide"><div class="tipslide"><span class="ic">3</span><div><h3>Savjet iz prakse</h3><p>Partner mora imati stvarnu i mjerljivu ulogu. Partner samo za bodove lako se prepozna i može srušiti ocjenu.</p></div></div></div>
+      <div class="sl-slide"><div class="tipslide"><span class="ic">4</span><div><h3>Savjet iz prakse</h3><p>Svaku stavku proračuna potkrijepite ponudom ili istraživanjem tržišta i provjerite sve postotne granice.</p></div></div></div>
+      <div class="sl-slide"><div class="tipslide"><span class="ic">5</span><div><h3>Savjet iz prakse</h3><p>Ne predajte zadnji dan. Sustavi se pod opterećenjem usporavaju, a kod poziva po redoslijedu zaprimanja brzina je presudna.</p></div></div></div>
+      <div class="sl-slide"><div class="tipslide"><span class="ic">6</span><div><h3>Savjet iz prakse</h3><p>Najviše financijskih korekcija dolazi od nabave. Prije svake narudžbe provjerite pravila iz ugovora.</p></div></div></div>
+      <div class="sl-slide"><div class="tipslide"><span class="ic">7</span><div><h3>Savjet iz prakse</h3><p>Ciljane vrijednosti pokazatelja postavite realno. Neostvareni pokazatelji znače umanjenje isplate.</p></div></div></div>
+    </div></div>
+    <div class="sl-bar"><div class="sl-dots"></div><div class="sl-nav"><button class="sl-btn" type="button" data-dir="-1" aria-label="Prethodni savjet">‹</button><button class="sl-btn" type="button" data-dir="1" aria-label="Sljedeći savjet">›</button></div></div>
+    <div class="sl-prog"><span></span></div>
+  </div>
 </section>
 
 <section id="ideje">
@@ -623,7 +699,7 @@ footer .wrap{padding-block:40px 48px}
 </section>
 
 </div></main>
-<footer><div class="wrap"><span style="display:inline-flex;align-items:center;gap:10px"><svg width="22" height="22" viewBox="0 0 104 104" aria-hidden="true"><rect x="38" y="4" width="28" height="36" rx="9" fill="#3FA9AE"/><rect x="64" y="38" width="36" height="28" rx="9" fill="#E07B3C"/><rect x="38" y="64" width="28" height="36" rx="9" fill="#D24B4F"/><rect x="4" y="38" width="36" height="28" rx="9" fill="#F2A65A"/><rect x="38" y="38" width="28" height="28" rx="4" fill="#FFFFFF"/></svg>Projektna klinika · Ivica Zelić · Rektor poslovna rješenja d.o.o.</span><span>Projektna klinika ne zamjenjuje službene upute davatelja sredstava.</span></div></footer>
+<footer><div class="wrap"><span style="display:inline-flex;align-items:center;gap:10px"><svg width="22" height="22" viewBox="0 0 104 104" aria-hidden="true"><rect x="38" y="4" width="28" height="36" rx="9" fill="#3FA9AE"/><rect x="64" y="38" width="36" height="28" rx="9" fill="#E07B3C"/><rect x="38" y="64" width="28" height="36" rx="9" fill="#D24B4F"/><rect x="4" y="38" width="36" height="28" rx="9" fill="#F2A65A"/><rect x="38" y="38" width="28" height="28" rx="4" fill="#FFFFFF"/></svg>Projektna klinika</span><span>Pokreće Rektor poslovna rješenja d.o.o. · Ivica Zelić</span><span>Projektna klinika ne zamjenjuje službene upute davatelja sredstava.</span></div></footer>
 
 <script>
 (function(){
@@ -690,6 +766,33 @@ footer .wrap{padding-block:40px 48px}
     li.querySelector('small').textContent=(parts[1]||'').trim();
     if(left){var c=left.cloneNode(true);li.appendChild(c)}
     tll.appendChild(li)});
+
+  // deadline slides from table
+  var dtr=document.getElementById('dl-track');
+  rows.filter(function(r){return !r.dataset.past&&(r.dataset.due||r.dataset.open)}).map(function(r){var ds=r.dataset.due||r.dataset.open;return {r:r,d:parse(ds),open:!r.dataset.due}}).sort(function(a,b){return a.d-b.d}).forEach(function(o){
+    var n=Math.round((o.d-today)/DAY),a=o.r.querySelector('td:nth-child(2) a'),parts=a.textContent.split('–');
+    var s=document.createElement('div');s.className='sl-slide';var c=document.createElement('a');c.className='dl';c.href=a.href;c.target='_blank';c.rel='noopener';c.style.setProperty('--c',col[o.r.dataset.a]);
+    c.innerHTML='<div class="big"></div><b></b><span></span>';
+    c.querySelector('.big').innerHTML=(n<=0?'0':n)+'<small>'+(o.open?'dana do otvaranja':(n%10===1&&n%100!==11?'dan do roka':'dana do roka'))+'</small>';
+    var tt=(parts[1]||parts[0]).trim();c.querySelector('b').textContent=tt.charAt(0).toUpperCase()+tt.slice(1);
+    c.querySelector('span').textContent=parts[0].trim()+' · '+o.r.querySelector('td.d').firstChild.textContent+' · '+o.r.querySelector('td:nth-child(3)').textContent;
+    s.appendChild(c);dtr.appendChild(s)});
+
+  // generic sliders
+  [].forEach.call(document.querySelectorAll('.slider'),function(sl){
+    var track=sl.querySelector('.sl-track'),slides=[].slice.call(track.children),dots=sl.querySelector('.sl-dots'),prog=sl.querySelector('.sl-prog span'),pvMax=+sl.dataset.pv||1,auto=+sl.dataset.auto||6000,i=0,timer=null,pv=1;
+    if(!slides.length){sl.closest('section').hidden=true;return}
+    function calcPv(){var w=sl.clientWidth;pv=Math.min(pvMax,w<620?1:w<940?2:3);sl.style.setProperty('--pv',pv)}
+    function pages(){return Math.max(1,slides.length-pv+1)}
+    function drawDots(){dots.innerHTML='';for(var k=0;k<pages();k++){var b=document.createElement('button');b.type='button';b.className='sl-dot';b.setAttribute('aria-label','Slajd '+(k+1));(function(k){b.addEventListener('click',function(){go(k,true)})})(k);dots.appendChild(b)}}
+    function render(){var w=slides[0].getBoundingClientRect().width;track.style.transform='translateX('+(-i*w)+'px)';[].forEach.call(dots.children,function(d,k){d.setAttribute('aria-current',k===i?'true':'false')});if(prog){prog.classList.remove('run');void prog.offsetWidth;if(!reduce)prog.classList.add('run')}}
+    function go(k,user){var n=pages();i=(k+n)%n;render();if(user)restart()}
+    function restart(){clearInterval(timer);if(reduce)return;sl.style.setProperty('--dur',auto+'ms');timer=setInterval(function(){if(!sl.matches(':hover')&&!sl.contains(document.activeElement))go(i+1)},auto)}
+    [].forEach.call(sl.querySelectorAll('.sl-btn'),function(b){b.addEventListener('click',function(){go(i+ +b.dataset.dir,true)})});
+    var sx=null;sl.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});sl.addEventListener('touchend',function(e){if(sx==null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40)go(i+(dx<0?1:-1),true);sx=null});
+    calcPv();drawDots();render();restart();
+    window.addEventListener('resize',function(){var o=pv;calcPv();if(o!==pv){i=0;drawDots()}render()});
+  });
 
   // active nav
   var links=[].slice.call(document.querySelectorAll('nav.sec a'));
