@@ -493,6 +493,29 @@ main .wrap>*{min-width:0}
 /* ---------- Ideas gate ---------- */
 .idea .lock{display:inline-flex;align-items:center;gap:6px;margin:4px 0 0;font-size:13.5px;font-weight:600;color:var(--muted)}
 .idea .lock::before{content:"";width:12px;height:14px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 14'%3E%3Cpath d='M3 6V4a3 3 0 0 1 6 0v2h1a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 14'%3E%3Cpath d='M3 6V4a3 3 0 0 1 6 0v2h1a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm1.5 0h3V4a1.5 1.5 0 0 0-3 0z'/%3E%3C/svg%3E") center/contain no-repeat}
+/* unlocked idea + popup */
+.idea-open{cursor:pointer}
+.idea-open:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.idea .unlock{display:inline-flex;align-items:center;gap:6px;margin:4px 0 0;font-size:13.5px;font-weight:700;color:var(--ac)}
+.idea .unlock::after{content:"→";transition:transform .2s}
+.idea-open:hover .unlock::after{transform:translateX(4px)}
+.idea-dlg .lg-top{align-items:flex-start}
+.idea-dlg .legal-h{margin:6px 0 0}
+.id-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.id-facts div{background:color-mix(in srgb,var(--teal) 9%,var(--bg));border-radius:14px;padding:12px 14px;display:grid;gap:2px}
+.id-facts small{color:var(--muted);font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+.id-facts b{font-size:15.5px}
+.idea-dlg .lg-body{padding:6px 2px 0;max-width:none}
+.id-acts{list-style:none;padding:0!important;display:grid;gap:8px}
+.id-acts li{display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start}
+.id-acts li span{background:var(--teal);color:#fff;border-radius:10px;font-weight:700;font-size:13px;text-align:center;padding:4px 0}
+.id-budget{width:100%;border-collapse:collapse;margin:0 0 12px;font-size:15.5px}
+.id-budget td{padding:8px 0;border-bottom:1px solid var(--line)}
+.id-budget td:last-child{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;padding-left:16px}
+.id-budget .tot td{font-weight:700;border-bottom:0;border-top:2px solid var(--teal)}
+.id-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px!important}
+.idea-dlg .btn.ghost{color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+@media (max-width:600px){.id-facts{grid-template-columns:1fr}.id-links .btn{width:100%;justify-content:center}}
 .ideas-gate{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 32px;padding:28px 30px;border-radius:22px;background:linear-gradient(120deg,var(--navy),#1d4a78);color:#fff}
 .ideas-gate h3{color:#fff;margin:0 0 6px;font-size:22px}
 .ideas-gate p{margin:0;color:#d7e2ee;max-width:60ch}
@@ -918,10 +941,10 @@ h3{font-weight:700}
 </section>
 
 <section id="ideje">
-  <div class="head"><span class="over">Novo 8. i 22. u mjesecu</span><h2>Projektne ideje</h2><p class="sub">Izdanje od 30. 10. 2026. Ovdje je kratka najava. Prošireno izdanje, razrađeno prema natječajnoj dokumentaciji, dobivaju samo pretplatnici newslettera.</p></div>
+  <div class="head"><span class="over">Novo 8. i 22. u mjesecu</span><h2>Projektne ideje</h2><p class="sub">Izdanje od 30. 10. 2026. Prvu ideju otvorili smo u cijelosti, kao primjer onoga što dobivate. Ostale, razrađene prema natječajnoj dokumentaciji, dobivaju samo pretplatnici newslettera.</p></div>
   <div class="ideas">
-    <div class="idea lift"><svg class="band" viewBox="0 0 300 90" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="90" fill="var(--sky-teal)"/><circle cx="40" cy="70" r="40" fill="#0F6E74" opacity=".25"/><path d="M120 70l22-30 22 30z" fill="#0F6E74"/><path d="M150 70l26-40 26 40z" fill="#1C7A86"/><circle cx="240" cy="30" r="10" fill="#F2A65A" class="pulse"/><rect x="0" y="70" width="300" height="20" fill="#0F6E74" opacity=".3"/></svg>
-      <div class="t"><span class="kicker k-teal">Odgoj i obrazovanje · MDU</span><h3>Mali istraživači zavičaja</h3><p>Zavičajne radionice i praznični kampovi za djecu u maloj općini. Rok 19. 11.</p><p class="lock">Puna razrada u newsletteru</p><p class="amt">okvirno 59.920 €</p></div></div>
+    <div class="idea lift idea-open" role="button" tabindex="0" data-dlg="ideja-1" aria-haspopup="dialog"><svg class="band" viewBox="0 0 300 90" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="90" fill="var(--sky-teal)"/><circle cx="40" cy="70" r="40" fill="#0F6E74" opacity=".25"/><path d="M120 70l22-30 22 30z" fill="#0F6E74"/><path d="M150 70l26-40 26 40z" fill="#1C7A86"/><circle cx="240" cy="30" r="10" fill="#F2A65A" class="pulse"/><rect x="0" y="70" width="300" height="20" fill="#0F6E74" opacity=".3"/></svg>
+      <div class="t"><span class="kicker k-teal">Odgoj i obrazovanje · MDU</span><h3>Mali istraživači zavičaja</h3><p>Zavičajne radionice i praznični kampovi za djecu u maloj općini. Rok 19. 11.</p><p class="unlock">Otključano · pogledajte cijelu razradu</p><p class="amt">okvirno 59.920 €</p></div></div>
     <div class="idea lift"><svg class="band" viewBox="0 0 300 90" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="90" fill="var(--sky-orange)"/><rect y="62" width="300" height="28" fill="#4E9A5A" opacity=".7"/><circle cx="150" cy="40" r="16" fill="#fff" stroke="#C55A1E" stroke-width="3" class="float"/><path d="M60 62v-24M240 62v-24" stroke="#C55A1E" stroke-width="4"/><circle cx="60" cy="32" r="6" fill="#C55A1E"/><circle cx="240" cy="32" r="6" fill="#C55A1E"/></svg>
       <div class="t"><span class="kicker k-orange">Sport · ESF+</span><h3>Svi u igri</h3><p>Sportski klub uključuje djecu u riziku od isključenosti. Prijave od 24. 11.</p><p class="lock">Puna razrada u newsletteru</p><p class="amt">okvirno 119.000 €</p></div></div>
     <div class="idea lift"><svg class="band" viewBox="0 0 300 90" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="90" fill="var(--sky-red)"/><path d="M90 74V44l40-22 40 22v30z" fill="#fff"/><path d="M84 46l46-28 46 28" stroke="#A3262A" stroke-width="5" fill="none"/><g fill="#12355B" opacity=".85"><rect x="100" y="24" width="20" height="10" transform="rotate(-30 110 29)"/><rect x="134" y="20" width="20" height="10" transform="rotate(30 144 25)"/></g><circle cx="230" cy="30" r="14" fill="#F2A65A" class="pulse"/><path d="M200 74c0-18 14-26 20-26s20 8 20 26" fill="#4E9A5A"/></svg>
@@ -1030,6 +1053,39 @@ h3{font-weight:700}
 
 </div></main>
 
+<dialog class="legal-dlg idea-dlg" id="ideja-1" aria-labelledby="ideja-1-h">
+<div class="lg-wrap">
+<div class="lg-top"><div><span class="kicker k-teal">Ideja 1 · Odgoj i obrazovanje</span><h2 class="legal-h" id="ideja-1-h">Mali istraživači zavičaja</h2></div><button type="button" class="lg-close" aria-label="Zatvori">×</button></div>
+<div class="id-facts"><div><small>Poziv</small><b>MDU – EKS 2026.</b></div><div><small>Iznos</small><b>10–70 tis. EUR</b></div><div><small>Rok</small><b>19. 11. u 16:00</b></div></div>
+<div class="lg-body">
+<p><strong>Cilj:</strong> tijekom cijele školske godine 2026./2027. djeci vrtićke dobi i učenicima od 1. do 4. razreda ponuditi besplatan program koji spaja zavičajnu baštinu, kretanje i prirodu – posebno u mjestima gdje izvannastavnih sadržaja gotovo nema.</p>
+<p><strong>Prijavitelj i partneri:</strong> općina ili grad (prijavitelj) + osnovna škola ili dječji vrtić + lokalna udruga (KUD, sportski klub ili ekološka udruga). Dopuštena su najviše dva partnera.</p>
+<p><strong>Ciljana skupina:</strong> oko 120 djece predškolske dobi i učenika 1.–4. razreda.</p>
+<h3>Aktivnosti</h3>
+<ol class="id-acts">
+<li><span>A1</span><div><b>Zavičajna radionica</b> – tjedne radionice o običajima, govoru, starim zanatima i pjesmama, uz posjet muzeju ili etno-zbirci (prioritet: kultura i tradicija).</div></li>
+<li><span>A2</span><div><b>Sportska igraonica</b> – dvaput tjedno igre i osnove više sportova s licenciranim trenerom (prioritet: sport i rekreacija).</div></li>
+<li><span>A3</span><div><b>Eko-vrt i mali STEM</b> – školski vrt, pokusi iz prirode i izleti u zaštićeno područje (prioriteti: priroda i podrška učenju).</div></li>
+<li><span>A4</span><div><b>Praznični kamp</b> – petodnevni dnevni kamp za zimskih i ljetnih praznika.</div></li>
+<li><span>A5</span><div><b>Promidžba i vidljivost</b> – plakati, objave i završna smotra za roditelje.</div></li>
+</ol>
+<h3>Okvirni proračun</h3>
+<table class="id-budget"><tbody>
+<tr><td>Osoblje (do 2 osobe, npr. kod partnera udruge)</td><td>21.000 €</td></tr>
+<tr><td>Vanjski stručnjaci, treneri i voditelji radionica</td><td>14.000 €</td></tr>
+<tr><td>Oprema i materijali (najviše 40 %)</td><td>12.000 €</td></tr>
+<tr><td>Sudjelovanje djece – ulaznice, prijevoz na izlete, užina</td><td>6.000 €</td></tr>
+<tr><td>Promidžba i vidljivost (najviše 4.000 €)</td><td>3.000 €</td></tr>
+<tr><td>Neizravni troškovi (7 % izravnih)</td><td>3.920 €</td></tr>
+<tr class="tot"><td>Ukupno</td><td>59.920 €</td></tr>
+</tbody></table>
+<p><strong>Pokazatelji:</strong> 4 organizirana programa, 120 djece obuhvaćeno.</p>
+<p><strong>Savjeti za prijavu:</strong> sudjelovanje djece mora biti potpuno besplatno; jedna općina smije podnijeti samo jednu prijavu; partnere odaberite transparentnim i dokumentiranim postupkom; opremu nabavite prije početka aktivnosti; za sve koji rade s djecom unaprijed pribavite potvrde o nekažnjavanju. Kod jednakog broja bodova prednost imaju relevantnost, regionalni razvoj i veći broj djece – zato ciljajte širok obuhvat.</p>
+<p class="id-links"><a class="btn" href="https://mdu.gov.hr/javni-pozivi/program-provedbe-edukativnih-kulturnih-i-sportskih-aktivnosti-za-predskolsku-djecu-te-djecu-od-1-do-4-razreda-osnovne-skole-u-lokalnim-zajednicama/7674" target="_blank" rel="noopener">Natječajna dokumentacija →</a><a class="btn ghost id-sub" href="#prijava">Primajte ovakve razrade u newsletteru</a></p>
+<p class="upd">Ideja je okvirna i služi kao polazište. Prije prijave provjerite uvjete u izvornom tekstu poziva.</p>
+</div>
+</div>
+</dialog>
 <dialog class="legal-dlg" id="pravno" aria-labelledby="legal-h">
 <div class="lg-wrap">
 <div class="lg-top"><h2 class="legal-h" id="legal-h">Pravne informacije</h2><button type="button" class="lg-close" aria-label="Zatvori">×</button></div>
@@ -1231,6 +1287,18 @@ h3{font-weight:700}
     var sx=null;sl.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});sl.addEventListener('touchend',function(e){if(sx==null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40)go(i+(dx<0?1:-1),true);sx=null});
     calcPv();drawDots();render();restart();
     window.addEventListener('resize',function(){var o=pv;calcPv();if(o!==pv){i=0;drawDots()}render()});
+  });
+
+  // project idea popups
+  document.querySelectorAll('.idea-open').forEach(function(card){
+    var d=document.getElementById(card.dataset.dlg);if(!d)return;
+    function open(){d.showModal?d.showModal():d.setAttribute('open','');d.querySelector('.lg-wrap').scrollTop=0;d.scrollTop=0}
+    function close(){d.close?d.close():d.removeAttribute('open')}
+    card.addEventListener('click',open);
+    card.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}});
+    d.querySelector('.lg-close').addEventListener('click',close);
+    d.addEventListener('click',function(e){if(e.target===d)close()});
+    d.querySelector('.id-sub').addEventListener('click',function(){close()});
   });
 
   // open legal sections from links
