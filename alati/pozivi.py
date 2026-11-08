@@ -34,7 +34,9 @@ header .wrap{padding-block:18px;display:flex;align-items:center;justify-content:
 header img{display:block;height:48px;width:auto}
 header nav a{color:#DCE7F3;text-decoration:none;font-weight:600;font-size:16px;margin-left:18px}
 header nav a:hover{color:#fff}
-main{flex:1}main .wrap{padding-block:36px 72px;display:grid;gap:24px}
+main{flex:1}main .wrap{padding-block:28px 72px;display:grid;gap:24px}
+.back{justify-self:start;display:inline-flex;align-items:center;gap:6px;background:var(--surface);color:var(--ink);font-weight:700;font-size:16px;text-decoration:none;padding:10px 18px;border-radius:999px;box-shadow:var(--shadow);transition:transform .15s}
+.back:hover{transform:translateX(-3px)}
 .crumbs{font-size:15px;color:var(--muted)}.crumbs a{color:var(--muted)}
 .tag{display:inline-block;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:#fff;padding:4px 12px;border-radius:999px;justify-self:start}
 h1{font-weight:700;font-size:clamp(28px,4.6vw,42px);line-height:1.15;letter-spacing:-.015em;margin:0;text-wrap:balance}
@@ -178,7 +180,7 @@ for p in pozivi:
     mailto = "mailto:rektor.co@gmail.com?subject=" + re.sub(r"%20", "%20", __import__("urllib.parse").parse.quote(subj))
     opn = f' data-open="{p["otvaranje"]}"' if p.get("otvaranje") else ""
     body = f"""<main><div class="wrap" style="--acc:{acc}">
-  <nav class="crumbs" aria-label="Putanja"><a href="/">Naslovnica</a> › <a href="/pozivi/">Otvoreni pozivi</a> › {e(pod)}</nav>
+  <a class="back" href="/#pozivi">← Natrag na portal Projektna klinika</a>\n  <nav class="crumbs" aria-label="Putanja"><a href="/">Naslovnica</a> › <a href="/pozivi/">Otvoreni pozivi</a> › {e(pod)}</nav>
   <span class="tag" style="background:{acc}">{e(pod)}</span>
   <h1>{e(p['naziv'])}</h1>
   <p class="lede">{e(p['davatelj'])}</p>
@@ -220,7 +222,7 @@ for k, (pod, acc) in POD.items():
     li = "".join(f'<a href="/pozivi/{p["slug"]}.html" style="--acc:{acc}"><span class="d">{("od " + hrdat(p["otvaranje"])) if p.get("otvaranje") else hrdat(p["rok"])}</span><span>{e(p["kratko"])}<small>Iznos: {e(p["iznos"])}</small></span></a>' for p in items)
     grupe += f'<section id="{k}"><h2>{e(pod)}</h2><div class="list">{li}</div></section>'
 body = f"""<main><div class="wrap">
-  <nav class="crumbs" aria-label="Putanja"><a href="/">Naslovnica</a> › Otvoreni pozivi</nav>
+  <a class="back" href="/#pozivi">← Natrag na portal Projektna klinika</a>\n  <nav class="crumbs" aria-label="Putanja"><a href="/">Naslovnica</a> › Otvoreni pozivi</nav>
   <h1>Otvoreni natječaji i javni pozivi</h1>
   <p class="lede">Za odgoj i obrazovanje, sport i Hrvate izvan RH. Stanje na dan {hrdat(prov)} Kliknite poziv za rok, iznos, prihvatljive prijavitelje i način prijave.</p>
   {grupe}
@@ -242,8 +244,10 @@ if a > 0:
     t = ix[a:b]
     for p in pozivi:
         for old in (f'<a href="{p["izvor"]}" target="_blank" rel="noopener">', f'<a href="{e(p["izvor"])}" target="_blank" rel="noopener">'):
-            t = t.replace(old, f'<a href="/pozivi/{p["slug"]}.html">')
+            t = t.replace(old, f'<a href="/pozivi/{p["slug"]}.html" target="_blank" rel="noopener">')
+        t = t.replace(f'<a href="/pozivi/{p["slug"]}.html">', f'<a href="/pozivi/{p["slug"]}.html" target="_blank" rel="noopener">')
     t = re.sub(r'<a href="/pozivi/([^"]+)\.html">', lambda m: m.group(0) if m.group(1) in written else '<a href="#">', t)
+    t = re.sub(r'<a href="/pozivi/([^"]+)\.html"( target="_blank" rel="noopener")?>', lambda m: m.group(0) if m.group(1) in written else '<a href="#pozivi">', t)
     ix = ix[:a] + t + ix[b:]
     open(ip, "w", encoding="utf-8").write(ix)
 

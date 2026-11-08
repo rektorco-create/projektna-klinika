@@ -35,7 +35,9 @@ header .wrap{padding-block:18px;display:flex;align-items:center;justify-content:
 header img{display:block;height:48px;width:auto}
 header nav a{color:#DCE7F3;text-decoration:none;font-weight:600;font-size:16px;margin-left:18px}
 header nav a:hover{color:#fff}
-main{flex:1}main .wrap{padding-block:36px 72px;display:grid;gap:24px}
+main{flex:1}main .wrap{padding-block:28px 72px;display:grid;gap:24px}
+.back{justify-self:start;display:inline-flex;align-items:center;gap:6px;background:var(--surface);color:var(--ink);font-weight:700;font-size:16px;text-decoration:none;padding:10px 18px;border-radius:999px;box-shadow:var(--shadow);transition:transform .15s}
+.back:hover{transform:translateX(-3px)}
 .crumbs{font-size:15px;color:var(--muted)}.crumbs a{color:var(--muted)}
 .tag{display:inline-block;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:#fff;padding:4px 12px;border-radius:999px;justify-self:start}
 h1{font-weight:700;font-size:clamp(28px,4.6vw,42px);line-height:1.15;letter-spacing:-.015em;margin:0;text-wrap:balance}
@@ -78,6 +80,7 @@ footer a{color:#AFC3DA}
 <header><div class="wrap"><a href="/" aria-label="Projektna klinika – naslovnica"><img src="/logo/logo-vodoravni-tamni.svg" width="160" height="48" alt="Projektna klinika"></a>
 <nav aria-label="Glavna navigacija"><a href="/pozivi/">Svi pozivi</a><a href="/#prijava">Newsletter</a><a href="/#kontakt">Kontakt</a></nav></div></header>
 <main><div class="wrap" style="--acc:#0F6E74">
+  <a class="back" href="/#pozivi">← Natrag na portal Projektna klinika</a>
   <nav class="crumbs" aria-label="Putanja"><a href="/">Naslovnica</a> › <a href="/pozivi/">Otvoreni pozivi</a> › Odgoj i obrazovanje</nav>
   <span class="tag" style="background:#0F6E74">Odgoj i obrazovanje</span>
   <h1>Javni poziv srednjim strukovnim, umjetničkim i mješovitim školama za promociju i jačanje kompetencija strukovnih i umjetničkih zanimanja za turizam u 2026.</h1>
