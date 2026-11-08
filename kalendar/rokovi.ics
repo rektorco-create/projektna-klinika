@@ -13,7 +13,7 @@ X-PUBLISHED-TTL:PT6H
 BEGIN:VEVENT
 UID:mvep-kulturna-promidzba-javna-diplomacija-2026-rok@projektnaklinika.ent
  er.fit
-DTSTAMP:20261108T173422Z
+DTSTAMP:20261108T194309Z
 DTSTART;VALUE=DATE:20261109
 DTEND;VALUE=DATE:20261110
 SUMMARY:Rok: MVEP – kulturna promidžba i javna diplomacija u inozemstvu
@@ -53,7 +53,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:mints-skole-zanimanja-turizam-2026-rok@projektnaklinika.enter.fit
-DTSTAMP:20261108T173422Z
+DTSTAMP:20261108T194309Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
 SUMMARY:Rok: MINTS – srednje strukovne i umjetničke škole: promocija za
@@ -91,7 +91,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:appf-natjecaj-srednje-skole-trgovinski-sporazumi-eu-rok@projektnaklinik
  a.enter.fit
-DTSTAMP:20261108T173422Z
+DTSTAMP:20261108T194309Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261116
 SUMMARY:Rok: APPF – natječaj za srednje škole: trgovinski sporazumi EU-
@@ -134,7 +134,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:mdu-edukativne-kulturne-sportske-aktivnosti-djeca-2026-rok@projektnakli
  nika.enter.fit
-DTSTAMP:20261108T173422Z
+DTSTAMP:20261108T194309Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:Rok do 16:00: MDU – edukativne\, kulturne i sportske aktivnosti z
@@ -179,7 +179,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:mzom-mjerni-instrumenti-strucni-suradnici-2026-2027-rok@projektnaklinik
  a.enter.fit
-DTSTAMP:20261108T173422Z
+DTSTAMP:20261108T194309Z
 DTSTART;VALUE=DATE:20261120
 DTEND;VALUE=DATE:20261121
 SUMMARY:Rok do 12:00: MZOM – mjerni instrumenti za stručne suradnike OŠ
@@ -224,7 +224,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:esf-izvannastavne-aktivnosti-cjelodnevna-skola-ii-rok@projektnaklinika.
  enter.fit
-DTSTAMP:20261108T173422Z
+DTSTAMP:20261108T194309Z
 DTSTART;VALUE=DATE:20261123
 DTEND;VALUE=DATE:20261124
 SUMMARY:Rok do 16:00: ESF+ – izvannastavne aktivnosti\, cjelodnevna škol
@@ -271,7 +271,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:esf-djeca-mladi-rizik-socijalne-iskljucenosti-sport-rok@projektnaklinik
  a.enter.fit
-DTSTAMP:20261108T173422Z
+DTSTAMP:20261108T194309Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
 SUMMARY:Rok do 16:00: ESF+ – djeca i mladi u riziku od socijalne isključ
@@ -314,7 +314,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:esf-djeca-mladi-rizik-socijalne-iskljucenosti-sport-otvaranje@projektna
  klinika.enter.fit
-DTSTAMP:20261108T173422Z
+DTSTAMP:20261108T194309Z
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
 SUMMARY:Otvaraju se prijave: ESF+ – djeca i mladi u riziku od socijalne i
@@ -350,7 +350,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:mzozt-klimatski-projekti-bih-2026-rok@projektnaklinika.enter.fit
-DTSTAMP:20261108T173422Z
+DTSTAMP:20261108T194309Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
 SUMMARY:Rok do 23:59: MZOZT – klimatski projekti lokalnih zajednica u BiH
@@ -394,7 +394,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:mzom-pk-1-1-20-potporna-infrastruktura-studenti-istrazivaci-rok@projekt
  naklinika.enter.fit
-DTSTAMP:20261108T173422Z
+DTSTAMP:20261108T194309Z
 DTSTART;VALUE=DATE:20261230
 DTEND;VALUE=DATE:20261231
 SUMMARY:Rok do 11:00: MZOM PK.1.1.20 – potporna infrastruktura za student
@@ -438,7 +438,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fulbright-specialist-2027-2028-rok@projektnaklinika.enter.fit
-DTSTAMP:20261108T173422Z
+DTSTAMP:20261108T194309Z
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
 SUMMARY:Rok: MZOM / Veleposlanstvo SAD-a – Fulbright Specialist 2027.–2
@@ -478,7 +478,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:mingo-kompetencije-nastavnika-mentora-strukovno-obrazovanje-rok@projekt
  naklinika.enter.fit
-DTSTAMP:20261108T173422Z
+DTSTAMP:20261108T194309Z
 DTSTART;VALUE=DATE:20280630
 DTEND;VALUE=DATE:20280701
 SUMMARY:Rok: MINGO – kompetencije nastavnika i mentora u strukovnim škol

@@ -151,7 +151,7 @@ page = f"""<!doctype html>
   <section class="faq"><h2>Česta pitanja</h2>{faq}</section>
   <section class="help"><h2>Recite nam što planirate</h2><p>Napišite ukratko tko ste, što želite napraviti i do kada. Odgovaramo u pravilu u roku od dva radna dana.</p>
     <div class="ctarow"><a class="btn" href="/#kontakt" data-goatcounter-click="usluge-obrazac">Pošaljite upit →</a><a class="btn ghost" href="{e(mail)}" data-goatcounter-click="usluge-mail">rektor.co@gmail.com</a></div></section>
-  <p class="note">Sami pišete prijavu? Pretplatnici newslettera besplatno dobivaju <a href="/#prijava" data-goatcounter-click="usluge-kontrolni-popis">kontrolni popis „Prije predaje prijave“</a>, a rokove otvorenih poziva možete pratiti i u <a href="/kalendar/">svom kalendaru</a>.</p>
+  <p class="note">Sami pišete prijavu? Pretplatnici newslettera besplatno dobivaju <a href="/#prijava" data-goatcounter-click="usluge-kontrolni-popis">kontrolni popis „Prije predaje prijave“</a>, za veće pozive pripremili smo <a href="/vodici/" data-goatcounter-click="usluge-vodici">vodiče za prijavu</a>, a rokove otvorenih poziva možete pratiti i u <a href="/kalendar/">svom kalendaru</a>.</p>
 </div></main>
 <footer><div class="wrap"><span>Projektna klinika · <a href="/">projektnaklinika.enter.fit</a></span><span>© 2026 REKTOR POSLOVNA RJEŠENJA d.o.o.</span></div></footer>
 </body>

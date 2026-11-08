@@ -27,6 +27,7 @@ out = f"""# Projektna klinika
 - Bazu provjerenih konzultanata za izradu projekata (uvjet: napisani i provedeni projekti, stopa iskorištenosti sredstava iznad 85 %).
 - Školu projekata: šest koraka od ideje do završnog izvješća.
 - Newslettere „Natječaji u fokusu“ (1. i 15. u mjesecu) i „Projektne ideje“ (8. i 22. u mjesecu, razrađene projektne ideje samo za pretplatnike).
+- Vodiči za prijavu (https://projektnaklinika.enter.fit/vodici/): tko se može prijaviti, troškovi, bodovanje, dokumenti i česte pogreške za MDU poziv za aktivnosti djece, ESF+ cjelodnevnu školu II (s kalkulatorom najvećeg iznosa) i ESF+ sport za djecu i mlade u riziku.
 - Usluge (https://projektnaklinika.enter.fit/usluge/): provjera prihvatljivosti i projektne ideje, priprema cijele prijave, provjera prijave prije predaje i upravljanje provedbom odobrenog projekta (nabava, zahtjevi za nadoknadom, izvješća). Cijena se dogovara unaprijed u pisanoj ponudi.
 
 Kontakt: rektor.co@gmail.com · obrazac na https://projektnaklinika.enter.fit/#kontakt

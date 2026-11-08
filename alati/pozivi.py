@@ -2,6 +2,10 @@
 """Izrađuje zasebnu stranicu za svaki otvoreni poziv (pozivi/<slug>.html) i popis pozivi/index.html
 iz alati/pozivi-podaci.json. Pokretanje iz korijena repozitorija: python3 alati/pozivi.py"""
 import json, html, os, datetime, re
+import sys as _sys
+_sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from vodici_sadrzaj import VODICI as _V
+VODIC_ZA = {v["poziv"]: v["slug"] for v in _V}
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://projektnaklinika.enter.fit"
@@ -170,6 +174,8 @@ for p in pozivi:
             {"@type": "ListItem", "position": 3, "name": p["kratko"], "item": url}]},
         {"@type": "MonetaryGrant", "name": p["naziv"], "description": ukratko(p), "url": p["izvor"],
          "funder": {"@type": "Organization", "name": p["davatelj"]}, "subjectOf": {"@id": url}}]}
+    vg = VODIC_ZA.get(p["slug"])
+    vodic = (f'<section class="box" style="border-left:6px solid {acc}"><h2>Vodič za prijavu na ovaj poziv</h2><p style="margin:0 0 12px">Tko se može prijaviti, što se financira, kako se boduje, koji dokumenti trebaju i najčešće pogreške – sažeto iz uputa za prijavitelje.</p><a class="btn" href="/vodici/{vg}/" data-goatcounter-click="poziv-vodic">Pročitajte vodič →</a></section>' if vg else "")
     fin = "".join(f"<li>{e(x)}</li>" for x in p["financira"])
     izvori = f'<a href="{e(p["izvor"])}" target="_blank" rel="noopener">Službena objava poziva</a>'
     if p.get("izvor2"):
@@ -194,11 +200,12 @@ for p in pozivi:
     <div><dt>Davatelj</dt><dd>{e(p['davatelj'])}</dd></div>
   </dl>
   <p class="note"><a href="/kalendar/" data-goatcounter-click="poziv-kalendar">Kalendar rokova</a> – ovaj i ostali rokovi automatski u vašem Google, Apple ili Outlook kalendaru.</p>
+  {vodic}
   <section class="box"><h2>Što se financira</h2><ul>{fin}</ul></section>
   <section class="help" aria-label="Pomoć s prijavom">
     <h2>Trebate pomoć s prijavom na ovaj poziv?</h2>
     <p>Provjerit ćemo prihvatljivost vaše ustanove i ideje, pomoći okupiti partnere, složiti proračun i pripremiti prijavu do roka.</p>
-    <div class="row"><a class="btn" href="{e(mailto)}">Pošaljite upit →</a><a class="btn ghost" style="color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4)" href="/#kontakt">Više o pomoći</a></div>
+    <div class="row"><a class="btn" href="{e(mailto)}">Pošaljite upit →</a><a class="btn ghost" style="color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4)" href="/usluge/">Više o pomoći</a></div>
   </section>
   <section class="box"><h2>Ne propustite sljedeći poziv</h2><p style="margin:0 0 12px">Besplatni newsletter „Natječaji u fokusu“ dvaput mjesečno donosi nove pozive za škole, vrtiće, sportske klubove, udruge, općine i Hrvate izvan RH – s iznosima i rokovima.</p><a class="btn" href="/#prijava">Prijava na newsletter →</a></section>
   {f'<section><h2>Slični pozivi – {e(pod)}</h2><div class="list">{sl}</div></section>' if sl else ''}
@@ -226,7 +233,7 @@ body = f"""<main><div class="wrap">
   <a class="back" href="/#pozivi">← Natrag na portal Projektna klinika</a>\n  <nav class="crumbs" aria-label="Putanja"><a href="/">Naslovnica</a> › Otvoreni pozivi</nav>
   <h1>Otvoreni natječaji i javni pozivi</h1>
   <p class="lede">Za odgoj i obrazovanje, sport i Hrvate izvan RH. Stanje na dan {hrdat(prov)} Kliknite poziv za rok, iznos, prihvatljive prijavitelje i način prijave.</p>
-  <a class="btn ghost" href="/kalendar/" data-goatcounter-click="pozivi-kalendar">Rokovi u vašem kalendaru →</a>
+  <div class="row" style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn ghost" href="/kalendar/" data-goatcounter-click="pozivi-kalendar">Rokovi u vašem kalendaru →</a><a class="btn ghost" href="/vodici/" data-goatcounter-click="pozivi-vodici">Vodiči za prijavu →</a></div>
   {grupe}
   <section class="help"><h2>Ne znate koji je poziv za vas?</h2><p>Opišite nam ustanovu i ideju – javit ćemo vam koji pozivi dolaze u obzir.</p><a class="btn" href="mailto:rektor.co@gmail.com?subject=Koji%20poziv%20je%20za%20nas%3F">Pošaljite upit →</a></section>
   <p class="note">Prije prijave uvijek provjerite izvorni tekst poziva – mjerodavna je službena objava davatelja.</p>
@@ -278,3 +285,4 @@ print(f"Izrađeno: {len(written)} stranica poziva + pozivi/index.html")
 # kalendar rokova za pretplatu (kalendar/*.ics i kalendar/index.html)
 import subprocess, sys
 subprocess.run([sys.executable, os.path.join(ROOT, "alati", "kalendar.py")], check=True)
+subprocess.run([sys.executable, os.path.join(ROOT, "alati", "vodici.py")], check=True)

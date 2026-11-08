@@ -13,7 +13,7 @@ X-PUBLISHED-TTL:PT6H
 BEGIN:VEVENT
 UID:esf-djeca-mladi-rizik-socijalne-iskljucenosti-sport-rok@projektnaklinik
  a.enter.fit
-DTSTAMP:20261108T173422Z
+DTSTAMP:20261108T194309Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
 SUMMARY:Rok do 16:00: ESF+ – djeca i mladi u riziku od socijalne isključ
@@ -56,7 +56,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:esf-djeca-mladi-rizik-socijalne-iskljucenosti-sport-otvaranje@projektna
  klinika.enter.fit
-DTSTAMP:20261108T173422Z
+DTSTAMP:20261108T194309Z
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
 SUMMARY:Otvaraju se prijave: ESF+ – djeca i mladi u riziku od socijalne i
