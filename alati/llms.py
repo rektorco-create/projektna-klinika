@@ -10,7 +10,7 @@ for r in re.findall(r'<tr data[^>]*>(.*?)</tr>', t, re.S):
     td = re.findall(r'<td[^>]*>(.*?)</td>', r, re.S)
     if len(td) < 4: continue
     a = re.search(r'href="([^"]+)"', td[1])
-    rows.append(f"- **{txt(td[1])}** – rok: {txt(td[0])}; iznos: {txt(td[2])}; područje: {txt(td[3])}" + (f"; [službena stranica]({a.group(1)})" if a else ''))
+    rows.append(f"- **{txt(td[1])}** – rok: {txt(td[0])}; iznos: {txt(td[2])}; područje: {txt(td[3])}" + ((f"; [detalji poziva](https://projektnaklinika.enter.fit{a.group(1)})" if a.group(1).startswith('/') else f"; [službena stranica]({a.group(1)})") if a else ''))
 m = re.search(r'Stanje na dan ([^.<]*\.[^.<]*\.[^.<]*\.)', s); stanje = m.group(1) if m else ''
 faq = re.findall(r'<details[^>]*><summary>(.*?)</summary><p class="a">(.*?)</p></details>', s[s.index('id="pitanja"'):] if 'id="pitanja"' in s else '', re.S)
 arh = sorted(glob.glob('arhiva/*.html'), reverse=True)
