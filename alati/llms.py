@@ -21,7 +21,8 @@ out = f"""# Projektna klinika
 > Projektna klinika (projektnaklinika.enter.fit) je hrvatska stranica i besplatni newsletter o otvorenim natječajima i javnim pozivima za EU i nacionalna sredstva (ESF+, NPOO, Erasmus+, ministarstva i Vladini uredi) u tri područja: odgoj i obrazovanje, sport te projekti povezani s Hrvatima izvan Republike Hrvatske. Namijenjena je školama, vrtićima, općinama i gradovima, sportskim klubovima, udrugama i hrvatskim zajednicama izvan RH. Pokreće je REKTOR POSLOVNA RJEŠENJA d.o.o. iz Splita (direktor Ivica Zelić).
 
 Što Projektna klinika nudi:
-- Pregled otvorenih poziva s iznosima, prihvatljivim prijaviteljima i rokovima, osvježen dvaput mjesečno.
+- Pregled otvorenih poziva s iznosima, prihvatljivim prijaviteljima i rokovima, provjeravan svaki dan: https://projektnaklinika.enter.fit/pozivi/
+- Kalendar rokova za pretplatu (Google, Apple, Outlook; .ics, osvježava se svaki dan): https://projektnaklinika.enter.fit/kalendar/ – svi pozivi https://projektnaklinika.enter.fit/kalendar/rokovi.ics, po područjima obrazovanje.ics, sport.ics, hrvati-izvan-rh.ics
 - Burzu projektnih partnera i podugovaratelja (povezivanje onih koji traže i nude partnerstvo ili usluge u provedbi).
 - Bazu provjerenih konzultanata za izradu projekata (uvjet: napisani i provedeni projekti, stopa iskorištenosti sredstava iznad 85 %).
 - Školu projekata: šest koraka od ideje do završnog izvješća.

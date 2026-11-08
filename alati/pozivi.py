@@ -193,6 +193,7 @@ for p in pozivi:
     <div><dt>Kako se prijaviti</dt><dd>{e(p['prijava'])}</dd></div>
     <div><dt>Davatelj</dt><dd>{e(p['davatelj'])}</dd></div>
   </dl>
+  <p class="note"><a href="/kalendar/" data-goatcounter-click="poziv-kalendar">Kalendar rokova</a> – ovaj i ostali rokovi automatski u vašem Google, Apple ili Outlook kalendaru.</p>
   <section class="box"><h2>Što se financira</h2><ul>{fin}</ul></section>
   <section class="help" aria-label="Pomoć s prijavom">
     <h2>Trebate pomoć s prijavom na ovaj poziv?</h2>
@@ -225,6 +226,7 @@ body = f"""<main><div class="wrap">
   <a class="back" href="/#pozivi">← Natrag na portal Projektna klinika</a>\n  <nav class="crumbs" aria-label="Putanja"><a href="/">Naslovnica</a> › Otvoreni pozivi</nav>
   <h1>Otvoreni natječaji i javni pozivi</h1>
   <p class="lede">Za odgoj i obrazovanje, sport i Hrvate izvan RH. Stanje na dan {hrdat(prov)} Kliknite poziv za rok, iznos, prihvatljive prijavitelje i način prijave.</p>
+  <a class="btn ghost" href="/kalendar/" data-goatcounter-click="pozivi-kalendar">Rokovi u vašem kalendaru →</a>
   {grupe}
   <section class="help"><h2>Ne znate koji je poziv za vas?</h2><p>Opišite nam ustanovu i ideju – javit ćemo vam koji pozivi dolaze u obzir.</p><a class="btn" href="mailto:rektor.co@gmail.com?subject=Koji%20poziv%20je%20za%20nas%3F">Pošaljite upit →</a></section>
   <p class="note">Prije prijave uvijek provjerite izvorni tekst poziva – mjerodavna je službena objava davatelja.</p>
@@ -272,3 +274,7 @@ for k, (pod, _) in POD.items():
 open(os.path.join(ROOT, "llms-full.txt"), "w", encoding="utf-8").write(full)
 
 print(f"Izrađeno: {len(written)} stranica poziva + pozivi/index.html")
+
+# kalendar rokova za pretplatu (kalendar/*.ics i kalendar/index.html)
+import subprocess, sys
+subprocess.run([sys.executable, os.path.join(ROOT, "alati", "kalendar.py")], check=True)
