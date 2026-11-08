@@ -40,6 +40,7 @@ main{flex:1}main .wrap{padding-block:36px 72px;display:grid;gap:24px}
 h1{font-weight:700;font-size:clamp(28px,4.6vw,42px);line-height:1.15;letter-spacing:-.015em;margin:0;text-wrap:balance}
 h2{font-size:24px;margin:0 0 8px;line-height:1.25}
 .lede{margin:0;color:var(--muted);font-size:19px}
+.sum{margin:0;max-width:70ch}
 .count{display:flex;align-items:center;gap:14px;background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:16px 20px;border-left:6px solid var(--acc)}
 .count b{font-size:34px;line-height:1;color:var(--acc);font-variant-numeric:tabular-nums}
 .count span{color:var(--muted)}
@@ -77,7 +78,39 @@ if(n<0){b.textContent='—';s.textContent='Rok za prijavu je istekao. Pogledajte
 if(n===0){b.textContent='Danas';s.textContent='je zadnji dan za prijavu';return;}
 b.textContent=n;s.textContent=(n%10===1&&n%100!==11?'dan':'dana')+' do roka za prijavu';})();</script>"""
 
-def head(title, desc, url, ld):
+def ukratko(p):
+    return (f"Poziv „{p['naziv']}“ – davatelj: {p['davatelj']}. Rok: {p['rok_tekst']}. Iznos: {p['iznos']}. "
+            f"Prijaviti se mogu: {p['prijavitelji']}. Prijava: {p['prijava']}.")
+
+def md(p, pod):
+    url = f"{BASE}/pozivi/{p['slug']}.html"
+    fin = "\n".join(f"- {x}" for x in p["financira"])
+    izv = p["izvor"] + (f"\n- Dokumentacija: {p['izvor2']}" if p.get("izvor2") else "")
+    otv = f"\n- **Otvaranje zaprimanja prijava:** {hrdat(p['otvaranje'])}" if p.get("otvaranje") else ""
+    return f"""# {p['naziv']}
+
+> {ukratko(p)}
+
+- **Područje:** {pod}
+- **Davatelj:** {p['davatelj']}
+- **Rok:** {p['rok_tekst']}{otv}
+- **Iznos:** {p['iznos']}
+- **Tko se može prijaviti:** {p['prijavitelji']}
+- **Kako se prijaviti:** {p['prijava']}
+
+## Što se financira
+
+{fin}
+
+## Izvori
+
+- Službena objava: {izv}
+- Stranica na Projektnoj klinici: {url}
+
+Podaci provjereni {hrdat(prov)} Mjerodavan je izvorni tekst poziva. Pomoć s prijavom: rektor.co@gmail.com (Projektna klinika, https://projektnaklinika.enter.fit/#kontakt).
+"""
+
+def head(title, desc, url, ld, alt=None):
     return f"""<!doctype html>
 <html lang="hr">
 <head>
@@ -85,7 +118,7 @@ def head(title, desc, url, ld):
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
-<link rel="canonical" href="{url}">
+<link rel="canonical" href="{url}">{f'{chr(10)}<link rel="alternate" type="text/markdown" title="Sažetak poziva za AI asistente" href="{alt}">' if alt else ''}
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="hr_HR">
@@ -132,7 +165,9 @@ for p in pozivi:
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Projektna klinika", "item": BASE + "/"},
             {"@type": "ListItem", "position": 2, "name": "Otvoreni pozivi", "item": BASE + "/pozivi/"},
-            {"@type": "ListItem", "position": 3, "name": p["kratko"], "item": url}]}]}
+            {"@type": "ListItem", "position": 3, "name": p["kratko"], "item": url}]},
+        {"@type": "MonetaryGrant", "name": p["naziv"], "description": ukratko(p), "url": p["izvor"],
+         "funder": {"@type": "Organization", "name": p["davatelj"]}, "subjectOf": {"@id": url}}]}
     fin = "".join(f"<li>{e(x)}</li>" for x in p["financira"])
     izvori = f'<a href="{e(p["izvor"])}" target="_blank" rel="noopener">Službena objava poziva</a>'
     if p.get("izvor2"):
@@ -147,6 +182,7 @@ for p in pozivi:
   <span class="tag" style="background:{acc}">{e(pod)}</span>
   <h1>{e(p['naziv'])}</h1>
   <p class="lede">{e(p['davatelj'])}</p>
+  <p class="sum"><b>Ukratko:</b> {e(ukratko(p))}</p>
   <div class="count" id="cd" data-due="{p['rok']}"{opn}><b>{hrdat(p['rok'])}</b><span>rok za prijavu</span></div>
   <dl class="facts">
     <div><dt>Rok</dt><dd>{e(p['rok_tekst'])}</dd></div>
@@ -166,7 +202,8 @@ for p in pozivi:
   <p class="note">Izvor: {izvori}. Podaci provjereni {hrdat(prov)} Prije prijave uvijek provjerite izvorni tekst poziva i natječajnu dokumentaciju – mjerodavna je službena objava.</p>
 </div></main>
 """
-    open(os.path.join(OUT, p["slug"] + ".html"), "w", encoding="utf-8").write(head(title, desc, url, ld) + body + FOOT + COUNT_JS + "\n</body>\n</html>\n")
+    open(os.path.join(OUT, p["slug"] + ".md"), "w", encoding="utf-8").write(md(p, pod))
+    open(os.path.join(OUT, p["slug"] + ".html"), "w", encoding="utf-8").write(head(title, desc, url, ld, f"{BASE}/pozivi/{p['slug']}.md") + body + FOOT + COUNT_JS + "\n</body>\n</html>\n")
     written.append(p["slug"])
 
 # popis svih poziva
@@ -194,7 +231,7 @@ body = f"""<main><div class="wrap">
 open(os.path.join(OUT, "index.html"), "w", encoding="utf-8").write(head(title, desc, url, ld) + body + FOOT + "</body>\n</html>\n")
 # obriši stranice poziva kojih više nema u podacima ili su istekle
 for f in os.listdir(OUT):
-    if f.endswith(".html") and f != "index.html" and f[:-5] not in written:
+    if (f.endswith(".html") or f.endswith(".md")) and f not in ("index.html",) and f.rsplit(".", 1)[0] not in written:
         os.remove(os.path.join(OUT, f)); print("Uklonjeno:", f)
 
 # naslovnica: poveznice u tablici otvorenih poziva vode na stranicu poziva
@@ -218,5 +255,16 @@ add = f'\n  <url><loc>{BASE}/pozivi/</loc><lastmod>{prov}</lastmod><changefreq>d
 add += "".join(f'\n  <url><loc>{BASE}/pozivi/{x}.html</loc><lastmod>{prov}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>' for x in written)
 sm = sm.replace("\n</urlset>", add + "\n</urlset>")
 open(sp, "w", encoding="utf-8").write(sm)
+
+full = f"""# Projektna klinika – otvoreni pozivi (puni opis)
+
+> Svi otvoreni natječaji i javni pozivi koje prati Projektna klinika (https://projektnaklinika.enter.fit) za odgoj i obrazovanje, sport i Hrvate izvan RH. Stanje na dan {hrdat(prov)} Podaci su preuzeti sa službenih stranica davatelja; mjerodavan je izvorni tekst poziva.
+
+"""
+for k, (pod, _) in POD.items():
+    items = [p for p in pozivi if p["podrucje"] == k]
+    if not items: continue
+    full += f"## {pod}\n\n" + "\n".join(md(p, pod).replace("\n# ", "\n### ").replace("# ", "### ", 1).replace("\n## ", "\n#### ") for p in items) + "\n"
+open(os.path.join(ROOT, "llms-full.txt"), "w", encoding="utf-8").write(full)
 
 print(f"Izrađeno: {len(written)} stranica poziva + pozivi/index.html")

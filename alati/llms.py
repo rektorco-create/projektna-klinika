@@ -35,11 +35,12 @@ Društvene mreže: https://www.facebook.com/projektnaklinika · https://www.inst
 
 {chr(10).join(rows) if rows else '- Trenutno nema unesenih poziva.'}
 
-Podaci su informativni; mjerodavne su službene upute davatelja sredstava.
+Podaci su informativni; mjerodavne su službene upute davatelja sredstava. Svaki poziv ima vlastitu stranicu s rokom, iznosom, prihvatljivim prijaviteljima, načinom prijave i opisom što se financira (i markdown inačicu iste adrese s nastavkom .md). Puni opis svih poziva u jednoj datoteci: https://projektnaklinika.enter.fit/llms-full.txt
 
 ## Glavni odjeljci
 
-- [Otvoreni pozivi](https://projektnaklinika.enter.fit/#pozivi): tablica poziva s rokovima i iznosima
+- [Svi otvoreni pozivi](https://projektnaklinika.enter.fit/pozivi/): popis po područjima, svaki poziv na zasebnoj stranici
+- [Otvoreni pozivi na naslovnici](https://projektnaklinika.enter.fit/#pozivi): tablica poziva s rokovima i iznosima
 - [Područja](https://projektnaklinika.enter.fit/#podrucja): odgoj i obrazovanje, sport, Hrvati izvan RH
 - [Burza partnera](https://projektnaklinika.enter.fit/#partneri): projektni partneri i podugovaratelji
 - [Baza konzultanata](https://projektnaklinika.enter.fit/#konzultanti): prijava za stručnjake
@@ -56,6 +57,7 @@ Podaci su informativni; mjerodavne su službene upute davatelja sredstava.
 {chr(10).join(f'### {txt(q)}{chr(10)}{chr(10)}{txt(a)}{chr(10)}' for q,a in faq)}
 ## Optional
 
+- [Puni opis svih otvorenih poziva](https://projektnaklinika.enter.fit/llms-full.txt)
 - [Sitemap](https://projektnaklinika.enter.fit/sitemap.xml)
 """
 open('llms.txt', 'w', encoding='utf-8').write(out)
