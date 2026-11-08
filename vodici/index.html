@@ -73,8 +73,8 @@ footer a{color:#AFC3DA}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 
 .toc{background:var(--surface);border-radius:16px;box-shadow:var(--shadow);padding:16px 20px;margin:18px 0}
-.toc b{display:block;margin-bottom:6px}.toc ol{margin:0;padding-left:20px;columns:2;column-gap:28px}
-@media (max-width:640px){.toc ol{columns:1}}
+.toc b{display:block;margin-bottom:6px}.toc ul{margin:0;padding-left:20px;columns:2;column-gap:28px}
+@media (max-width:640px){.toc ul{columns:1}}
 .toc a{color:var(--ink)}
 .facts2{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}
 @media (max-width:760px){.facts2{grid-template-columns:1fr 1fr}}@media (max-width:460px){.facts2{grid-template-columns:1fr}}
@@ -107,6 +107,45 @@ ul.check li:before{content:"";position:absolute;left:0;top:5px;width:18px;height
 .vlist h2{margin:0 0 6px;font-size:20px}.vlist p{margin:0;color:var(--muted);font-size:16px}
 .ctarow{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:14px}
 .btn.ghost2{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.6)}
+@keyframes vfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.float{animation:vfloat 6s ease-in-out infinite}.float.d2{animation-delay:-2s}.float.d3{animation-delay:-4s}
+@media (prefers-reduced-motion:reduce){.float{animation:none}}
+.vhero{position:relative;overflow:hidden;background:linear-gradient(135deg,#12355B 0%,#0D2846 70%);color:#fff;border-radius:24px;padding:30px 30px 26px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:18px;align-items:center;margin:16px 0 20px;box-shadow:var(--shadow)}
+.vhero:before{content:"";position:absolute;inset:0 0 auto 0;height:6px;background:linear-gradient(90deg,#0F6E74 0 33%,#C55A1E 33% 66%,#A3262A 66%)}
+.vhero:after{content:"";position:absolute;right:-80px;bottom:-120px;width:340px;height:340px;border-radius:50%;background:var(--acc);opacity:.25}
+.vhero>*{position:relative;z-index:1}
+.vhero .over{display:inline-block;background:rgba(255,255,255,.14);color:#fff;border-radius:999px;padding:5px 12px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.vhero h1{color:#fff;margin:12px 0 10px;font-size:clamp(28px,4.2vw,42px);line-height:1.12}
+.vhero .lede{color:#D7E2EE;margin:0 0 14px}
+.vhero .pub{margin:0 0 16px;color:#F2A65A;font-weight:700;font-size:16.5px}
+.vhero svg{width:100%;max-width:300px;justify-self:center;filter:drop-shadow(0 18px 30px rgba(0,0,0,.25))}
+.chips2{display:flex;flex-wrap:wrap;gap:8px}
+.chips2 span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:7px 14px;font-size:15.5px;color:#fff}
+.chips2 b{color:#F2A65A;margin-right:6px}
+@media (max-width:760px){.vhero{grid-template-columns:1fr;padding:24px 20px}.vhero svg{max-width:200px;order:-1}}
+.g{counter-reset:sec}
+.g section.num>h2{display:flex;align-items:center;gap:12px}
+.g section.num>h2:before{counter-increment:sec;content:counter(sec);flex:none;display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:12px;background:var(--acc);color:#fff;font-size:18px}
+.bars{display:grid;gap:10px;background:var(--surface);border-radius:16px;box-shadow:var(--shadow);padding:18px 20px;margin:0 0 16px}
+.bar{display:grid;grid-template-columns:minmax(0,1fr) 52px;gap:4px 12px;align-items:center}
+.bar span{font-size:15.5px}.bar b{text-align:right;font-variant-numeric:tabular-nums;color:var(--acc)}
+.bar i{grid-column:1/-1;height:12px;border-radius:999px;background:var(--line);overflow:hidden;display:block}
+.bar i:after{content:"";display:block;height:100%;width:var(--w);background:var(--c);border-radius:999px}
+.road{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;counter-reset:rd}
+@media (max-width:860px){.road{grid-template-columns:1fr 1fr}}@media (max-width:480px){.road{grid-template-columns:1fr}}
+.road li{counter-increment:rd;background:var(--surface);border-radius:16px;box-shadow:var(--shadow);padding:16px;position:relative;border-top:5px solid var(--acc)}
+.road li:last-child{background:var(--acc);color:#fff}.road li:last-child small{color:#fff}
+.road b{display:block;font-size:17px;margin-bottom:4px}.road small{display:block;color:var(--muted);font-size:15.5px;line-height:1.5}
+.vcards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:900px){.vcards{grid-template-columns:1fr}}
+.vcard{display:flex;flex-direction:column;background:var(--surface);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;color:var(--ink);text-decoration:none;transition:transform .2s}
+.vcard:hover{transform:translateY(-4px)}
+.vcard .art{background:linear-gradient(135deg,#12355B,#0D2846);padding:14px 20px 4px;border-top:6px solid var(--acc);display:flex;justify-content:center}
+.vcard .art svg{width:100%;max-width:220px;height:auto}
+.vcard .bd{padding:18px 20px 20px;display:grid;gap:8px;flex:1}
+.vcard .k{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--acc)}
+.vcard h2{margin:0;font-size:20px;line-height:1.25}.vcard p{margin:0;color:var(--muted);font-size:15.5px}
+.vcard .go{margin-top:auto;font-weight:700;color:var(--acc)}
 </style>
 <script data-goatcounter="https://projektnaklinika.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -119,7 +158,27 @@ ul.check li:before{content:"";position:absolute;left:0;top:5px;width:18px;height
   <nav class="crumbs" aria-label="Putanja"><a href="/">Naslovnica</a> › Vodiči</nav>
   <h1>Vodiči za prijavu na natječaje</h1>
   <p class="lede">Za veće otvorene pozive pročitali smo upute za prijavitelje, bodovne tablice i objavljena pitanja i odgovore te ih složili u pregledan vodič: tko se može prijaviti, što se financira, kako se boduje, koji dokumenti trebaju i gdje prijave najčešće padaju.</p>
-  <div class="vlist"><a href="/vodici/mdu-aktivnosti-za-djecu-2026/" style="--acc:#0F6E74"><h2>MDU poziv za aktivnosti djece: vodič za prijavu</h2><p>Praktični vodič za općine i gradove: tko se može prijaviti, partneri, prihvatljivi troškovi, kako se boduje (100 bodova), dokumenti i najčešće pogreške. Rok 19. 11. 2026. u 16:00.</p></a><a href="/vodici/esf-cjelodnevna-skola-ii/" style="--acc:#0F6E74"><h2>ESF+ cjelodnevna škola II: vodič za prijavu</h2><p>Vodič za osnovne škole i osnivače: tko se može prijaviti, kako izračunati najveći iznos, što se financira, kako se boduje (prag 60 bodova) i koji dokumenti trebaju. Rok 23. 11. 2026. u 16:00.</p></a><a href="/vodici/esf-sport-djeca-i-mladi-u-riziku/" style="--acc:#C55A1E"><h2>ESF+ sport za djecu i mlade u riziku: vodič za prijavu</h2><p>Vodič za sportske udruge i škole sa školskim sportskim društvom: ciljne skupine i dokazi, minimalni broj treninga, paušal 40 %, bodovanje (prag 70) i dokumenti. Poziv je obustavljen do 23. 11. 2026.</p></a></div>
+  <div class="vcards"><a class="vcard" href="/vodici/mdu-aktivnosti-za-djecu-2026/" style="--acc:#0F6E74"><div class="art"><svg viewBox="0 0 320 240" role="img" aria-label="Ilustracija: knjiga, lopta i note – aktivnosti za djecu">
+<circle cx="160" cy="124" r="104" fill="#fff" opacity=".1"/>
+<g class="float"><path d="M70 92c30-14 60-14 88 0v100c-28-14-58-14-88 0z" fill="#fff"/><path d="M162 92c28-14 58-14 88 0v100c-30-14-60-14-88 0z" fill="#E6F2F2"/>
+<path d="M158 92v100h4V92z" fill="#12355B" opacity=".35"/><g stroke="#0F6E74" stroke-width="4" stroke-linecap="round" opacity=".55"><path d="M86 112h56M86 128h50M86 144h56M178 112h56M184 128h50M178 144h56"/></g></g>
+<g class="float d2"><circle cx="252" cy="70" r="30" fill="#C55A1E" stroke="#fff" stroke-width="4"/><path d="M226 62c16 8 36 8 52 0M226 78c16-8 36-8 52 0M252 40v60" stroke="#fff" stroke-width="3" fill="none" opacity=".8"/></g>
+<g class="float d3"><path d="M74 36v40" stroke="#F2A65A" stroke-width="7" stroke-linecap="round"/><path d="M74 36l28-8v34" stroke="#F2A65A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="64" cy="78" r="11" fill="#F2A65A"/><circle cx="92" cy="64" r="11" fill="#F2A65A"/></g>
+<g class="float"><path d="M160 26l7 14 15 2-11 10 3 15-14-7-14 7 3-15-11-10 15-2z" fill="#fff"/></g>
+</svg></div><div class="bd"><span class="k">Rok 19. 11. u 16:00</span><h2>MDU poziv za aktivnosti djece: vodič za prijavu</h2><p>Za općine i gradove te njihove partnere: knjižnice, vrtiće, škole, klubove i udruge</p><span class="go">Pročitajte vodič →</span></div></a><a class="vcard" href="/vodici/esf-cjelodnevna-skola-ii/" style="--acc:#0F6E74"><div class="art"><svg viewBox="0 0 320 240" role="img" aria-label="Ilustracija: škola sa satom – cjelodnevna škola">
+<circle cx="160" cy="124" r="104" fill="#fff" opacity=".1"/>
+<g class="float"><rect x="74" y="104" width="172" height="104" rx="10" fill="#fff"/><path d="M60 110l100-62 100 62z" fill="#A3262A"/>
+<g fill="#E6F2F2"><rect x="92" y="126" width="30" height="26" rx="5"/><rect x="198" y="126" width="30" height="26" rx="5"/><rect x="92" y="164" width="30" height="26" rx="5"/><rect x="198" y="164" width="30" height="26" rx="5"/></g>
+<rect x="140" y="160" width="40" height="48" rx="6" fill="#0F6E74"/><circle cx="160" cy="98" r="20" fill="#fff" stroke="#12355B" stroke-width="4"/><path d="M160 86v13l9 6" stroke="#12355B" stroke-width="4" fill="none" stroke-linecap="round"/></g>
+<g class="float d2"><g transform="translate(262 52) rotate(35)"><rect x="-8" y="-40" width="16" height="64" rx="3" fill="#F2A65A"/><path d="M-8 24h16l-8 16z" fill="#FBEEE5"/><rect x="-8" y="-46" width="16" height="10" rx="3" fill="#C55A1E"/></g></g>
+<g class="float d3"><circle cx="58" cy="60" r="22" fill="#F2A65A"/><path d="M48 60l7 7 13-14" stroke="#12355B" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg></div><div class="bd"><span class="k">Rok 23. 11. u 16:00</span><h2>ESF+ cjelodnevna škola II: vodič za prijavu</h2><p>Za jednosmjenske osnovne škole i njihove osnivače – gradove, općine, županije</p><span class="go">Pročitajte vodič →</span></div></a><a class="vcard" href="/vodici/esf-sport-djeca-i-mladi-u-riziku/" style="--acc:#C55A1E"><div class="art"><svg viewBox="0 0 320 240" role="img" aria-label="Ilustracija: lopta, medalja i srce – sport za djecu i mlade">
+<circle cx="160" cy="124" r="104" fill="#fff" opacity=".1"/>
+<g class="float"><circle cx="150" cy="134" r="64" fill="#fff"/><path d="M150 104l26 19-10 30h-32l-10-30z" fill="#12355B"/>
+<g stroke="#12355B" stroke-width="4" fill="none" opacity=".7"><path d="M150 104V72M176 123l28-12M166 153l18 26M134 153l-18 26M124 123l-28-12"/></g></g>
+<g class="float d2"><path d="M238 30l14 30M266 30l-14 30" stroke="#0F6E74" stroke-width="8" stroke-linecap="round"/><circle cx="252" cy="80" r="24" fill="#F2A65A" stroke="#fff" stroke-width="4"/><text x="252" y="88" text-anchor="middle" font-family="'Source Sans 3',Arial,sans-serif" font-size="22" font-weight="700" fill="#12355B">1</text></g>
+<g class="float d3"><path d="M66 70c-12-14-34-2-26 16 6 12 26 24 26 24s20-12 26-24c8-18-14-30-26-16z" fill="#A3262A" stroke="#fff" stroke-width="3"/></g>
+</svg></div><div class="bd"><span class="k">Status obustava do 23. 11.</span><h2>ESF+ sport za djecu i mlade u riziku: vodič za prijavu</h2><p>Za sportske klubove i saveze te škole sa školskim sportskim društvom</p><span class="go">Pročitajte vodič →</span></div></a></div>
   <section class="help"><h2>Za koji poziv vam treba vodič?</h2><p>Javite nam se – vodiče pišemo za pozive koji najviše zanimaju škole, općine, klubove i udruge.</p><div class="ctarow"><a class="btn" href="/usluge/?ref=vodici">Usluge →</a><a class="btn ghost2" href="/pozivi/">Svi otvoreni pozivi</a></div></section>
 </div></main>
 <footer><div class="wrap"><span>Projektna klinika · <a href="/">projektnaklinika.enter.fit</a></span><span>© 2026 REKTOR POSLOVNA RJEŠENJA d.o.o.</span></div></footer>

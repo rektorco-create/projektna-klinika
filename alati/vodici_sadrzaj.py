@@ -6,6 +6,10 @@ HTML je dopušten u tekstovima (već escapiran gdje treba)."""
 VODICI = [
 {
  "slug": "mdu-aktivnosti-za-djecu-2026",
+ "ikona": "mdu", "publika": "Za općine i gradove te njihove partnere: knjižnice, vrtiće, škole, klubove i udruge",
+ "chips": [("Rok", "19. 11. u 16:00"), ("Iznos", "10–70 tis. €"), ("Bodovi", "100, rang-lista")],
+ "bodovi": [("Prioritetna područja", 20), ("Potrebe djece u lokalnom kontekstu", 20), ("Način provedbe", 20), ("Proračun", 10), ("Indeks razvijenosti", 25), ("Brdsko-planinsko / otok", 5)],
+ "koraci": [("Odmah", "Registracija u sustav eprijave-mindu.gov.hr i dogovor s partnerima (najviše dva)"), ("Do 9. 11.", "Zadnji dan za pitanja Ministarstvu (programi_projekti@mdu.hr)"), ("Tjedan prije", "Potvrde Porezne uprave (ne starije od 30 dana), potpisane i ovjerene izjave, proračun u .xlsx"), ("19. 11. do 16:00", "Predaja u sustavu – ne ostavljajte za zadnji sat")],
  "poziv": "mdu-edukativne-kulturne-sportske-aktivnosti-djeca-2026",
  "acc": "#0F6E74",
  "kratko": "MDU – aktivnosti za djecu (općine i gradovi)",
@@ -79,6 +83,10 @@ VODICI = [
 },
 {
  "slug": "esf-cjelodnevna-skola-ii",
+ "ikona": "cds", "publika": "Za jednosmjenske osnovne škole i njihove osnivače – gradove, općine, županije",
+ "chips": [("Rok", "23. 11. u 16:00"), ("Iznos", "od 40 tis. €, 100 %"), ("Prag", "60 bodova")],
+ "bodovi": [("Pokazatelji, potrebe i broj skupina", 40), ("Proračun i provedba", 10), ("Inovativnost i volontiranje", 10), ("Horizontalna načela", 15), ("Iskustvo i suradnja s dionicima", 20), ("Regionalni razvoj", 5)],
+ "koraci": [("Odmah", "Broj učenika u jednoj smjeni (ŠeR, 1. 10. 2026.) i izračun najvećeg iznosa"), ("Do 9. 11.", "Zadnji dan za pitanja (esf_plus@mzom.hr)"), ("Tjedan prije", "Obrazac 3 s aktivnostima i troškovnikom, izjave svih partnerskih škola"), ("23. 11. do 16:00", "Predaja u sustavu eKohezija")],
  "poziv": "esf-izvannastavne-aktivnosti-cjelodnevna-skola-ii",
  "acc": "#0F6E74",
  "kratko": "ESF+ – izvannastavne aktivnosti, cjelodnevna škola II",
@@ -148,6 +156,10 @@ VODICI = [
 },
 {
  "slug": "esf-sport-djeca-i-mladi-u-riziku",
+ "ikona": "sport", "publika": "Za sportske klubove i saveze te škole sa školskim sportskim društvom",
+ "chips": [("Status", "obustava do 23. 11."), ("Iznos", "50–150 tis. €"), ("Prag", "70 bodova")],
+ "bodovi": [("Sudionici, potrebe, programi i radionice", 50), ("Izvedivost", 10), ("Održivost", 10), ("Horizontalna načela", 15), ("Osoblje i partnerstvo", 15)],
+ "koraci": [("Sada", "Odabir sudionika i prikupljanje dokaza o ciljnoj skupini, uz suglasnost roditelja"), ("Sada", "Satnice osoblja (godišnji bruto ÷ 1.720), program s najmanje 70 treninga, partneri"), ("Prije otvaranja", "Potvrda Porezne (ne starija od objave poziva), izjave, prijava spremna u eKoheziji"), ("Prvi dan otvaranja", "Predaja – prijave se obrađuju redom zaprimanja")],
  "poziv": "esf-djeca-mladi-rizik-socijalne-iskljucenosti-sport",
  "acc": "#C55A1E",
  "kratko": "ESF+ – sport za djecu i mlade u riziku od socijalne isključenosti",
