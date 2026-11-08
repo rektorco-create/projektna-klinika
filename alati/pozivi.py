@@ -114,7 +114,9 @@ FOOT = """<footer><div class="wrap"><span>Projektna klinika · <a href="/">proje
 """
 
 prov = D["provjereno"]
-pozivi = sorted(D["pozivi"], key=lambda p: p.get("otvaranje") or p["rok"])
+danas = datetime.date.today().isoformat()
+# pozivi kojima je rok prošao ne dobivaju stranicu (stare se brišu niže)
+pozivi = sorted([p for p in D["pozivi"] if p["rok"] >= danas], key=lambda p: p.get("otvaranje") or p["rok"])
 written = []
 
 for p in pozivi:
@@ -190,4 +192,31 @@ body = f"""<main><div class="wrap">
 </div></main>
 """
 open(os.path.join(OUT, "index.html"), "w", encoding="utf-8").write(head(title, desc, url, ld) + body + FOOT + "</body>\n</html>\n")
+# obriši stranice poziva kojih više nema u podacima ili su istekle
+for f in os.listdir(OUT):
+    if f.endswith(".html") and f != "index.html" and f[:-5] not in written:
+        os.remove(os.path.join(OUT, f)); print("Uklonjeno:", f)
+
+# naslovnica: poveznice u tablici otvorenih poziva vode na stranicu poziva
+ip = os.path.join(ROOT, "index.html")
+ix = open(ip, encoding="utf-8").read()
+a, b = ix.find('<table id="calls">'), ix.find('</table>', ix.find('<table id="calls">'))
+if a > 0:
+    t = ix[a:b]
+    for p in pozivi:
+        for old in (f'<a href="{p["izvor"]}" target="_blank" rel="noopener">', f'<a href="{e(p["izvor"])}" target="_blank" rel="noopener">'):
+            t = t.replace(old, f'<a href="/pozivi/{p["slug"]}.html">')
+    t = re.sub(r'<a href="/pozivi/([^"]+)\.html">', lambda m: m.group(0) if m.group(1) in written else '<a href="#">', t)
+    ix = ix[:a] + t + ix[b:]
+    open(ip, "w", encoding="utf-8").write(ix)
+
+# sitemap: zadrži sve što nije u /pozivi/, dodaj /pozivi/ i stranice poziva
+sp = os.path.join(ROOT, "sitemap.xml")
+sm = open(sp, encoding="utf-8").read()
+sm = re.sub(r'\s*<url><loc>[^<]*/pozivi/[^<]*</loc>.*?</url>', '', sm)
+add = f'\n  <url><loc>{BASE}/pozivi/</loc><lastmod>{prov}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>'
+add += "".join(f'\n  <url><loc>{BASE}/pozivi/{x}.html</loc><lastmod>{prov}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>' for x in written)
+sm = sm.replace("\n</urlset>", add + "\n</urlset>")
+open(sp, "w", encoding="utf-8").write(sm)
+
 print(f"Izrađeno: {len(written)} stranica poziva + pozivi/index.html")
