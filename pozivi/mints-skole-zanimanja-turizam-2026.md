@@ -18,4 +18,4 @@
 - Službena objava: https://mints.gov.hr/javni-pozivi-i-natjecaji-11414/t-u-r-i-z-a-m/22181
 - Stranica na Projektnoj klinici: https://projektnaklinika.enter.fit/pozivi/mints-skole-zanimanja-turizam-2026.html
 
-Podaci provjereni 8. 11. 2026. Mjerodavan je izvorni tekst poziva. Pomoć s prijavom: rektor.co@gmail.com (Projektna klinika, https://projektnaklinika.enter.fit/#kontakt).
+Podaci provjereni 9. 11. 2026. Mjerodavan je izvorni tekst poziva. Pomoć s prijavom: rektor.co@gmail.com (Projektna klinika, https://projektnaklinika.enter.fit/#kontakt).

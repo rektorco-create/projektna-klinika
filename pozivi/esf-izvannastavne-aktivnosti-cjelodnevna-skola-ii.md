@@ -19,4 +19,4 @@
 - Službena objava: https://esf.hr/esfplus/natjecaji/obrazovanje/podrska-osnovnim-skolama-za-provedbu-izvannastavnih-aktivnosti-kao-pripreme-za-program-cjelodnevne-skole-ii/
 - Stranica na Projektnoj klinici: https://projektnaklinika.enter.fit/pozivi/esf-izvannastavne-aktivnosti-cjelodnevna-skola-ii.html
 
-Podaci provjereni 8. 11. 2026. Mjerodavan je izvorni tekst poziva. Pomoć s prijavom: rektor.co@gmail.com (Projektna klinika, https://projektnaklinika.enter.fit/#kontakt).
+Podaci provjereni 9. 11. 2026. Mjerodavan je izvorni tekst poziva. Pomoć s prijavom: rektor.co@gmail.com (Projektna klinika, https://projektnaklinika.enter.fit/#kontakt).
