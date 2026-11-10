@@ -18,4 +18,4 @@
 - Službena objava: https://mingo.gov.hr/javni-pozivi-i-natjecaji-7371/javni-pozivi-i-natjecaji-ministarstva/otvoreni-javni-pozivi-i-natjecaji/7390
 - Stranica na Projektnoj klinici: https://projektnaklinika.enter.fit/pozivi/mingo-kompetencije-nastavnika-mentora-strukovno-obrazovanje.html
 
-Podaci provjereni 9. 11. 2026. Mjerodavan je izvorni tekst poziva. Pomoć s prijavom: rektor.co@gmail.com (Projektna klinika, https://projektnaklinika.enter.fit/#kontakt).
+Podaci provjereni 10. 11. 2026. Mjerodavan je izvorni tekst poziva. Pomoć s prijavom: rektor.co@gmail.com (Projektna klinika, https://projektnaklinika.enter.fit/#kontakt).

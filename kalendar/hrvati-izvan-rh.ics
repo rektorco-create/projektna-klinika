@@ -11,49 +11,8 @@ X-WR-TIMEZONE:Europe/Zagreb
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
 BEGIN:VEVENT
-UID:mvep-kulturna-promidzba-javna-diplomacija-2026-rok@projektnaklinika.ent
- er.fit
-DTSTAMP:20261109T070047Z
-DTSTART;VALUE=DATE:20261109
-DTEND;VALUE=DATE:20261110
-SUMMARY:Rok: MVEP – kulturna promidžba i javna diplomacija u inozemstvu
-DESCRIPTION:Javni poziv za predlaganje projekata kulturne promidžbe\, javn
- e diplomacije i međunarodne prepoznatljivosti Republike Hrvatske\n\nDavat
- elj: Ministarstvo vanjskih i europskih poslova (MVEP)\nRok: 9. 11. 2026. (
- sat nije naveden)\nIznos: 1.000 – 20.000 € po projektu\; ukupno do 920
- .000 €\nTko se može prijaviti: nije navedeno na stranici objave – pro
- vjerite tekst poziva na stranici MVEP-a\n\nŠto se financira:\n– predsta
- vljanje kulturne baštine\, prirodnih ljepota i kulturnog identiteta Hrvat
- ske\n– predstavljanje povijesti\, znanosti\, jezika i književnosti\n–
-  predstavljanje glazbe (tradicijske i suvremene) i glazbeno-scenske umjetn
- osti\n– obilježavanje važnijih datuma hrvatske povijesti\n\nDetalji na
-  Projektnoj klinici: https://projektnaklinika.enter.fit/pozivi/mvep-kultur
- na-promidzba-javna-diplomacija-2026.html\nSlužbena objava: https://rrvz.h
- r/javni-poziv-za-predlaganje-projekata-kulturne-promidzbe-javne-diplomacij
- e-i-medunarodne-prepoznatljivosti-republike-hrvatske-2/\n\nPomoć s prijav
- om: rektor.co@gmail.com · https://projektnaklinika.enter.fit/#kontakt\nMj
- erodavan je izvorni tekst poziva. Podaci provjereni 9. 11. 2026.
-URL:https://projektnaklinika.enter.fit/pozivi/mvep-kulturna-promidzba-javna
- -diplomacija-2026.html
-CATEGORIES:Hrvati izvan RH
-TRANSP:TRANSPARENT
-STATUS:CONFIRMED
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Za 7 dana ističe rok: MVEP – kulturna promidžba i javna dip
- lomacija u inozemstvu
-TRIGGER:-P7D
-END:VALARM
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Sutra ističe rok: MVEP – kulturna promidžba i javna diploma
- cija u inozemstvu
-TRIGGER:-P1D
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:mzozt-klimatski-projekti-bih-2026-rok@projektnaklinika.enter.fit
-DTSTAMP:20261109T070047Z
+DTSTAMP:20261110T071115Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
 SUMMARY:Rok do 23:59: MZOZT – klimatski projekti lokalnih zajednica u BiH
@@ -74,8 +33,8 @@ DESCRIPTION:Poziv za dodjelu bespovratnih sredstava za projekte ublažavanj
  žbena objava: https://mzozt.gov.hr/javni-pozivi-i-natjecaji-7371/javni-po
  zivi-i-natjecaji-ministarstva/otvoreni-javni-pozivi-i-natjecaji/7390\n\nPo
  moć s prijavom: rektor.co@gmail.com · https://projektnaklinika.enter.fit
- /#kontakt\nMjerodavan je izvorni tekst poziva. Podaci provjereni 9. 11. 20
- 26.
+ /#kontakt\nMjerodavan je izvorni tekst poziva. Podaci provjereni 10. 11. 2
+ 026.
 URL:https://projektnaklinika.enter.fit/pozivi/mzozt-klimatski-projekti-bih-
  2026.html
 CATEGORIES:Hrvati izvan RH

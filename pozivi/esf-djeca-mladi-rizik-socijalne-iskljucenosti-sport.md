@@ -20,4 +20,4 @@
 - Službena objava: https://mints.gov.hr/javni-pozivi-i-natjecaji-11414/s-p-o-r-t/22182
 - Stranica na Projektnoj klinici: https://projektnaklinika.enter.fit/pozivi/esf-djeca-mladi-rizik-socijalne-iskljucenosti-sport.html
 
-Podaci provjereni 9. 11. 2026. Mjerodavan je izvorni tekst poziva. Pomoć s prijavom: rektor.co@gmail.com (Projektna klinika, https://projektnaklinika.enter.fit/#kontakt).
+Podaci provjereni 10. 11. 2026. Mjerodavan je izvorni tekst poziva. Pomoć s prijavom: rektor.co@gmail.com (Projektna klinika, https://projektnaklinika.enter.fit/#kontakt).

@@ -19,4 +19,4 @@
 - Službena objava: https://mdu.gov.hr/javni-pozivi/program-provedbe-edukativnih-kulturnih-i-sportskih-aktivnosti-za-predskolsku-djecu-te-djecu-od-1-do-4-razreda-osnovne-skole-u-lokalnim-zajednicama/7674
 - Stranica na Projektnoj klinici: https://projektnaklinika.enter.fit/pozivi/mdu-edukativne-kulturne-sportske-aktivnosti-djeca-2026.html
 
-Podaci provjereni 9. 11. 2026. Mjerodavan je izvorni tekst poziva. Pomoć s prijavom: rektor.co@gmail.com (Projektna klinika, https://projektnaklinika.enter.fit/#kontakt).
+Podaci provjereni 10. 11. 2026. Mjerodavan je izvorni tekst poziva. Pomoć s prijavom: rektor.co@gmail.com (Projektna klinika, https://projektnaklinika.enter.fit/#kontakt).

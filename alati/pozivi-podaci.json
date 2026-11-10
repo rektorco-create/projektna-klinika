@@ -1,20 +1,6 @@
 {
- "provjereno": "2026-11-09",
+ "provjereno": "2026-11-10",
  "pozivi": [
-  {
-   "slug": "mvep-kulturna-promidzba-javna-diplomacija-2026",
-   "podrucje": "red",
-   "kratko": "MVEP – kulturna promidžba i javna diplomacija u inozemstvu",
-   "naziv": "Javni poziv za predlaganje projekata kulturne promidžbe, javne diplomacije i međunarodne prepoznatljivosti Republike Hrvatske",
-   "davatelj": "Ministarstvo vanjskih i europskih poslova (MVEP)",
-   "rok": "2026-11-09", "rok_tekst": "9. 11. 2026. (sat nije naveden)",
-   "iznos": "1.000 – 20.000 € po projektu; ukupno do 920.000 €",
-   "prijavitelji": "nije navedeno na stranici objave – provjerite tekst poziva na stranici MVEP-a",
-   "prijava": "prema uputama u pozivu na stranici MVEP-a",
-   "financira": ["predstavljanje kulturne baštine, prirodnih ljepota i kulturnog identiteta Hrvatske", "predstavljanje povijesti, znanosti, jezika i književnosti", "predstavljanje glazbe (tradicijske i suvremene) i glazbeno-scenske umjetnosti", "obilježavanje važnijih datuma hrvatske povijesti"],
-   "izvor": "https://rrvz.hr/javni-poziv-za-predlaganje-projekata-kulturne-promidzbe-javne-diplomacije-i-medunarodne-prepoznatljivosti-republike-hrvatske-2/",
-   "izvor2": "https://mvep.gov.hr/ministarstvo/natjecaji/9625"
-  },
   {
    "slug": "mints-skole-zanimanja-turizam-2026",
    "podrucje": "teal",
