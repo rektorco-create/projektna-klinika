@@ -19,4 +19,4 @@
 - Službena objava: https://mzom.gov.hr/natjecaji-196/objavljen-poziv-potporna-infrastruktura-za-operaciju-jacanje-kompetencija-studenata-i-mladih-istrazivaca-za-pametnu-specijalizaciju-i-industrijsku-tranziciju-kod-poziva-pk-1-1-20/8080
 - Stranica na Projektnoj klinici: https://projektnaklinika.enter.fit/pozivi/mzom-pk-1-1-20-potporna-infrastruktura-studenti-istrazivaci.html
 
-Podaci provjereni 11. 11. 2026. Mjerodavan je izvorni tekst poziva. Pomoć s prijavom: rektor.co@gmail.com (Projektna klinika, https://projektnaklinika.enter.fit/#kontakt).
+Podaci provjereni 12. 11. 2026. Mjerodavan je izvorni tekst poziva. Pomoć s prijavom: rektor.co@gmail.com (Projektna klinika, https://projektnaklinika.enter.fit/#kontakt).
