@@ -19,4 +19,4 @@
 - Službena objava: https://mzom.gov.hr/istaknute-teme/natjecaji-196/javni-poziv-za-iskazivanjem-interesa-strucnih-suradnika-osnovnih-i-srednjih-skola-te-ucenickih-domova-za-nabavkom-mjernih-instrumenata-za-skolsku-godinu-2026-2027/8143
 - Stranica na Projektnoj klinici: https://projektnaklinika.enter.fit/pozivi/mzom-mjerni-instrumenti-strucni-suradnici-2026-2027.html
 
-Podaci provjereni 12. 11. 2026. Mjerodavan je izvorni tekst poziva. Pomoć s prijavom: rektor.co@gmail.com (Projektna klinika, https://projektnaklinika.enter.fit/#kontakt).
+Podaci provjereni 13. 11. 2026. Mjerodavan je izvorni tekst poziva. Pomoć s prijavom: rektor.co@gmail.com (Projektna klinika, https://projektnaklinika.enter.fit/#kontakt).

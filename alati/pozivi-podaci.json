@@ -1,19 +1,6 @@
 {
- "provjereno": "2026-11-12",
+ "provjereno": "2026-11-13",
  "pozivi": [
-  {
-   "slug": "mints-skole-zanimanja-turizam-2026",
-   "podrucje": "teal",
-   "kratko": "MINTS – srednje strukovne i umjetničke škole: promocija zanimanja za turizam",
-   "naziv": "Javni poziv srednjim strukovnim, umjetničkim i mješovitim školama za promociju i jačanje kompetencija strukovnih i umjetničkih zanimanja za turizam u 2026.",
-   "davatelj": "Ministarstvo turizma i sporta",
-   "rok": "2026-11-12", "rok_tekst": "12. 11. 2026. (sat nije naveden)",
-   "iznos": "nije navedeno na stranici objave",
-   "prijavitelji": "srednje strukovne, umjetničke i mješovite škole",
-   "prijava": "isključivo putem portala eTurizam (eturizam.gov.hr); prijavu podnosi osoba ovlaštena za zastupanje škole u sustavu e-Građani (FINA e-ovlaštenja)",
-   "financira": ["aktivnosti promocije i jačanja kompetencija strukovnih i umjetničkih zanimanja za turizam"],
-   "izvor": "https://mints.gov.hr/javni-pozivi-i-natjecaji-11414/t-u-r-i-z-a-m/22181"
-  },
   {
    "slug": "appf-natjecaj-srednje-skole-trgovinski-sporazumi-eu",
    "podrucje": "teal",
