@@ -18,4 +18,4 @@
 - Službena objava: https://www.ampeu.hr/novosti/natjecaj-za-srednje-skole-iz-cijele-eu-kako-trgovinski-sporazumi-eu-a-mogu-promicati-demokratske-vrijednosti
 - Stranica na Projektnoj klinici: https://projektnaklinika.enter.fit/pozivi/appf-natjecaj-srednje-skole-trgovinski-sporazumi-eu.html
 
-Podaci provjereni 13. 11. 2026. Mjerodavan je izvorni tekst poziva. Pomoć s prijavom: rektor.co@gmail.com (Projektna klinika, https://projektnaklinika.enter.fit/#kontakt).
+Podaci provjereni 14. 11. 2026. Mjerodavan je izvorni tekst poziva. Pomoć s prijavom: rektor.co@gmail.com (Projektna klinika, https://projektnaklinika.enter.fit/#kontakt).
