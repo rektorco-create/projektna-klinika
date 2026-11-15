@@ -11,52 +11,9 @@ X-WR-TIMEZONE:Europe/Zagreb
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
 BEGIN:VEVENT
-UID:appf-natjecaj-srednje-skole-trgovinski-sporazumi-eu-rok@projektnaklinik
- a.enter.fit
-DTSTAMP:20261114T071841Z
-DTSTART;VALUE=DATE:20261115
-DTEND;VALUE=DATE:20261116
-SUMMARY:Rok: APPF – natječaj za srednje škole: trgovinski sporazumi EU-
- a i demokratske vrijednosti
-DESCRIPTION:Natječaj za srednje škole iz cijele EU: Kako trgovinski spora
- zumi EU-a mogu promicati demokratske vrijednosti?\n\nDavatelj: Tijelo za e
- uropske političke stranke i europske političke zaklade (APPF)\; objava A
- MPEU\nRok: predbilježba do 15. 11. 2026.\; radovi do 15. 12. 2026.\nIznos
- : nagrada: posjet sjedištu Europskog parlamenta (Bruxelles ili Strasbourg
- ) za do 30 učenika i 2 nastavnika – putni troškovi\, smještaj i dnevn
- ice\nTko se može prijaviti: cijeli razred srednje škole (učenici od 16 
- godina)\, uz 1–2 nastavnika\; jedna prijava po školi\n\nŠto se financi
- ra:\n– esej razreda (do 5 stranica / 15.000 znakova) i video (do 3 minut
- e) o tome kako trgovinski sporazumi EU-a promiču ljudska prava\, vladavin
- u prava i dobro upravljanje\n\nDetalji na Projektnoj klinici: https://proj
- ektnaklinika.enter.fit/pozivi/appf-natjecaj-srednje-skole-trgovinski-spora
- zumi-eu.html\nSlužbena objava: https://www.ampeu.hr/novosti/natjecaj-za-s
- rednje-skole-iz-cijele-eu-kako-trgovinski-sporazumi-eu-a-mogu-promicati-de
- mokratske-vrijednosti\n\nPomoć s prijavom: rektor.co@gmail.com · https:/
- /projektnaklinika.enter.fit/#kontakt\nMjerodavan je izvorni tekst poziva. 
- Podaci provjereni 14. 11. 2026.
-URL:https://projektnaklinika.enter.fit/pozivi/appf-natjecaj-srednje-skole-t
- rgovinski-sporazumi-eu.html
-CATEGORIES:Odgoj i obrazovanje
-TRANSP:TRANSPARENT
-STATUS:CONFIRMED
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Za 7 dana ističe rok: APPF – natječaj za srednje škole: tr
- govinski sporazumi EU-a i demokratske vrijednosti
-TRIGGER:-P7D
-END:VALARM
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Sutra ističe rok: APPF – natječaj za srednje škole: trgovi
- nski sporazumi EU-a i demokratske vrijednosti
-TRIGGER:-P1D
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:mdu-edukativne-kulturne-sportske-aktivnosti-djeca-2026-rok@projektnakli
  nika.enter.fit
-DTSTAMP:20261114T071841Z
+DTSTAMP:20261115T073550Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:Rok do 16:00: MDU – edukativne\, kulturne i sportske aktivnosti z
@@ -79,7 +36,7 @@ DESCRIPTION:Program provedbe edukativnih\, kulturnih i sportskih aktivnosti
  dskolsku-djecu-te-djecu-od-1-do-4-razreda-osnovne-skole-u-lokalnim-zajedni
  cama/7674\n\nPomoć s prijavom: rektor.co@gmail.com · https://projektnakl
  inika.enter.fit/#kontakt\nMjerodavan je izvorni tekst poziva. Podaci provj
- ereni 14. 11. 2026.
+ ereni 15. 11. 2026.
 URL:https://projektnaklinika.enter.fit/pozivi/mdu-edukativne-kulturne-sport
  ske-aktivnosti-djeca-2026.html
 CATEGORIES:Odgoj i obrazovanje
@@ -101,7 +58,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:mzom-mjerni-instrumenti-strucni-suradnici-2026-2027-rok@projektnaklinik
  a.enter.fit
-DTSTAMP:20261114T071841Z
+DTSTAMP:20261115T073550Z
 DTSTART;VALUE=DATE:20261120
 DTEND;VALUE=DATE:20261121
 SUMMARY:Rok do 12:00: MZOM – mjerni instrumenti za stručne suradnike OŠ
@@ -123,7 +80,7 @@ DESCRIPTION:Javni poziv za iskazivanje interesa stručnih suradnika osnovni
  -interesa-strucnih-suradnika-osnovnih-i-srednjih-skola-te-ucenickih-domova
  -za-nabavkom-mjernih-instrumenata-za-skolsku-godinu-2026-2027/8143\n\nPomo
  ć s prijavom: rektor.co@gmail.com · https://projektnaklinika.enter.fit/#
- kontakt\nMjerodavan je izvorni tekst poziva. Podaci provjereni 14. 11. 202
+ kontakt\nMjerodavan je izvorni tekst poziva. Podaci provjereni 15. 11. 202
  6.
 URL:https://projektnaklinika.enter.fit/pozivi/mzom-mjerni-instrumenti-struc
  ni-suradnici-2026-2027.html
@@ -146,7 +103,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:esf-djeca-mladi-rizik-socijalne-iskljucenosti-sport-rok@projektnaklinik
  a.enter.fit
-DTSTAMP:20261114T071841Z
+DTSTAMP:20261115T073550Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
 SUMMARY:Rok do 16:00: ESF+ – djeca i mladi u riziku od socijalne isključ
@@ -167,7 +124,7 @@ DESCRIPTION:Uključivanje djece i mladih u riziku od socijalne isključenos
  a-mladi-rizik-socijalne-iskljucenosti-sport.html\nSlužbena objava: https:
  //mints.gov.hr/javni-pozivi-i-natjecaji-11414/s-p-o-r-t/22182\n\nPomoć s 
  prijavom: rektor.co@gmail.com · https://projektnaklinika.enter.fit/#konta
- kt\nMjerodavan je izvorni tekst poziva. Podaci provjereni 14. 11. 2026.
+ kt\nMjerodavan je izvorni tekst poziva. Podaci provjereni 15. 11. 2026.
 URL:https://projektnaklinika.enter.fit/pozivi/esf-djeca-mladi-rizik-socijal
  ne-iskljucenosti-sport.html
 CATEGORIES:Sport
@@ -189,7 +146,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:esf-djeca-mladi-rizik-socijalne-iskljucenosti-sport-otvaranje@projektna
  klinika.enter.fit
-DTSTAMP:20261114T071841Z
+DTSTAMP:20261115T073550Z
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
 SUMMARY:Otvaraju se prijave: ESF+ – djeca i mladi u riziku od socijalne i
@@ -210,7 +167,7 @@ DESCRIPTION:Uključivanje djece i mladih u riziku od socijalne isključenos
  a-mladi-rizik-socijalne-iskljucenosti-sport.html\nSlužbena objava: https:
  //mints.gov.hr/javni-pozivi-i-natjecaji-11414/s-p-o-r-t/22182\n\nPomoć s 
  prijavom: rektor.co@gmail.com · https://projektnaklinika.enter.fit/#konta
- kt\nMjerodavan je izvorni tekst poziva. Podaci provjereni 14. 11. 2026.
+ kt\nMjerodavan je izvorni tekst poziva. Podaci provjereni 15. 11. 2026.
 URL:https://projektnaklinika.enter.fit/pozivi/esf-djeca-mladi-rizik-socijal
  ne-iskljucenosti-sport.html
 CATEGORIES:Sport
@@ -225,7 +182,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:mzozt-klimatski-projekti-bih-2026-rok@projektnaklinika.enter.fit
-DTSTAMP:20261114T071841Z
+DTSTAMP:20261115T073550Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
 SUMMARY:Rok do 23:59: MZOZT – klimatski projekti lokalnih zajednica u BiH
@@ -246,7 +203,7 @@ DESCRIPTION:Poziv za dodjelu bespovratnih sredstava za projekte ublažavanj
  žbena objava: https://mzozt.gov.hr/javni-pozivi-i-natjecaji-7371/javni-po
  zivi-i-natjecaji-ministarstva/otvoreni-javni-pozivi-i-natjecaji/7390\n\nPo
  moć s prijavom: rektor.co@gmail.com · https://projektnaklinika.enter.fit
- /#kontakt\nMjerodavan je izvorni tekst poziva. Podaci provjereni 14. 11. 2
+ /#kontakt\nMjerodavan je izvorni tekst poziva. Podaci provjereni 15. 11. 2
  026.
 URL:https://projektnaklinika.enter.fit/pozivi/mzozt-klimatski-projekti-bih-
  2026.html
@@ -267,9 +224,49 @@ TRIGGER:-P1D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:mzom-esa-pecs-4-nacionalni-poziv-2026-rok@projektnaklinika.enter.fit
+DTSTAMP:20261115T073550Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261201
+SUMMARY:Rok: MZOM / ESA – 4. nacionalni PECS poziv (svemirski projekti\, 
+ sveučilišni predmeti i doktorski radovi)
+DESCRIPTION:Poziv na podnošenje projektnih prijedloga u sklopu ESA natječ
+ aja (četvrti nacionalni PECS poziv)\n\nDavatelj: Europska svemirska agenc
+ ija (ESA) u suradnji s Ministarstvom znanosti\, obrazovanja i mladih\nRok:
+  30. 11. 2026. (sat nije naveden)\nIznos: nije navedeno\nTko se može prij
+ aviti: znanstvene organizacije i hrvatske tvrtke\n\nŠto se financira:\n
+ – Tip A: istraživačke i pripremne aktivnosti\n– Tip B: razvoj proizv
+ oda ili usluga\n– Tip D: znanstvene aktivnosti u svemirskom području\n
+ – Tip F: svemirske primjene\n– Tip G1: sveučilišni kolegiji i moduli
+ \; Tip G2: doktorski radovi\n\nDetalji na Projektnoj klinici: https://proj
+ ektnaklinika.enter.fit/pozivi/mzom-esa-pecs-4-nacionalni-poziv-2026.html\n
+ Službena objava: https://mzom.gov.hr/istaknute-teme/natjecaji-196/poziv-n
+ a-podnosenje-projektnih-prijedloga-u-sklopu-esa-natjecaja-8127/8127\n\nPom
+ oć s prijavom: rektor.co@gmail.com · https://projektnaklinika.enter.fit/
+ #kontakt\nMjerodavan je izvorni tekst poziva. Podaci provjereni 15. 11. 20
+ 26.
+URL:https://projektnaklinika.enter.fit/pozivi/mzom-esa-pecs-4-nacionalni-po
+ ziv-2026.html
+CATEGORIES:Odgoj i obrazovanje
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Za 7 dana ističe rok: MZOM / ESA – 4. nacionalni PECS poziv 
+ (svemirski projekti\, sveučilišni predmeti i doktorski radovi)
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sutra ističe rok: MZOM / ESA – 4. nacionalni PECS poziv (sve
+ mirski projekti\, sveučilišni predmeti i doktorski radovi)
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:esf-izvannastavne-aktivnosti-cjelodnevna-skola-ii-rok@projektnaklinika.
  enter.fit
-DTSTAMP:20261114T071841Z
+DTSTAMP:20261115T073550Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Rok do 16:00: ESF+ – izvannastavne aktivnosti\, cjelodnevna škol
@@ -295,7 +292,7 @@ DESCRIPTION:Podrška osnovnim školama za provedbu izvannastavnih aktivnost
  a-za-provedbu-izvannastavnih-aktivnosti-kao-pripreme-za-program-cjelodnevn
  e-skole-ii/\n\nPomoć s prijavom: rektor.co@gmail.com · https://projektna
  klinika.enter.fit/#kontakt\nMjerodavan je izvorni tekst poziva. Podaci pro
- vjereni 14. 11. 2026.
+ vjereni 15. 11. 2026.
 URL:https://projektnaklinika.enter.fit/pozivi/esf-izvannastavne-aktivnosti-
  cjelodnevna-skola-ii.html
 CATEGORIES:Odgoj i obrazovanje
@@ -317,7 +314,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:mzom-obrazovanje-nacionalnih-manjina-2026-2027-rok@projektnaklinika.ent
  er.fit
-DTSTAMP:20261114T071841Z
+DTSTAMP:20261115T073550Z
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
 SUMMARY:Rok: MZOM – projekti poticanja obrazovanja nacionalnih manjina 20
@@ -346,7 +343,7 @@ DESCRIPTION:Javni poziv za sufinanciranje projekata poticanja obrazovanja n
  nciranje-projekata-poticanja-obrazovanja-nacionalnih-manjina-u-republici-h
  rvatskoj-u-2026-2027-skolskoj-godini/8173\n\nPomoć s prijavom: rektor.co@
  gmail.com · https://projektnaklinika.enter.fit/#kontakt\nMjerodavan je iz
- vorni tekst poziva. Podaci provjereni 14. 11. 2026.
+ vorni tekst poziva. Podaci provjereni 15. 11. 2026.
 URL:https://projektnaklinika.enter.fit/pozivi/mzom-obrazovanje-nacionalnih-
  manjina-2026-2027.html
 CATEGORIES:Odgoj i obrazovanje
@@ -366,9 +363,52 @@ TRIGGER:-P1D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:appf-natjecaj-srednje-skole-trgovinski-sporazumi-eu-rok@projektnaklinik
+ a.enter.fit
+DTSTAMP:20261115T073550Z
+DTSTART;VALUE=DATE:20261215
+DTEND;VALUE=DATE:20261216
+SUMMARY:Rok: APPF – natječaj za srednje škole: trgovinski sporazumi EU-
+ a i demokratske vrijednosti
+DESCRIPTION:Natječaj za srednje škole iz cijele EU: Kako trgovinski spora
+ zumi EU-a mogu promicati demokratske vrijednosti?\n\nDavatelj: Tijelo za e
+ uropske političke stranke i europske političke zaklade (APPF)\; objava A
+ MPEU\nRok: predbilježba do 15. 11. 2026.\; radovi do 15. 12. 2026.\nIznos
+ : nagrada: posjet sjedištu Europskog parlamenta (Bruxelles ili Strasbourg
+ ) za do 30 učenika i 2 nastavnika – putni troškovi\, smještaj i dnevn
+ ice\nTko se može prijaviti: cijeli razred srednje škole (učenici od 16 
+ godina)\, uz 1–2 nastavnika\; jedna prijava po školi\n\nŠto se financi
+ ra:\n– esej razreda (do 5 stranica / 15.000 znakova) i video (do 3 minut
+ e) o tome kako trgovinski sporazumi EU-a promiču ljudska prava\, vladavin
+ u prava i dobro upravljanje\n\nDetalji na Projektnoj klinici: https://proj
+ ektnaklinika.enter.fit/pozivi/appf-natjecaj-srednje-skole-trgovinski-spora
+ zumi-eu.html\nSlužbena objava: https://www.ampeu.hr/novosti/natjecaj-za-s
+ rednje-skole-iz-cijele-eu-kako-trgovinski-sporazumi-eu-a-mogu-promicati-de
+ mokratske-vrijednosti\n\nPomoć s prijavom: rektor.co@gmail.com · https:/
+ /projektnaklinika.enter.fit/#kontakt\nMjerodavan je izvorni tekst poziva. 
+ Podaci provjereni 15. 11. 2026.
+URL:https://projektnaklinika.enter.fit/pozivi/appf-natjecaj-srednje-skole-t
+ rgovinski-sporazumi-eu.html
+CATEGORIES:Odgoj i obrazovanje
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Za 7 dana ističe rok: APPF – natječaj za srednje škole: tr
+ govinski sporazumi EU-a i demokratske vrijednosti
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sutra ističe rok: APPF – natječaj za srednje škole: trgovi
+ nski sporazumi EU-a i demokratske vrijednosti
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:mzom-pk-1-1-20-potporna-infrastruktura-studenti-istrazivaci-rok@projekt
  naklinika.enter.fit
-DTSTAMP:20261114T071841Z
+DTSTAMP:20261115T073550Z
 DTSTART;VALUE=DATE:20261230
 DTEND;VALUE=DATE:20261231
 SUMMARY:Rok do 11:00: MZOM PK.1.1.20 – potporna infrastruktura za student
@@ -390,7 +430,7 @@ DESCRIPTION:Potporna infrastruktura za operaciju „Jačanje kompetencija s
  za-operaciju-jacanje-kompetencija-studenata-i-mladih-istrazivaca-za-pametn
  u-specijalizaciju-i-industrijsku-tranziciju-kod-poziva-pk-1-1-20/8080\n\nP
  omoć s prijavom: rektor.co@gmail.com · https://projektnaklinika.enter.fi
- t/#kontakt\nMjerodavan je izvorni tekst poziva. Podaci provjereni 14. 11. 
+ t/#kontakt\nMjerodavan je izvorni tekst poziva. Podaci provjereni 15. 11. 
  2026.
 URL:https://projektnaklinika.enter.fit/pozivi/mzom-pk-1-1-20-potporna-infra
  struktura-studenti-istrazivaci.html
@@ -412,7 +452,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fulbright-specialist-2027-2028-rok@projektnaklinika.enter.fit
-DTSTAMP:20261114T071841Z
+DTSTAMP:20261115T073550Z
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
 SUMMARY:Rok: MZOM / Veleposlanstvo SAD-a – Fulbright Specialist 2027.–2
@@ -430,7 +470,7 @@ DESCRIPTION:Program „Fulbright Specialist“ u 2027. i 2028. godini\n\nDa
  žbena objava: https://mzom.gov.hr/istaknute-teme/natjecaji-196/program-fu
  lbright-specialist-u-2027-i-2028-godini/8136\n\nPomoć s prijavom: rektor.
  co@gmail.com · https://projektnaklinika.enter.fit/#kontakt\nMjerodavan je
-  izvorni tekst poziva. Podaci provjereni 14. 11. 2026.
+  izvorni tekst poziva. Podaci provjereni 15. 11. 2026.
 URL:https://projektnaklinika.enter.fit/pozivi/fulbright-specialist-2027-202
  8.html
 CATEGORIES:Odgoj i obrazovanje
@@ -450,9 +490,49 @@ TRIGGER:-P1D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:erasmus-europska-diploma-eued-2027-rok@projektnaklinika.enter.fit
+DTSTAMP:20261115T073550Z
+DTSTART;VALUE=DATE:20270218
+DTEND;VALUE=DATE:20270219
+SUMMARY:Rok: EACEA – Erasmus+ europska diploma (EUED): zajednički studij
+ ski programi
+DESCRIPTION:European Degree Exploratory Action (ERASMUS-EDU-2026-EUED)\n\nD
+ avatelj: Europska komisija – Erasmus+ (Portal za financiranje i natječa
+ je)\nRok: 18. 2. 2027. (sat nije naveden u objavi)\nIznos: 14 mil. € uku
+ pno\; iznos po projektu nije navedeno\nTko se može prijaviti: visoka uči
+ lišta (detaljni uvjeti prihvatljivosti i sastav konzorcija navedeni su u 
+ dokumentaciji poziva)\n\nŠto se financira:\n– oblikovanje\, prilagodba 
+ i provedba inovativnih i uključivih transnacionalnih zajedničkih studijs
+ kih programa (preddiplomska\, diplomska ili doktorska razina) u skladu s k
+ riterijima oznake zajedničke europske diplome\n\nDetalji na Projektnoj kl
+ inici: https://projektnaklinika.enter.fit/pozivi/erasmus-europska-diploma-
+ eued-2027.html\nSlužbena objava: https://ec.europa.eu/info/funding-tender
+ s/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2026
+ -EUED\n\nPomoć s prijavom: rektor.co@gmail.com · https://projektnaklinik
+ a.enter.fit/#kontakt\nMjerodavan je izvorni tekst poziva. Podaci provjeren
+ i 15. 11. 2026.
+URL:https://projektnaklinika.enter.fit/pozivi/erasmus-europska-diploma-eued
+ -2027.html
+CATEGORIES:Odgoj i obrazovanje
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Za 7 dana ističe rok: EACEA – Erasmus+ europska diploma (EUE
+ D): zajednički studijski programi
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sutra ističe rok: EACEA – Erasmus+ europska diploma (EUED): 
+ zajednički studijski programi
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:mingo-kompetencije-nastavnika-mentora-strukovno-obrazovanje-rok@projekt
  naklinika.enter.fit
-DTSTAMP:20261114T071841Z
+DTSTAMP:20261115T073550Z
 DTSTART;VALUE=DATE:20280630
 DTEND;VALUE=DATE:20280701
 SUMMARY:Rok: MINGO – kompetencije nastavnika i mentora u strukovnim škol
@@ -470,7 +550,7 @@ DESCRIPTION:Javni poziv „Jačanje stručnih kompetencija nastavnika i men
  tjecaji-7371/javni-pozivi-i-natjecaji-ministarstva/otvoreni-javni-pozivi-i
  -natjecaji/7390\n\nPomoć s prijavom: rektor.co@gmail.com · https://proje
  ktnaklinika.enter.fit/#kontakt\nMjerodavan je izvorni tekst poziva. Podaci
-  provjereni 14. 11. 2026.
+  provjereni 15. 11. 2026.
 URL:https://projektnaklinika.enter.fit/pozivi/mingo-kompetencije-nastavnika
  -mentora-strukovno-obrazovanje.html
 CATEGORIES:Odgoj i obrazovanje

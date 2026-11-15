@@ -22,4 +22,4 @@
 - Službena objava: https://mzom.gov.hr/istaknute-teme/natjecaji-196/javni-poziv-za-sufinanciranje-projekata-poticanja-obrazovanja-nacionalnih-manjina-u-republici-hrvatskoj-u-2026-2027-skolskoj-godini/8173
 - Stranica na Projektnoj klinici: https://projektnaklinika.enter.fit/pozivi/mzom-obrazovanje-nacionalnih-manjina-2026-2027.html
 
-Podaci provjereni 14. 11. 2026. Mjerodavan je izvorni tekst poziva. Pomoć s prijavom: rektor.co@gmail.com (Projektna klinika, https://projektnaklinika.enter.fit/#kontakt).
+Podaci provjereni 15. 11. 2026. Mjerodavan je izvorni tekst poziva. Pomoć s prijavom: rektor.co@gmail.com (Projektna klinika, https://projektnaklinika.enter.fit/#kontakt).

@@ -1,5 +1,5 @@
 {
- "provjereno": "2026-11-14",
+ "provjereno": "2026-11-15",
  "pozivi": [
   {
    "slug": "appf-natjecaj-srednje-skole-trgovinski-sporazumi-eu",
@@ -7,7 +7,7 @@
    "kratko": "APPF – natječaj za srednje škole: trgovinski sporazumi EU-a i demokratske vrijednosti",
    "naziv": "Natječaj za srednje škole iz cijele EU: Kako trgovinski sporazumi EU-a mogu promicati demokratske vrijednosti?",
    "davatelj": "Tijelo za europske političke stranke i europske političke zaklade (APPF); objava AMPEU",
-   "rok": "2026-11-15",
+   "rok": "2026-12-15",
    "rok_tekst": "predbilježba do 15. 11. 2026.; radovi do 15. 12. 2026.",
    "iznos": "nagrada: posjet sjedištu Europskog parlamenta (Bruxelles ili Strasbourg) za do 30 učenika i 2 nastavnika – putni troškovi, smještaj i dnevnice",
    "prijavitelji": "cijeli razred srednje škole (učenici od 16 godina), uz 1–2 nastavnika; jedna prijava po školi",
@@ -175,6 +175,42 @@
     "aktivnosti od 1. 9. 2026. do 31. 8. 2027."
    ],
    "izvor": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/javni-poziv-za-sufinanciranje-projekata-poticanja-obrazovanja-nacionalnih-manjina-u-republici-hrvatskoj-u-2026-2027-skolskoj-godini/8173"
+  },
+  {
+   "slug": "mzom-esa-pecs-4-nacionalni-poziv-2026",
+   "podrucje": "teal",
+   "kratko": "MZOM / ESA – 4. nacionalni PECS poziv (svemirski projekti, sveučilišni predmeti i doktorski radovi)",
+   "naziv": "Poziv na podnošenje projektnih prijedloga u sklopu ESA natječaja (četvrti nacionalni PECS poziv)",
+   "davatelj": "Europska svemirska agencija (ESA) u suradnji s Ministarstvom znanosti, obrazovanja i mladih",
+   "rok": "2026-11-30",
+   "rok_tekst": "30. 11. 2026. (sat nije naveden)",
+   "iznos": "nije navedeno",
+   "prijavitelji": "znanstvene organizacije i hrvatske tvrtke",
+   "prijava": "nije navedeno – za više informacija objava MZOM-a upućuje na ESA-inu stranicu",
+   "financira": [
+    "Tip A: istraživačke i pripremne aktivnosti",
+    "Tip B: razvoj proizvoda ili usluga",
+    "Tip D: znanstvene aktivnosti u svemirskom području",
+    "Tip F: svemirske primjene",
+    "Tip G1: sveučilišni kolegiji i moduli; Tip G2: doktorski radovi"
+   ],
+   "izvor": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/poziv-na-podnosenje-projektnih-prijedloga-u-sklopu-esa-natjecaja-8127/8127"
+  },
+  {
+   "slug": "erasmus-europska-diploma-eued-2027",
+   "podrucje": "teal",
+   "kratko": "EACEA – Erasmus+ europska diploma (EUED): zajednički studijski programi",
+   "naziv": "European Degree Exploratory Action (ERASMUS-EDU-2026-EUED)",
+   "davatelj": "Europska komisija – Erasmus+ (Portal za financiranje i natječaje)",
+   "rok": "2027-02-18",
+   "rok_tekst": "18. 2. 2027. (sat nije naveden u objavi)",
+   "iznos": "14 mil. € ukupno; iznos po projektu nije navedeno",
+   "prijavitelji": "visoka učilišta (detaljni uvjeti prihvatljivosti i sastav konzorcija navedeni su u dokumentaciji poziva)",
+   "prijava": "elektronički, putem Portala za financiranje i natječaje Europske komisije (Funding & Tenders Portal)",
+   "financira": [
+    "oblikovanje, prilagodba i provedba inovativnih i uključivih transnacionalnih zajedničkih studijskih programa (preddiplomska, diplomska ili doktorska razina) u skladu s kriterijima oznake zajedničke europske diplome"
+   ],
+   "izvor": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2026-EUED"
   }
  ]
 }
