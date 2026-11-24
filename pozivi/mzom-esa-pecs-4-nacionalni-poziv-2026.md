@@ -22,4 +22,4 @@
 - Službena objava: https://mzom.gov.hr/istaknute-teme/natjecaji-196/poziv-na-podnosenje-projektnih-prijedloga-u-sklopu-esa-natjecaja-8127/8127
 - Stranica na Projektnoj klinici: https://projektnaklinika.enter.fit/pozivi/mzom-esa-pecs-4-nacionalni-poziv-2026.html
 
-Podaci provjereni 23. 11. 2026. Mjerodavan je izvorni tekst poziva. Pomoć s prijavom: rektor.co@gmail.com (Projektna klinika, https://projektnaklinika.enter.fit/#kontakt).
+Podaci provjereni 24. 11. 2026. Mjerodavan je izvorni tekst poziva. Pomoć s prijavom: rektor.co@gmail.com (Projektna klinika, https://projektnaklinika.enter.fit/#kontakt).
