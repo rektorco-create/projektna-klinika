@@ -1,11 +1,11 @@
 {
- "pokrenuto": "2026-11-28T09:24:09+00:00",
+ "pokrenuto": "2026-11-28T09:29:43+00:00",
  "izvori": {
   "eufondovi": [
    {
     "url": "https://eufondovi.gov.hr/",
     "datoteka": "davatelji/eufondovi-gov-hr-fef4b7.txt",
-    "snimljeno": "2026-11-28T09:24:09+00:00",
+    "snimljeno": "2026-11-28T09:29:43+00:00",
     "status": 200,
     "konacni_url": "https://eufondovi.gov.hr/",
     "tip": "text/html",
@@ -15,7 +15,7 @@
    {
     "url": "https://eufondovi.gov.hr/pozivi/",
     "datoteka": "davatelji/eufondovi-gov-hr-pozivi-89c7e5.txt",
-    "snimljeno": "2026-11-28T09:24:14+00:00",
+    "snimljeno": "2026-11-28T09:29:48+00:00",
     "status": 200,
     "konacni_url": "https://eufondovi.gov.hr/pozivi/",
     "tip": "text/html",
@@ -27,7 +27,7 @@
    {
     "url": "https://esf.hr/esfplus/naslovnica/",
     "datoteka": "davatelji/esf-hr-esfplus-naslovnica-5a259f.txt",
-    "snimljeno": "2026-11-28T09:24:17+00:00",
+    "snimljeno": "2026-11-28T09:29:52+00:00",
     "status": 200,
     "konacni_url": "https://esf.hr/esfplus/naslovnica/",
     "tip": "text/html",
@@ -37,7 +37,7 @@
    {
     "url": "https://esf.hr/esfplus/natjecaji/",
     "datoteka": "davatelji/esf-hr-esfplus-natjecaji-49d623.txt",
-    "snimljeno": "2026-11-28T09:24:24+00:00",
+    "snimljeno": "2026-11-28T09:29:58+00:00",
     "status": 200,
     "konacni_url": "https://esf.hr/esfplus/natjecaji/zdravstvo/",
     "tip": "text/html",
@@ -49,7 +49,7 @@
    {
     "url": "https://fondovieu.gov.hr/",
     "datoteka": "davatelji/fondovieu-gov-hr-ad36ac.txt",
-    "snimljeno": "2026-11-28T09:24:28+00:00",
+    "snimljeno": "2026-11-28T09:30:04+00:00",
     "status": 200,
     "konacni_url": "https://fondovieu.gov.hr/",
     "tip": "text/html",
@@ -59,7 +59,7 @@
    {
     "url": "https://fondovieu.gov.hr/pozivi",
     "datoteka": "davatelji/fondovieu-gov-hr-pozivi-c0369e.txt",
-    "snimljeno": "2026-11-28T09:24:32+00:00",
+    "snimljeno": "2026-11-28T09:30:06+00:00",
     "status": 200,
     "konacni_url": "https://fondovieu.gov.hr/pozivi",
     "tip": "text/html",
@@ -71,7 +71,7 @@
    {
     "url": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/196",
     "datoteka": "davatelji/mzom-gov-hr-istaknute-teme-natjecaji-196-196-6c7e2e.txt",
-    "snimljeno": "2026-11-28T09:24:34+00:00",
+    "snimljeno": "2026-11-28T09:30:09+00:00",
     "status": 200,
     "konacni_url": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/196",
     "tip": "text/html",
@@ -83,7 +83,7 @@
    {
     "url": "https://mints.gov.hr/javni-pozivi-i-natjecaji-11414/11414",
     "datoteka": "davatelji/mints-gov-hr-javni-pozivi-i-natjecaji-11414-11414-06293f.txt",
-    "snimljeno": "2026-11-28T09:24:37+00:00",
+    "snimljeno": "2026-11-28T09:30:13+00:00",
     "status": 200,
     "konacni_url": "https://mints.gov.hr/javni-pozivi-i-natjecaji-11414/11414",
     "tip": "text/html",
@@ -93,7 +93,7 @@
    {
     "url": "https://mint.gov.hr/javni-pozivi-i-natjecaji-11414/s-p-o-r-t/22182",
     "datoteka": "davatelji/mint-gov-hr-javni-pozivi-i-natjecaji-11414-s-p-o-r-t-22182-77a88d.txt",
-    "snimljeno": "2026-11-28T09:24:40+00:00",
+    "snimljeno": "2026-11-28T09:30:16+00:00",
     "status": 200,
     "konacni_url": "https://mint.gov.hr/javni-pozivi-i-natjecaji-11414/s-p-o-r-t/22182",
     "tip": "text/html",
@@ -103,7 +103,7 @@
    {
     "url": "https://mints.gov.hr/sport-21838/21838",
     "datoteka": "davatelji/mints-gov-hr-sport-21838-21838-cb88e8.txt",
-    "snimljeno": "2026-11-28T09:24:45+00:00",
+    "snimljeno": "2026-11-28T09:30:19+00:00",
     "status": 200,
     "konacni_url": "https://mints.gov.hr/sport-21680/21680",
     "tip": "text/html",
@@ -113,7 +113,7 @@
    {
     "url": "https://mints.gov.hr/turizam-21837/21837",
     "datoteka": "davatelji/mints-gov-hr-turizam-21837-21837-68b42d.txt",
-    "snimljeno": "2026-11-28T09:24:48+00:00",
+    "snimljeno": "2026-11-28T09:30:22+00:00",
     "status": 200,
     "konacni_url": "https://mints.gov.hr/istaknute-teme-turizam/11",
     "tip": "text/html",
@@ -125,7 +125,7 @@
    {
     "url": "https://hrvatiizvanrh.gov.hr/natjecaji-574/574",
     "datoteka": "davatelji/hrvatiizvanrh-gov-hr-natjecaji-574-574-9d79a5.txt",
-    "snimljeno": "2026-11-28T09:24:51+00:00",
+    "snimljeno": "2026-11-28T09:30:25+00:00",
     "status": 200,
     "konacni_url": "https://hrvatiizvanrh.gov.hr/natjecaji-574/574",
     "tip": "text/html",
@@ -135,7 +135,7 @@
    {
     "url": "https://hrvatiizvanrh.gov.hr/vijesti/8",
     "datoteka": "davatelji/hrvatiizvanrh-gov-hr-vijesti-8-7c82f9.txt",
-    "snimljeno": "2026-11-28T09:24:54+00:00",
+    "snimljeno": "2026-11-28T09:30:28+00:00",
     "status": 200,
     "konacni_url": "https://hrvatiizvanrh.gov.hr/vijesti/8",
     "tip": "text/html",
@@ -147,7 +147,7 @@
    {
     "url": "https://mdu.gov.hr/javni-pozivi/5923",
     "datoteka": "davatelji/mdu-gov-hr-javni-pozivi-5923-c778b5.txt",
-    "snimljeno": "2026-11-28T09:24:56+00:00",
+    "snimljeno": "2026-11-28T09:30:31+00:00",
     "status": 200,
     "konacni_url": "https://mdu.gov.hr/javni-pozivi/5923",
     "tip": "text/html",
@@ -155,18 +155,21 @@
     "znakova": 6047
    },
    {
-    "url": "https://mdu.gov.hr/vijesti-4693",
-    "datoteka": "davatelji/mdu-gov-hr-vijesti-4693-700fcc.txt",
-    "snimljeno": "2026-11-28T09:24:59+00:00",
-    "status": 404,
-    "greska": "HTTP 404"
+    "url": "https://mdu.gov.hr/vijesti-4693/4693",
+    "datoteka": "davatelji/mdu-gov-hr-vijesti-4693-4693-906b23.txt",
+    "snimljeno": "2026-11-28T09:30:34+00:00",
+    "status": 200,
+    "konacni_url": "https://mdu.gov.hr/vijesti-4693/4693",
+    "tip": "text/html",
+    "naslov": "Ministarstvo demografije i useljeništva - Vijesti",
+    "znakova": 2391
    }
   ],
   "mvep": [
    {
     "url": "https://mvep.gov.hr/ministarstvo/natjecaji/9625",
     "datoteka": "davatelji/mvep-gov-hr-ministarstvo-natjecaji-9625-e20483.txt",
-    "snimljeno": "2026-11-28T09:25:22+00:00",
+    "snimljeno": "2026-11-28T09:30:37+00:00",
     "status": 200,
     "konacni_url": "https://mvep.gov.hr/ministarstvo/natjecaji/9625",
     "tip": "text/html",
@@ -178,7 +181,7 @@
    {
     "url": "https://rrvz.hr/",
     "datoteka": "davatelji/rrvz-hr-8fb561.txt",
-    "snimljeno": "2026-11-28T09:25:26+00:00",
+    "snimljeno": "2026-11-28T09:30:40+00:00",
     "status": 200,
     "konacni_url": "https://rrvz.hr/",
     "tip": "text/html",
@@ -190,7 +193,7 @@
    {
     "url": "https://mingo.gov.hr/javni-pozivi-i-natjecaji-7371/javni-pozivi-i-natjecaji-ministarstva/otvoreni-javni-pozivi-i-natjecaji/7390",
     "datoteka": "davatelji/mingo-gov-hr-javni-pozivi-i-natjecaji-7371-javni-pozivi-i-natjecaji-ministarstva-otvoreni--68aa51.txt",
-    "snimljeno": "2026-11-28T09:25:30+00:00",
+    "snimljeno": "2026-11-28T09:30:44+00:00",
     "status": 200,
     "konacni_url": "https://mingo.gov.hr/javni-pozivi-i-natjecaji-7371/javni-pozivi-i-natjecaji-ministarstva/otvoreni-javni-pozivi-i-natjecaji/7390",
     "tip": "text/html",
@@ -202,7 +205,7 @@
    {
     "url": "https://mzozt.gov.hr/javni-pozivi-i-natjecaji-7371/javni-pozivi-i-natjecaji-ministarstva/otvoreni-javni-pozivi-i-natjecaji/7390",
     "datoteka": "davatelji/mzozt-gov-hr-javni-pozivi-i-natjecaji-7371-javni-pozivi-i-natjecaji-ministarstva-otvoreni--6e101f.txt",
-    "snimljeno": "2026-11-28T09:25:35+00:00",
+    "snimljeno": "2026-11-28T09:30:48+00:00",
     "status": 200,
     "konacni_url": "https://mzozt.gov.hr/javni-pozivi-i-natjecaji-7371/javni-pozivi-i-natjecaji-ministarstva/otvoreni-javni-pozivi-i-natjecaji/7390",
     "tip": "text/html",
@@ -210,18 +213,21 @@
     "znakova": 219269
    },
    {
-    "url": "https://mzozt.gov.hr/novosti-8",
-    "datoteka": "davatelji/mzozt-gov-hr-novosti-8-29908d.txt",
-    "snimljeno": "2026-11-28T09:25:39+00:00",
-    "status": 404,
-    "greska": "HTTP 404"
+    "url": "https://mzozt.gov.hr/novosti-8/8",
+    "datoteka": "davatelji/mzozt-gov-hr-novosti-8-8-a3273b.txt",
+    "snimljeno": "2026-11-28T09:30:52+00:00",
+    "status": 200,
+    "konacni_url": "https://mzozt.gov.hr/novosti-8/8",
+    "tip": "text/html",
+    "naslov": "Ministarstvo zaštite okoliša i zelene tranzicije Republike Hrvatske - Novosti",
+    "znakova": 7187
    }
   ],
   "mrosp": [
    {
     "url": "https://mrosp.gov.hr/",
     "datoteka": "davatelji/mrosp-gov-hr-d5d0ff.txt",
-    "snimljeno": "2026-11-28T09:26:02+00:00",
+    "snimljeno": "2026-11-28T09:30:55+00:00",
     "status": 200,
     "konacni_url": "https://mrosp.gov.hr/",
     "tip": "text/html",
@@ -231,7 +237,7 @@
    {
     "url": "https://mrosp.gov.hr/pristup-informacijama-16/natjecaji-pozivi-i-zaposljavanje/udruge-u-sustavu-socijalne-skrbi-natjecaji-pozivi-i-obrasci/11791",
     "datoteka": "davatelji/mrosp-gov-hr-pristup-informacijama-16-natjecaji-pozivi-i-zaposljavanje-udruge-u-sustavu-so-c46f8b.txt",
-    "snimljeno": "2026-11-28T09:26:05+00:00",
+    "snimljeno": "2026-11-28T09:30:58+00:00",
     "status": 200,
     "konacni_url": "https://mrosp.gov.hr/pristup-informacijama-16/natjecaji-pozivi-i-zaposljavanje/udruge-u-sustavu-socijalne-skrbi-natjecaji-pozivi-i-obrasci/11791",
     "tip": "text/html",
@@ -241,7 +247,7 @@
    {
     "url": "https://mrosp.gov.hr/pristup-informacijama-16/natjecaji-pozivi-i-zaposljavanje/ostali-natjecaji-i-pozivi/13690",
     "datoteka": "davatelji/mrosp-gov-hr-pristup-informacijama-16-natjecaji-pozivi-i-zaposljavanje-ostali-natjecaji-i--83fa49.txt",
-    "snimljeno": "2026-11-28T09:26:07+00:00",
+    "snimljeno": "2026-11-28T09:31:01+00:00",
     "status": 200,
     "konacni_url": "https://mrosp.gov.hr/pristup-informacijama-16/natjecaji-pozivi-i-zaposljavanje/ostali-natjecaji-i-pozivi/13690",
     "tip": "text/html",
@@ -253,7 +259,7 @@
    {
     "url": "https://razvoj.gov.hr/",
     "datoteka": "davatelji/razvoj-gov-hr-ed0a1f.txt",
-    "snimljeno": "2026-11-28T09:26:10+00:00",
+    "snimljeno": "2026-11-28T09:31:03+00:00",
     "status": 200,
     "konacni_url": "https://razvoj.gov.hr/",
     "tip": "text/html",
@@ -263,7 +269,7 @@
    {
     "url": "https://razvoj.gov.hr/vijesti/8",
     "datoteka": "davatelji/razvoj-gov-hr-vijesti-8-59d1e0.txt",
-    "snimljeno": "2026-11-28T09:26:13+00:00",
+    "snimljeno": "2026-11-28T09:31:06+00:00",
     "status": 200,
     "konacni_url": "https://razvoj.gov.hr/vijesti/8",
     "tip": "text/html",
@@ -275,7 +281,7 @@
    {
     "url": "https://www.ampeu.hr/natjecaji",
     "datoteka": "davatelji/www-ampeu-hr-natjecaji-cca685.txt",
-    "snimljeno": "2026-11-28T09:26:16+00:00",
+    "snimljeno": "2026-11-28T09:31:09+00:00",
     "status": 200,
     "konacni_url": "https://www.ampeu.hr/natjecaji",
     "tip": "text/html",
@@ -285,7 +291,7 @@
    {
     "url": "https://www.ampeu.hr/novosti",
     "datoteka": "davatelji/www-ampeu-hr-novosti-65041f.txt",
-    "snimljeno": "2026-11-28T09:26:20+00:00",
+    "snimljeno": "2026-11-28T09:31:12+00:00",
     "status": 200,
     "konacni_url": "https://www.ampeu.hr/novosti",
     "tip": "text/html",
@@ -297,7 +303,7 @@
    {
     "url": "https://udruge.gov.hr/natjecaji-5503/5503",
     "datoteka": "davatelji/udruge-gov-hr-natjecaji-5503-5503-5a883a.txt",
-    "snimljeno": "2026-11-28T09:26:23+00:00",
+    "snimljeno": "2026-11-28T09:31:15+00:00",
     "status": 200,
     "konacni_url": "https://udruge.gov.hr/natjecaji-5503/5503",
     "tip": "text/html",
@@ -309,7 +315,7 @@
    {
     "url": "https://min-kulture.gov.hr/natjecaji-16274/javni-pozivi-404/404",
     "datoteka": "davatelji/min-kulture-gov-hr-natjecaji-16274-javni-pozivi-404-404-6f5599.txt",
-    "snimljeno": "2026-11-28T09:26:26+00:00",
+    "snimljeno": "2026-11-28T09:31:18+00:00",
     "status": 200,
     "konacni_url": "https://min-kulture.gov.hr/natjecaji-16274/javni-pozivi-404/404",
     "tip": "text/html",
@@ -321,7 +327,7 @@
    {
     "url": "https://www.asoo.hr/",
     "datoteka": "davatelji/www-asoo-hr-c8fe30.txt",
-    "snimljeno": "2026-11-28T09:26:29+00:00",
+    "snimljeno": "2026-11-28T09:31:21+00:00",
     "status": 200,
     "konacni_url": "https://www.asoo.hr/",
     "tip": "text/html",
@@ -333,7 +339,7 @@
    {
     "url": "https://aem.hr/",
     "datoteka": "davatelji/aem-hr-75ab87.txt",
-    "snimljeno": "2026-11-28T09:26:34+00:00",
+    "snimljeno": "2026-11-28T09:31:27+00:00",
     "status": 200,
     "konacni_url": "https://aem.hr/",
     "tip": "text/html",
@@ -342,7 +348,272 @@
    }
   ]
  },
- "nove_podstranice": [],
+ "nove_podstranice": [
+  {
+   "url": "https://mdu.gov.hr/vijesti-4693/4693?impaired=1",
+   "datoteka": "davatelji/novo/mdu-gov-hr-vijesti-4693-4693-8a2eb3.txt",
+   "snimljeno": "2026-11-28T09:31:30+00:00",
+   "status": 200,
+   "konacni_url": "https://mdu.gov.hr/vijesti-4693/4693?impaired=1",
+   "tip": "text/html",
+   "naslov": "Ministarstvo demografije i useljeništva - Vijesti",
+   "znakova": 2391,
+   "izvor": "mdu",
+   "tekst_poveznice": "Prilagodba pristupačnosti"
+  },
+  {
+   "url": "https://mdu.gov.hr/vijesti-4693/biram-otok-ministarstvo-demografije-i-useljenistva-pokrece-kampanju-koja-poziva-na-zivot-na-hrvatskim-otocima/7716",
+   "datoteka": "davatelji/novo/mdu-gov-hr-vijesti-4693-biram-otok-ministarstvo-demografije-i-useljenistva-pokrece-kampanj-bb981b.txt",
+   "snimljeno": "2026-11-28T09:31:33+00:00",
+   "status": 200,
+   "konacni_url": "https://mdu.gov.hr/vijesti-4693/biram-otok-ministarstvo-demografije-i-useljenistva-pokrece-kampanju-koja-poziva-na-zivot-na-hrvatskim-otocima/7716",
+   "tip": "text/html",
+   "naslov": "Ministarstvo demografije i useljeništva - BIRAM OTOK – Ministarstvo demografije i useljeništva pokreće kampanju koja poziva na život na hrvatskim otocima",
+   "znakova": 3979,
+   "izvor": "mdu",
+   "tekst_poveznice": "BIRAM OTOK – Ministarstvo demografije i useljeništva pokreće kampanju koja poziva na život na hrvatskim otocima"
+  },
+  {
+   "url": "https://mdu.gov.hr/vijesti-4693/ministarstvo-nastavlja-jacati-potporu-obiteljima-jednokratna-naknada-za-novorodjeno-dijete-raste-na-803-eura/7713",
+   "datoteka": "davatelji/novo/mdu-gov-hr-vijesti-4693-ministarstvo-nastavlja-jacati-potporu-obiteljima-jednokratna-nakna-8ff90f.txt",
+   "snimljeno": "2026-11-28T09:31:35+00:00",
+   "status": 200,
+   "konacni_url": "https://mdu.gov.hr/vijesti-4693/ministarstvo-nastavlja-jacati-potporu-obiteljima-jednokratna-naknada-za-novorodjeno-dijete-raste-na-803-eura/7713",
+   "tip": "text/html",
+   "naslov": "Ministarstvo demografije i useljeništva - Ministarstvo nastavlja jačati potporu obiteljima: Jednokratna naknada za novorođeno dijete raste na 803 eura!",
+   "znakova": 4395,
+   "izvor": "mdu",
+   "tekst_poveznice": "Ministarstvo nastavlja jačati potporu obiteljima: Jednokratna naknada za novorođeno dijete raste na 803 eura!"
+  },
+  {
+   "url": "https://mdu.gov.hr/vijesti-4693/izaslanstvo-iz-sjeverne-makedonije-u-posjetu-ministarstvu-demografije-i-useljenistva-razmjena-iskustava-o-povratku-i-suradnji-s-iseljenistvom/7712",
+   "datoteka": "davatelji/novo/mdu-gov-hr-vijesti-4693-izaslanstvo-iz-sjeverne-makedonije-u-posjetu-ministarstvu-demograf-96be2c.txt",
+   "snimljeno": "2026-11-28T09:31:38+00:00",
+   "status": 200,
+   "konacni_url": "https://mdu.gov.hr/vijesti-4693/izaslanstvo-iz-sjeverne-makedonije-u-posjetu-ministarstvu-demografije-i-useljenistva-razmjena-iskustava-o-povratku-i-suradnji-s-iseljenistvom/7712",
+   "tip": "text/html",
+   "naslov": "Ministarstvo demografije i useljeništva - Izaslanstvo iz Sjeverne Makedonije u posjetu Ministarstvu demografije i useljeništva: Razmjena iskustava o povratku i suradnji s iseljeništvom",
+   "znakova": 3332,
+   "izvor": "mdu",
+   "tekst_poveznice": "Izaslanstvo iz Sjeverne Makedonije u posjetu Ministarstvu demografije i useljeništva: Razmjena iskustava o povratku i suradnji s iseljeništvom"
+  },
+  {
+   "url": "https://mdu.gov.hr/vijesti-4693/ministar-medju-hrvatima-u-peruu-san-vasih-predaka-danas-moze-postati-vasa-stvarnost/7711",
+   "datoteka": "davatelji/novo/mdu-gov-hr-vijesti-4693-ministar-medju-hrvatima-u-peruu-san-vasih-predaka-danas-moze-posta-fd27f2.txt",
+   "snimljeno": "2026-11-28T09:31:40+00:00",
+   "status": 200,
+   "konacni_url": "https://mdu.gov.hr/vijesti-4693/ministar-medju-hrvatima-u-peruu-san-vasih-predaka-danas-moze-postati-vasa-stvarnost/7711",
+   "tip": "text/html",
+   "naslov": "Ministarstvo demografije i useljeništva - Ministar među Hrvatima u Peruu: San vaših predaka danas može postati vaša stvarnost",
+   "znakova": 7792,
+   "izvor": "mdu",
+   "tekst_poveznice": "Ministar među Hrvatima u Peruu: San vaših predaka danas može postati vaša stvarnost"
+  },
+  {
+   "url": "https://mdu.gov.hr/vijesti-4693/drzavna-tajnica-danijela-blazanovic-na-panelu-za-svako-dijete-za-snazniju-obitelj-podrska-roditeljstvu-mora-se-osjetiti-u-svakodnevnom-zivotu/7710",
+   "datoteka": "davatelji/novo/mdu-gov-hr-vijesti-4693-drzavna-tajnica-danijela-blazanovic-na-panelu-za-svako-dijete-za-s-f0adaf.txt",
+   "snimljeno": "2026-11-28T09:31:42+00:00",
+   "status": 200,
+   "konacni_url": "https://mdu.gov.hr/vijesti-4693/drzavna-tajnica-danijela-blazanovic-na-panelu-za-svako-dijete-za-snazniju-obitelj-podrska-roditeljstvu-mora-se-osjetiti-u-svakodnevnom-zivotu/7710",
+   "tip": "text/html",
+   "naslov": "Ministarstvo demografije i useljeništva - Državna tajnica Danijela Blažanović na panelu „Za svako dijete. Za snažniju obitelj.”: Podrška roditeljstvu mora se osjetiti u svakodnevnom životu",
+   "znakova": 4674,
+   "izvor": "mdu",
+   "tekst_poveznice": "Državna tajnica Danijela Blažanović na panelu „Za svako dijete. Za snažniju obitelj.”: Podrška roditeljstvu mora se osjetiti u svakodnevnom životu"
+  },
+  {
+   "url": "https://mdu.gov.hr/vijesti-4693/stradanja-mjestana-nadina-nikad-se-ne-smiju-zaboraviti/7709",
+   "datoteka": "davatelji/novo/mdu-gov-hr-vijesti-4693-stradanja-mjestana-nadina-nikad-se-ne-smiju-zaboraviti-7709-f12cbd.txt",
+   "snimljeno": "2026-11-28T09:31:45+00:00",
+   "status": 200,
+   "konacni_url": "https://mdu.gov.hr/vijesti-4693/stradanja-mjestana-nadina-nikad-se-ne-smiju-zaboraviti/7709",
+   "tip": "text/html",
+   "naslov": "Ministarstvo demografije i useljeništva - Stradanja mještana Nadina nikad se ne smiju zaboraviti",
+   "znakova": 2148,
+   "izvor": "mdu",
+   "tekst_poveznice": "Stradanja mještana Nadina nikad se ne smiju zaboraviti"
+  },
+  {
+   "url": "https://mdu.gov.hr/vijesti-4693/ministarstvo-nastavlja-jacati-veze-s-hrvatskim-iseljenistvom-u-juznoj-americi-susret-s-predsjednikom-najstarije-hrvatske-udruge-u-brazilu/7708",
+   "datoteka": "davatelji/novo/mdu-gov-hr-vijesti-4693-ministarstvo-nastavlja-jacati-veze-s-hrvatskim-iseljenistvom-u-juz-f8eee6.txt",
+   "snimljeno": "2026-11-28T09:31:47+00:00",
+   "status": 200,
+   "konacni_url": "https://mdu.gov.hr/vijesti-4693/ministarstvo-nastavlja-jacati-veze-s-hrvatskim-iseljenistvom-u-juznoj-americi-susret-s-predsjednikom-najstarije-hrvatske-udruge-u-brazilu/7708",
+   "tip": "text/html",
+   "naslov": "Ministarstvo demografije i useljeništva - Ministarstvo nastavlja jačati veze s hrvatskim iseljeništvom u Južnoj Americi: Susret s predsjednikom najstarije hrvatske udruge u Brazilu",
+   "znakova": 3422,
+   "izvor": "mdu",
+   "tekst_poveznice": "Ministarstvo nastavlja jačati veze s hrvatskim iseljeništvom u Južnoj Americi: Susret s predsjednikom najstarije hrvatske udruge u Brazilu"
+  },
+  {
+   "url": "https://mdu.gov.hr/vijesti-4693/zrtve-vukovara-i-skabrnje-nasa-su-obveza-cuvanja-lijepe-nase/7707",
+   "datoteka": "davatelji/novo/mdu-gov-hr-vijesti-4693-zrtve-vukovara-i-skabrnje-nasa-su-obveza-cuvanja-lijepe-nase-7707-a41995.txt",
+   "snimljeno": "2026-11-28T09:31:50+00:00",
+   "status": 200,
+   "konacni_url": "https://mdu.gov.hr/vijesti-4693/zrtve-vukovara-i-skabrnje-nasa-su-obveza-cuvanja-lijepe-nase/7707",
+   "tip": "text/html",
+   "naslov": "Ministarstvo demografije i useljeništva - Žrtve Vukovara i Škabrnje naša su obveza čuvanja Lijepe Naše",
+   "znakova": 2680,
+   "izvor": "mdu",
+   "tekst_poveznice": "Žrtve Vukovara i Škabrnje naša su obveza čuvanja Lijepe Naše"
+  },
+  {
+   "url": "https://mdu.gov.hr/vijesti-4693/sjecanje-koje-ne-blijedi-vukovar-i-skabrnja-simboli-hrvatske-hrabrosti-zrtve-i-slobode/7705",
+   "datoteka": "davatelji/novo/mdu-gov-hr-vijesti-4693-sjecanje-koje-ne-blijedi-vukovar-i-skabrnja-simboli-hrvatske-hrabr-398e5a.txt",
+   "snimljeno": "2026-11-28T09:31:52+00:00",
+   "status": 200,
+   "konacni_url": "https://mdu.gov.hr/vijesti-4693/sjecanje-koje-ne-blijedi-vukovar-i-skabrnja-simboli-hrvatske-hrabrosti-zrtve-i-slobode/7705",
+   "tip": "text/html",
+   "naslov": "Ministarstvo demografije i useljeništva - Sjećanje koje ne blijedi: Vukovar i Škabrnja – simboli hrvatske hrabrosti, žrtve i slobode",
+   "znakova": 2783,
+   "izvor": "mdu",
+   "tekst_poveznice": "Sjećanje koje ne blijedi: Vukovar i Škabrnja – simboli hrvatske hrabrosti, žrtve i slobode"
+  },
+  {
+   "url": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-u-opcini-ruzic-otvoreno-novouredjeno-djecje-igraliste-u-mirlovic-polju/7706",
+   "datoteka": "davatelji/novo/mdu-gov-hr-vijesti-4693-ministar-sipic-u-opcini-ruzic-otvoreno-novouredjeno-djecje-igralis-11261f.txt",
+   "snimljeno": "2026-11-28T09:31:55+00:00",
+   "status": 200,
+   "konacni_url": "https://mdu.gov.hr/vijesti-4693/ministar-sipic-u-opcini-ruzic-otvoreno-novouredjeno-djecje-igraliste-u-mirlovic-polju/7706",
+   "tip": "text/html",
+   "naslov": "Ministarstvo demografije i useljeništva - Ministar Šipić u Općini Ružić: otvoreno novouređeno dječje igralište u Mirlović Polju",
+   "znakova": 3390,
+   "izvor": "mdu",
+   "tekst_poveznice": "Ministar Šipić u Općini Ružić: otvoreno novouređeno dječje igralište u Mirlović Polju"
+  },
+  {
+   "url": "https://mzozt.gov.hr/novosti-8/8?impaired=1",
+   "datoteka": "davatelji/novo/mzozt-gov-hr-novosti-8-8-83fbfb.txt",
+   "snimljeno": "2026-11-28T09:31:57+00:00",
+   "status": 200,
+   "konacni_url": "https://mzozt.gov.hr/novosti-8/8?impaired=1",
+   "tip": "text/html",
+   "naslov": "Ministarstvo zaštite okoliša i zelene tranzicije Republike Hrvatske - Novosti",
+   "znakova": 7187,
+   "izvor": "mzozt",
+   "tekst_poveznice": "Prilagodba pristupačnosti"
+  },
+  {
+   "url": "https://mzozt.gov.hr/novosti-8/hrvatska-dobiva-novi-park-prirode-zagorske-gore-predstavljen-i-nacrt-naputka-o-utvrdjivanju-sastava-komunalnog-otpada/10948",
+   "datoteka": "davatelji/novo/mzozt-gov-hr-novosti-8-hrvatska-dobiva-novi-park-prirode-zagorske-gore-predstavljen-i-nacr-635aa3.txt",
+   "snimljeno": "2026-11-28T09:32:00+00:00",
+   "status": 200,
+   "konacni_url": "https://mzozt.gov.hr/novosti-8/hrvatska-dobiva-novi-park-prirode-zagorske-gore-predstavljen-i-nacrt-naputka-o-utvrdjivanju-sastava-komunalnog-otpada/10948",
+   "tip": "text/html",
+   "naslov": "Ministarstvo zaštite okoliša i zelene tranzicije Republike Hrvatske - Hrvatska dobiva novi Park prirode Zagorske gore, predstavljen i Nacrt Naputka o utvrđivanju sastava komunalnog otpada",
+   "znakova": 5755,
+   "izvor": "mzozt",
+   "tekst_poveznice": "Hrvatska dobiva novi Park prirode Zagorske gore, predstavljen i Nacrt Naputka o utvrđivanju sastava komunalnog otpada"
+  },
+  {
+   "url": "https://mzozt.gov.hr/novosti-8/zavrsena-aglomeracija-pozega-gotovo-30-milijuna-eura-za-bolju-vodoopskrbu-odvodnju-i-zastitu-okolisa/10946",
+   "datoteka": "davatelji/novo/mzozt-gov-hr-novosti-8-zavrsena-aglomeracija-pozega-gotovo-30-milijuna-eura-za-bolju-vodoo-786781.txt",
+   "snimljeno": "2026-11-28T09:32:02+00:00",
+   "status": 200,
+   "konacni_url": "https://mzozt.gov.hr/novosti-8/zavrsena-aglomeracija-pozega-gotovo-30-milijuna-eura-za-bolju-vodoopskrbu-odvodnju-i-zastitu-okolisa/10946",
+   "tip": "text/html",
+   "naslov": "Ministarstvo zaštite okoliša i zelene tranzicije Republike Hrvatske - Završena aglomeracija Požega: gotovo 30 milijuna eura za bolju vodoopskrbu, odvodnju i zaštitu okoliša",
+   "znakova": 6186,
+   "izvor": "mzozt",
+   "tekst_poveznice": "Završena aglomeracija Požega: gotovo 30 milijuna eura za bolju vodoopskrbu, odvodnju i zaštitu okoliša"
+  },
+  {
+   "url": "https://mzozt.gov.hr/novosti-8/zavrseni-veliki-radovi-na-aglomeraciji-djakovo-u-pogon-pusten-novi-uredjaj-za-prociscivanje-otpadnih-voda/10943",
+   "datoteka": "davatelji/novo/mzozt-gov-hr-novosti-8-zavrseni-veliki-radovi-na-aglomeraciji-djakovo-u-pogon-pusten-novi--49e405.txt",
+   "snimljeno": "2026-11-28T09:32:05+00:00",
+   "status": 200,
+   "konacni_url": "https://mzozt.gov.hr/novosti-8/zavrseni-veliki-radovi-na-aglomeraciji-djakovo-u-pogon-pusten-novi-uredjaj-za-prociscivanje-otpadnih-voda/10943",
+   "tip": "text/html",
+   "naslov": "Ministarstvo zaštite okoliša i zelene tranzicije Republike Hrvatske - Završeni veliki radovi na aglomeraciji Đakovo, u pogon pušten novi uređaj za pročišćivanje otpadnih voda",
+   "znakova": 5296,
+   "izvor": "mzozt",
+   "tekst_poveznice": "Završeni veliki radovi na aglomeraciji Đakovo, u pogon pušten novi uređaj za pročišćivanje otpadnih voda"
+  },
+  {
+   "url": "https://mzozt.gov.hr/novosti-8/izaslanstvo-ureda-puckog-pravobranitelja-republike-moldove-u-posjetu-ministarstvu-zastite-okolisa-i-zelene-tranzicije/10947",
+   "datoteka": "davatelji/novo/mzozt-gov-hr-novosti-8-izaslanstvo-ureda-puckog-pravobranitelja-republike-moldove-u-posjet-62a649.txt",
+   "snimljeno": "2026-11-28T09:32:07+00:00",
+   "status": 200,
+   "konacni_url": "https://mzozt.gov.hr/novosti-8/izaslanstvo-ureda-puckog-pravobranitelja-republike-moldove-u-posjetu-ministarstvu-zastite-okolisa-i-zelene-tranzicije/10947",
+   "tip": "text/html",
+   "naslov": "Ministarstvo zaštite okoliša i zelene tranzicije Republike Hrvatske - Izaslanstvo Ureda pučkog pravobranitelja Republike Moldove u posjetu Ministarstvu zaštite okoliša i zelene tranzicije",
+   "znakova": 3941,
+   "izvor": "mzozt",
+   "tekst_poveznice": "Izaslanstvo Ureda pučkog pravobranitelja Republike Moldove u posjetu Ministarstvu zaštite okoliša i zelene tranzicije"
+  },
+  {
+   "url": "https://mzozt.gov.hr/novosti-8/nastavljen-cop31-hrvatska-pokazala-kako-se-brani-od-poplava-prirodnim-retencijama-predstavljeni-i-sustavi-za-pracenje-klimatskih-ekstrema/10941",
+   "datoteka": "davatelji/novo/mzozt-gov-hr-novosti-8-nastavljen-cop31-hrvatska-pokazala-kako-se-brani-od-poplava-prirodn-e78d80.txt",
+   "snimljeno": "2026-11-28T09:32:10+00:00",
+   "status": 200,
+   "konacni_url": "https://mzozt.gov.hr/novosti-8/nastavljen-cop31-hrvatska-pokazala-kako-se-brani-od-poplava-prirodnim-retencijama-predstavljeni-i-sustavi-za-pracenje-klimatskih-ekstrema/10941",
+   "tip": "text/html",
+   "naslov": "Ministarstvo zaštite okoliša i zelene tranzicije Republike Hrvatske - Nastavljen COP31: Hrvatska pokazala kako se brani od poplava prirodnim retencijama, predstavljeni i sustavi za praćenje klimatskih ekstrema",
+   "znakova": 5805,
+   "izvor": "mzozt",
+   "tekst_poveznice": "Nastavljen COP31: Hrvatska pokazala kako se brani od poplava prirodnim retencijama, predstavljeni i sustavi za praćenje klimatskih ekstrema"
+  },
+  {
+   "url": "https://mzozt.gov.hr/novosti-8/pocinje-provedba-projekta-uspostave-hrvatskog-registra-malih-kucnih-lozista-remal-u-sklopu-life-slovenia-supair/10940",
+   "datoteka": "davatelji/novo/mzozt-gov-hr-novosti-8-pocinje-provedba-projekta-uspostave-hrvatskog-registra-malih-kucnih-68b818.txt",
+   "snimljeno": "2026-11-28T09:32:12+00:00",
+   "status": 200,
+   "konacni_url": "https://mzozt.gov.hr/novosti-8/pocinje-provedba-projekta-uspostave-hrvatskog-registra-malih-kucnih-lozista-remal-u-sklopu-life-slovenia-supair/10940",
+   "tip": "text/html",
+   "naslov": "Ministarstvo zaštite okoliša i zelene tranzicije Republike Hrvatske - Počinje provedba projekta uspostave Hrvatskog Registra malih kućnih ložišta (ReMaL) u sklopu LIFE Slovenia SupAIR",
+   "znakova": 5804,
+   "izvor": "mzozt",
+   "tekst_poveznice": "Počinje provedba projekta uspostave Hrvatskog Registra malih kućnih ložišta (ReMaL) u sklopu LIFE Slovenia SupAIR"
+  },
+  {
+   "url": "https://mzozt.gov.hr/novosti-8/pocela-sanacija-dviju-lokacija-u-poznanovcu-uklonit-ce-se-13-200-tona-ilegalno-odlozenog-otpada/10938",
+   "datoteka": "davatelji/novo/mzozt-gov-hr-novosti-8-pocela-sanacija-dviju-lokacija-u-poznanovcu-uklonit-ce-se-13-200-to-7127d8.txt",
+   "snimljeno": "2026-11-28T09:32:15+00:00",
+   "status": 200,
+   "konacni_url": "https://mzozt.gov.hr/novosti-8/pocela-sanacija-dviju-lokacija-u-poznanovcu-uklonit-ce-se-13-200-tona-ilegalno-odlozenog-otpada/10938",
+   "tip": "text/html",
+   "naslov": "Ministarstvo zaštite okoliša i zelene tranzicije Republike Hrvatske - Počela sanacija dviju lokacija u Poznanovcu, uklonit će se 13.200 tona ilegalno odloženog otpada",
+   "znakova": 4590,
+   "izvor": "mzozt",
+   "tekst_poveznice": "Počela sanacija dviju lokacija u Poznanovcu, uklonit će se 13.200 tona ilegalno odloženog otpada"
+  },
+  {
+   "url": "https://mzozt.gov.hr/novosti-8/za-sanaciju-sest-zatvorenih-odlagalista-neopasnog-otpada-osigurano-17-66-milijuna-eura-bespovratnih-sredstava/10937",
+   "datoteka": "davatelji/novo/mzozt-gov-hr-novosti-8-za-sanaciju-sest-zatvorenih-odlagalista-neopasnog-otpada-osigurano--a92abe.txt",
+   "snimljeno": "2026-11-28T09:32:17+00:00",
+   "status": 200,
+   "konacni_url": "https://mzozt.gov.hr/novosti-8/za-sanaciju-sest-zatvorenih-odlagalista-neopasnog-otpada-osigurano-17-66-milijuna-eura-bespovratnih-sredstava/10937",
+   "tip": "text/html",
+   "naslov": "Ministarstvo zaštite okoliša i zelene tranzicije Republike Hrvatske - Za sanaciju šest zatvorenih odlagališta neopasnog otpada osigurano 17,66 milijuna eura bespovratnih sredstava",
+   "znakova": 5886,
+   "izvor": "mzozt",
+   "tekst_poveznice": "Za sanaciju šest zatvorenih odlagališta neopasnog otpada osigurano 17,66 milijuna eura bespovratnih sredstava"
+  },
+  {
+   "url": "https://mzozt.gov.hr/novosti-8/nastavljen-cop31-hrvatska-kroz-plan-od-gotovo-1-7-milijarde-eura-ulaze-u-energetsku-obnovu-i-zeleni-transport-vuckovic-se-sastala-s-direktorom-ek-a/10936",
+   "datoteka": "davatelji/novo/mzozt-gov-hr-novosti-8-nastavljen-cop31-hrvatska-kroz-plan-od-gotovo-1-7-milijarde-eura-ul-13c214.txt",
+   "snimljeno": "2026-11-28T09:32:20+00:00",
+   "status": 200,
+   "konacni_url": "https://mzozt.gov.hr/novosti-8/nastavljen-cop31-hrvatska-kroz-plan-od-gotovo-1-7-milijarde-eura-ulaze-u-energetsku-obnovu-i-zeleni-transport-vuckovic-se-sastala-s-direktorom-ek-a/10936",
+   "tip": "text/html",
+   "naslov": "Ministarstvo zaštite okoliša i zelene tranzicije Republike Hrvatske - Nastavljen COP31: Hrvatska kroz plan od gotovo 1,7 milijarde eura ulaže u energetsku obnovu i zeleni transport, Vučković se sastala s direktorom EK-a",
+   "znakova": 5930,
+   "izvor": "mzozt",
+   "tekst_poveznice": "Nastavljen COP31: Hrvatska kroz plan od gotovo 1,7 milijarde eura ulaže u energetsku obnovu i zeleni transport, Vučković se sastala s direktorom EK-a"
+  },
+  {
+   "url": "https://mzozt.gov.hr/novosti-8/obilazak-radova-na-sanaciji-kosice/10935",
+   "datoteka": "davatelji/novo/mzozt-gov-hr-novosti-8-obilazak-radova-na-sanaciji-kosice-10935-e671a7.txt",
+   "snimljeno": "2026-11-28T09:32:22+00:00",
+   "status": 200,
+   "konacni_url": "https://mzozt.gov.hr/novosti-8/obilazak-radova-na-sanaciji-kosice/10935",
+   "tip": "text/html",
+   "naslov": "Ministarstvo zaštite okoliša i zelene tranzicije Republike Hrvatske - Obilazak radova na sanaciji Kosice",
+   "znakova": 5067,
+   "izvor": "mzozt",
+   "tekst_poveznice": "Obilazak radova na sanaciji Kosice"
+  }
+ ],
  "nove_preskoceno_zbog_limita": 0,
- "prvo_pokretanje": true
+ "prvo_pokretanje": false
 }
