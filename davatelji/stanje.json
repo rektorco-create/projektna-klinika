@@ -1,0 +1,348 @@
+{
+ "pokrenuto": "2026-11-28T09:24:09+00:00",
+ "izvori": {
+  "eufondovi": [
+   {
+    "url": "https://eufondovi.gov.hr/",
+    "datoteka": "davatelji/eufondovi-gov-hr-fef4b7.txt",
+    "snimljeno": "2026-11-28T09:24:09+00:00",
+    "status": 200,
+    "konacni_url": "https://eufondovi.gov.hr/",
+    "tip": "text/html",
+    "naslov": "EU fondovi Hrvatska – Središnji internetski portal za EU fondove i EU programe u Republici Hrvatskoj",
+    "znakova": 4316
+   },
+   {
+    "url": "https://eufondovi.gov.hr/pozivi/",
+    "datoteka": "davatelji/eufondovi-gov-hr-pozivi-89c7e5.txt",
+    "snimljeno": "2026-11-28T09:24:14+00:00",
+    "status": 200,
+    "konacni_url": "https://eufondovi.gov.hr/pozivi/",
+    "tip": "text/html",
+    "naslov": "Pozivi – EU fondovi Hrvatska",
+    "znakova": 2397
+   }
+  ],
+  "esf": [
+   {
+    "url": "https://esf.hr/esfplus/naslovnica/",
+    "datoteka": "davatelji/esf-hr-esfplus-naslovnica-5a259f.txt",
+    "snimljeno": "2026-11-28T09:24:17+00:00",
+    "status": 200,
+    "konacni_url": "https://esf.hr/esfplus/naslovnica/",
+    "tip": "text/html",
+    "naslov": "NAJAVA: Poziv za dostavu projektnih prijedloga „Umjetnost i kultura za mlade“ - Europski socijalni fond",
+    "znakova": 10017
+   },
+   {
+    "url": "https://esf.hr/esfplus/natjecaji/",
+    "datoteka": "davatelji/esf-hr-esfplus-natjecaji-49d623.txt",
+    "snimljeno": "2026-11-28T09:24:24+00:00",
+    "status": 200,
+    "konacni_url": "https://esf.hr/esfplus/natjecaji/zdravstvo/",
+    "tip": "text/html",
+    "naslov": "Zdravstvo - Europski socijalni fond",
+    "znakova": 14420
+   }
+  ],
+  "fondovieu": [
+   {
+    "url": "https://fondovieu.gov.hr/",
+    "datoteka": "davatelji/fondovieu-gov-hr-ad36ac.txt",
+    "snimljeno": "2026-11-28T09:24:28+00:00",
+    "status": 200,
+    "konacni_url": "https://fondovieu.gov.hr/",
+    "tip": "text/html",
+    "naslov": "Portal - NPOO (Nacionalni plan oporavka i otpornosti) - fondovieu.gov.hr",
+    "znakova": 2681
+   },
+   {
+    "url": "https://fondovieu.gov.hr/pozivi",
+    "datoteka": "davatelji/fondovieu-gov-hr-pozivi-c0369e.txt",
+    "snimljeno": "2026-11-28T09:24:32+00:00",
+    "status": 200,
+    "konacni_url": "https://fondovieu.gov.hr/pozivi",
+    "tip": "text/html",
+    "naslov": "Pozivi - NPOO (Nacionalni plan oporavka i otpornosti) - fondovieu.gov.hr",
+    "znakova": 5592
+   }
+  ],
+  "mzom": [
+   {
+    "url": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/196",
+    "datoteka": "davatelji/mzom-gov-hr-istaknute-teme-natjecaji-196-196-6c7e2e.txt",
+    "snimljeno": "2026-11-28T09:24:34+00:00",
+    "status": 200,
+    "konacni_url": "https://mzom.gov.hr/istaknute-teme/natjecaji-196/196",
+    "tip": "text/html",
+    "naslov": "Ministarstvo znanosti, obrazovanja i mladih - Natječaji",
+    "znakova": 3484
+   }
+  ],
+  "mints": [
+   {
+    "url": "https://mints.gov.hr/javni-pozivi-i-natjecaji-11414/11414",
+    "datoteka": "davatelji/mints-gov-hr-javni-pozivi-i-natjecaji-11414-11414-06293f.txt",
+    "snimljeno": "2026-11-28T09:24:37+00:00",
+    "status": 200,
+    "konacni_url": "https://mints.gov.hr/javni-pozivi-i-natjecaji-11414/11414",
+    "tip": "text/html",
+    "naslov": "Ministarstvo turizma i sporta Republike Hrvatske - Javni pozivi i natječaji",
+    "znakova": 1181
+   },
+   {
+    "url": "https://mint.gov.hr/javni-pozivi-i-natjecaji-11414/s-p-o-r-t/22182",
+    "datoteka": "davatelji/mint-gov-hr-javni-pozivi-i-natjecaji-11414-s-p-o-r-t-22182-77a88d.txt",
+    "snimljeno": "2026-11-28T09:24:40+00:00",
+    "status": 200,
+    "konacni_url": "https://mint.gov.hr/javni-pozivi-i-natjecaji-11414/s-p-o-r-t/22182",
+    "tip": "text/html",
+    "naslov": "Ministarstvo turizma i sporta Republike Hrvatske - S P O R T",
+    "znakova": 31827
+   },
+   {
+    "url": "https://mints.gov.hr/sport-21838/21838",
+    "datoteka": "davatelji/mints-gov-hr-sport-21838-21838-cb88e8.txt",
+    "snimljeno": "2026-11-28T09:24:45+00:00",
+    "status": 200,
+    "konacni_url": "https://mints.gov.hr/sport-21680/21680",
+    "tip": "text/html",
+    "naslov": "Ministarstvo turizma i sporta Republike Hrvatske - Sport",
+    "znakova": 2100
+   },
+   {
+    "url": "https://mints.gov.hr/turizam-21837/21837",
+    "datoteka": "davatelji/mints-gov-hr-turizam-21837-21837-68b42d.txt",
+    "snimljeno": "2026-11-28T09:24:48+00:00",
+    "status": 200,
+    "konacni_url": "https://mints.gov.hr/istaknute-teme-turizam/11",
+    "tip": "text/html",
+    "naslov": "Ministarstvo turizma i sporta Republike Hrvatske - Istaknute teme - Turizam",
+    "znakova": 2177
+   }
+  ],
+  "hrvatiizvanrh": [
+   {
+    "url": "https://hrvatiizvanrh.gov.hr/natjecaji-574/574",
+    "datoteka": "davatelji/hrvatiizvanrh-gov-hr-natjecaji-574-574-9d79a5.txt",
+    "snimljeno": "2026-11-28T09:24:51+00:00",
+    "status": 200,
+    "konacni_url": "https://hrvatiizvanrh.gov.hr/natjecaji-574/574",
+    "tip": "text/html",
+    "naslov": "Središnji državni ured za Hrvate izvan Republike Hrvatske - Natječaji",
+    "znakova": 2081
+   },
+   {
+    "url": "https://hrvatiizvanrh.gov.hr/vijesti/8",
+    "datoteka": "davatelji/hrvatiizvanrh-gov-hr-vijesti-8-7c82f9.txt",
+    "snimljeno": "2026-11-28T09:24:54+00:00",
+    "status": 200,
+    "konacni_url": "https://hrvatiizvanrh.gov.hr/vijesti/8",
+    "tip": "text/html",
+    "naslov": "Središnji državni ured za Hrvate izvan Republike Hrvatske - Vijesti",
+    "znakova": 5547
+   }
+  ],
+  "mdu": [
+   {
+    "url": "https://mdu.gov.hr/javni-pozivi/5923",
+    "datoteka": "davatelji/mdu-gov-hr-javni-pozivi-5923-c778b5.txt",
+    "snimljeno": "2026-11-28T09:24:56+00:00",
+    "status": 200,
+    "konacni_url": "https://mdu.gov.hr/javni-pozivi/5923",
+    "tip": "text/html",
+    "naslov": "Ministarstvo demografije i useljeništva - Javni pozivi",
+    "znakova": 6047
+   },
+   {
+    "url": "https://mdu.gov.hr/vijesti-4693",
+    "datoteka": "davatelji/mdu-gov-hr-vijesti-4693-700fcc.txt",
+    "snimljeno": "2026-11-28T09:24:59+00:00",
+    "status": 404,
+    "greska": "HTTP 404"
+   }
+  ],
+  "mvep": [
+   {
+    "url": "https://mvep.gov.hr/ministarstvo/natjecaji/9625",
+    "datoteka": "davatelji/mvep-gov-hr-ministarstvo-natjecaji-9625-e20483.txt",
+    "snimljeno": "2026-11-28T09:25:22+00:00",
+    "status": 200,
+    "konacni_url": "https://mvep.gov.hr/ministarstvo/natjecaji/9625",
+    "tip": "text/html",
+    "naslov": "Ministarstvo vanjskih i europskih poslova RH - Natječaji",
+    "znakova": 73763
+   }
+  ],
+  "rrvz": [
+   {
+    "url": "https://rrvz.hr/",
+    "datoteka": "davatelji/rrvz-hr-8fb561.txt",
+    "snimljeno": "2026-11-28T09:25:26+00:00",
+    "status": 200,
+    "konacni_url": "https://rrvz.hr/",
+    "tip": "text/html",
+    "naslov": "JURA",
+    "znakova": 10793
+   }
+  ],
+  "mingo": [
+   {
+    "url": "https://mingo.gov.hr/javni-pozivi-i-natjecaji-7371/javni-pozivi-i-natjecaji-ministarstva/otvoreni-javni-pozivi-i-natjecaji/7390",
+    "datoteka": "davatelji/mingo-gov-hr-javni-pozivi-i-natjecaji-7371-javni-pozivi-i-natjecaji-ministarstva-otvoreni--68aa51.txt",
+    "snimljeno": "2026-11-28T09:25:30+00:00",
+    "status": 200,
+    "konacni_url": "https://mingo.gov.hr/javni-pozivi-i-natjecaji-7371/javni-pozivi-i-natjecaji-ministarstva/otvoreni-javni-pozivi-i-natjecaji/7390",
+    "tip": "text/html",
+    "naslov": "Ministarstvo gospodarstva - Otvoreni javni pozivi i natječaji",
+    "znakova": 223957
+   }
+  ],
+  "mzozt": [
+   {
+    "url": "https://mzozt.gov.hr/javni-pozivi-i-natjecaji-7371/javni-pozivi-i-natjecaji-ministarstva/otvoreni-javni-pozivi-i-natjecaji/7390",
+    "datoteka": "davatelji/mzozt-gov-hr-javni-pozivi-i-natjecaji-7371-javni-pozivi-i-natjecaji-ministarstva-otvoreni--6e101f.txt",
+    "snimljeno": "2026-11-28T09:25:35+00:00",
+    "status": 200,
+    "konacni_url": "https://mzozt.gov.hr/javni-pozivi-i-natjecaji-7371/javni-pozivi-i-natjecaji-ministarstva/otvoreni-javni-pozivi-i-natjecaji/7390",
+    "tip": "text/html",
+    "naslov": "Ministarstvo zaštite okoliša i zelene tranzicije Republike Hrvatske - Otvoreni javni pozivi i natječaji",
+    "znakova": 219269
+   },
+   {
+    "url": "https://mzozt.gov.hr/novosti-8",
+    "datoteka": "davatelji/mzozt-gov-hr-novosti-8-29908d.txt",
+    "snimljeno": "2026-11-28T09:25:39+00:00",
+    "status": 404,
+    "greska": "HTTP 404"
+   }
+  ],
+  "mrosp": [
+   {
+    "url": "https://mrosp.gov.hr/",
+    "datoteka": "davatelji/mrosp-gov-hr-d5d0ff.txt",
+    "snimljeno": "2026-11-28T09:26:02+00:00",
+    "status": 200,
+    "konacni_url": "https://mrosp.gov.hr/",
+    "tip": "text/html",
+    "naslov": "Ministarstvo rada, mirovinskog sustava, obitelji i socijalne politike - Naslovna",
+    "znakova": 3096
+   },
+   {
+    "url": "https://mrosp.gov.hr/pristup-informacijama-16/natjecaji-pozivi-i-zaposljavanje/udruge-u-sustavu-socijalne-skrbi-natjecaji-pozivi-i-obrasci/11791",
+    "datoteka": "davatelji/mrosp-gov-hr-pristup-informacijama-16-natjecaji-pozivi-i-zaposljavanje-udruge-u-sustavu-so-c46f8b.txt",
+    "snimljeno": "2026-11-28T09:26:05+00:00",
+    "status": 200,
+    "konacni_url": "https://mrosp.gov.hr/pristup-informacijama-16/natjecaji-pozivi-i-zaposljavanje/udruge-u-sustavu-socijalne-skrbi-natjecaji-pozivi-i-obrasci/11791",
+    "tip": "text/html",
+    "naslov": "Ministarstvo rada, mirovinskog sustava, obitelji i socijalne politike - Udruge u sustavu socijalne skrbi - natječaji, pozivi i obrasci",
+    "znakova": 2576
+   },
+   {
+    "url": "https://mrosp.gov.hr/pristup-informacijama-16/natjecaji-pozivi-i-zaposljavanje/ostali-natjecaji-i-pozivi/13690",
+    "datoteka": "davatelji/mrosp-gov-hr-pristup-informacijama-16-natjecaji-pozivi-i-zaposljavanje-ostali-natjecaji-i--83fa49.txt",
+    "snimljeno": "2026-11-28T09:26:07+00:00",
+    "status": 200,
+    "konacni_url": "https://mrosp.gov.hr/pristup-informacijama-16/natjecaji-pozivi-i-zaposljavanje/ostali-natjecaji-i-pozivi/13690",
+    "tip": "text/html",
+    "naslov": "Ministarstvo rada, mirovinskog sustava, obitelji i socijalne politike - Ostali natječaji i pozivi",
+    "znakova": 5465
+   }
+  ],
+  "razvoj": [
+   {
+    "url": "https://razvoj.gov.hr/",
+    "datoteka": "davatelji/razvoj-gov-hr-ed0a1f.txt",
+    "snimljeno": "2026-11-28T09:26:10+00:00",
+    "status": 200,
+    "konacni_url": "https://razvoj.gov.hr/",
+    "tip": "text/html",
+    "naslov": "Ministarstvo regionalnoga razvoja i fondova Europske unije - Naslovna",
+    "znakova": 3212
+   },
+   {
+    "url": "https://razvoj.gov.hr/vijesti/8",
+    "datoteka": "davatelji/razvoj-gov-hr-vijesti-8-59d1e0.txt",
+    "snimljeno": "2026-11-28T09:26:13+00:00",
+    "status": 200,
+    "konacni_url": "https://razvoj.gov.hr/vijesti/8",
+    "tip": "text/html",
+    "naslov": "Ministarstvo regionalnoga razvoja i fondova Europske unije - Vijesti",
+    "znakova": 4074
+   }
+  ],
+  "ampeu": [
+   {
+    "url": "https://www.ampeu.hr/natjecaji",
+    "datoteka": "davatelji/www-ampeu-hr-natjecaji-cca685.txt",
+    "snimljeno": "2026-11-28T09:26:16+00:00",
+    "status": 200,
+    "konacni_url": "https://www.ampeu.hr/natjecaji",
+    "tip": "text/html",
+    "naslov": "Ampeu | Agencija za mobilnost i programe Europske Unije - Natječaji",
+    "znakova": 9400
+   },
+   {
+    "url": "https://www.ampeu.hr/novosti",
+    "datoteka": "davatelji/www-ampeu-hr-novosti-65041f.txt",
+    "snimljeno": "2026-11-28T09:26:20+00:00",
+    "status": 200,
+    "konacni_url": "https://www.ampeu.hr/novosti",
+    "tip": "text/html",
+    "naslov": "Novosti - Ampeu | Agencija za mobilnost i programe Europske Unije",
+    "znakova": 8130
+   }
+  ],
+  "udruge": [
+   {
+    "url": "https://udruge.gov.hr/natjecaji-5503/5503",
+    "datoteka": "davatelji/udruge-gov-hr-natjecaji-5503-5503-5a883a.txt",
+    "snimljeno": "2026-11-28T09:26:23+00:00",
+    "status": 200,
+    "konacni_url": "https://udruge.gov.hr/natjecaji-5503/5503",
+    "tip": "text/html",
+    "naslov": "Ured za udruge - Natječaji",
+    "znakova": 4716
+   }
+  ],
+  "min-kulture": [
+   {
+    "url": "https://min-kulture.gov.hr/natjecaji-16274/javni-pozivi-404/404",
+    "datoteka": "davatelji/min-kulture-gov-hr-natjecaji-16274-javni-pozivi-404-404-6f5599.txt",
+    "snimljeno": "2026-11-28T09:26:26+00:00",
+    "status": 200,
+    "konacni_url": "https://min-kulture.gov.hr/natjecaji-16274/javni-pozivi-404/404",
+    "tip": "text/html",
+    "naslov": "Ministarstvo kulture i medija Republike Hrvatske - Javni pozivi",
+    "znakova": 2433
+   }
+  ],
+  "asoo": [
+   {
+    "url": "https://www.asoo.hr/",
+    "datoteka": "davatelji/www-asoo-hr-c8fe30.txt",
+    "snimljeno": "2026-11-28T09:26:29+00:00",
+    "status": 200,
+    "konacni_url": "https://www.asoo.hr/",
+    "tip": "text/html",
+    "naslov": "ASOO - Agencija za strukovno obrazovanje i obrazovanje odraslih -",
+    "znakova": 58217
+   }
+  ],
+  "aem": [
+   {
+    "url": "https://aem.hr/",
+    "datoteka": "davatelji/aem-hr-75ab87.txt",
+    "snimljeno": "2026-11-28T09:26:34+00:00",
+    "status": 200,
+    "konacni_url": "https://aem.hr/",
+    "tip": "text/html",
+    "naslov": "Agencija za medije",
+    "znakova": 3535
+   }
+  ]
+ },
+ "nove_podstranice": [],
+ "nove_preskoceno_zbog_limita": 0,
+ "prvo_pokretanje": true
+}
