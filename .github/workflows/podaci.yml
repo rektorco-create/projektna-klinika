@@ -1,0 +1,47 @@
+name: Dnevna snimka davatelja i GoatCountera
+
+# Svako jutro prije jutarnjih zadataka (5:05 UTC = 6:05 zimi / 7:05 ljeti po zagrebačkom vremenu).
+on:
+  schedule:
+    - cron: "5 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: podaci
+  cancel-in-progress: false
+
+jobs:
+  snimka:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github/podaci
+          path: main
+
+      - name: Grana „podaci“
+        run: |
+          if git ls-remote --exit-code --heads "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" podaci >/dev/null; then
+            git clone --depth 1 --branch podaci "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" out
+          else
+            mkdir out && cd out && git init -b podaci && git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}"
+          fi
+          rm -rf out/davatelji/novo
+
+      - name: Snimka
+        env:
+          GOATCOUNTER_TOKEN: ${{ secrets.GOATCOUNTER_TOKEN }}
+        run: python3 main/.github/podaci/snimi.py out
+
+      - name: Spremi
+        run: |
+          cd out
+          git config user.name "Projektna klinika – snimka"
+          git config user.email "rektor.co@gmail.com"
+          git add -A
+          git commit -q -m "Snimka $(TZ=Europe/Zagreb date +%Y-%m-%d)" || echo "Nema promjena."
+          git push origin podaci
